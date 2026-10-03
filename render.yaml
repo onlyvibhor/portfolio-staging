@@ -1,0 +1,21 @@
+# Render static-site blueprint (staging).
+# content/content.js is committed, so no build step is needed.
+services:
+  - type: web
+    name: portfolio-staging
+    runtime: static
+    staticPublishPath: .
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex, nofollow
+    routes:
+      - type: rewrite
+        source: /work
+        destination: /work.html
+      - type: rewrite
+        source: /lab
+        destination: /lab.html
+      - type: rewrite
+        source: /about
+        destination: /about.html
