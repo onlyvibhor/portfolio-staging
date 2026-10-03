@@ -1,0 +1,186 @@
+{
+  "title": "Break To Build",
+  "slug": "btb",
+  "published": true,
+  "featured": true,
+  "order": 2,
+  "title_lines": "Break\nTo Build",
+  "card_title": "Break\nTo Build",
+  "client": "Razorpay × JioHotstar",
+  "year": "2026",
+  "category": "AI film · IPL campaign",
+  "role": "Art & Creative Direction",
+  "tagline": "Thirty founders. Thirty ad films. Zero shoots.",
+  "summary": "A 100% AI experiment in making a TVC: founders photographed once, then broken, bent and built into cinematic films.",
+  "cover": {
+    "image": "assets/img/p/btb-1.jpg",
+    "video": ""
+  },
+  "metrics": [
+    {
+      "value": "30",
+      "label": "AI-led ad films"
+    },
+    {
+      "value": "30",
+      "label": "founders featured"
+    },
+    {
+      "value": "1",
+      "label": "photograph per founder"
+    },
+    {
+      "value": "0",
+      "label": "live-action shoots"
+    }
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "label": "The brief",
+      "title": "Back the founders building India, on the biggest stage in Indian marketing.",
+      "body": "Razorpay's IPL 2026 push on JioHotstar. The ambition was to match the scale and spectacle of the tournament, while also stress-testing everything the design team had learned about AI workflows, tooling and design systems over the year."
+    },
+    {
+      "type": "statement",
+      "text": "A 100% AI experiment in making a TVC. No actors. No stunts. No live-action shots."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/btb-1.jpg",
+      "caption": "Break To Build, Razorpay 2026",
+      "size": "full"
+    },
+    {
+      "type": "text",
+      "label": "The launch film",
+      "title": "What if breaking through was literal?",
+      "body": "We took the campaign idea of breaking through and turned it into a visual statement: breaking, bending and defying the impossible."
+    },
+    {
+      "type": "text",
+      "label": "The problem",
+      "title": "Getting 30 busy founders in one frame? Almost impossible.",
+      "body": "A shoot at this scale means complex schedules and a massive production budget. Breaking glass, breaking walls, breaking ceilings means high-risk shots, high production costs, and founders who are not actors.\n\n**AI made it possible. Thirty founders. One frame. Zero logistics.**"
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/btb-4.jpg",
+      "caption": "30 founders. 30 stories. One unusual production.",
+      "size": "wide"
+    },
+    {
+      "type": "steps",
+      "label": "From a photoshoot to a TV commercial",
+      "title": "One shoot and AI. Infinite possibilities.",
+      "items": [
+        {
+          "title": "Shoot",
+          "body": "Founders photographed once across carefully planned angles and poses."
+        },
+        {
+          "title": "Style frames",
+          "body": "We designed the visual language and built the worlds each founder would break through."
+        },
+        {
+          "title": "Generate",
+          "body": "AI transformed stills into cinematic environments, action and destruction."
+        },
+        {
+          "title": "Craft",
+          "body": "Shots were refined, composited and edited into finished films."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/btb-9.jpg",
+      "caption": "From internal shoot, to planned poses, to worlds, to finished films",
+      "size": "narrow"
+    },
+    {
+      "type": "text",
+      "label": "The takeaway",
+      "title": "A stress test for everything the team had learned about AI.",
+      "body": "Thirty ad films, a launch film, teasers, music and supporting content, produced AI-led from end to end: not AI-assisted, not AI-enhanced. It took collective conviction to say yes to something with no established playbook, on one of the biggest stages in Indian marketing."
+    }
+  ],
+  "team": [
+    {
+      "name": "Vibhor Mathur",
+      "role": "Art & Creative Direction"
+    },
+    {
+      "name": "Rahul Girish",
+      "role": "Design"
+    },
+    {
+      "name": "Sourajit Sengupta",
+      "role": "Creative Director"
+    },
+    {
+      "name": "Varun Thakar",
+      "role": "Partner"
+    },
+    {
+      "name": "Talented.Agency",
+      "role": "Partner"
+    },
+    {
+      "name": "Neil Dutta",
+      "role": ""
+    },
+    {
+      "name": "Akash Wadhwa",
+      "role": ""
+    },
+    {
+      "name": "Sanjana Shetty",
+      "role": ""
+    },
+    {
+      "name": "Ishan Gupta",
+      "role": ""
+    },
+    {
+      "name": "Aadithya Narayanan S",
+      "role": ""
+    },
+    {
+      "name": "Ajay R Nath",
+      "role": ""
+    },
+    {
+      "name": "Nivedita Prabhu",
+      "role": ""
+    },
+    {
+      "name": "Ajmal Roshan",
+      "role": ""
+    },
+    {
+      "name": "Aman Shetty",
+      "role": ""
+    },
+    {
+      "name": "Ashish Thawani",
+      "role": ""
+    },
+    {
+      "name": "MarkMedia",
+      "role": "Partner"
+    }
+  ],
+  "awards": [],
+  "links": [
+    {
+      "label": "Behance case study",
+      "url": "https://www.behance.net/gallery/254665051/Break-To-Build-Razorpay-IPL-Campaign"
+    }
+  ],
+  "categories": [
+    "AI Film",
+    "Campaign"
+  ],
+  "external_url": ""
+}

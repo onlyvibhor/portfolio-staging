@@ -1,0 +1,290 @@
+{
+  "title": "Trial of the Century",
+  "slug": "trial",
+  "published": true,
+  "featured": true,
+  "order": 1,
+  "title_lines": "Trial of the\nCentury",
+  "card_title": "Trial of the\nCentury",
+  "client": "RazorpayX Payroll",
+  "year": "2025",
+  "category": "AI film · Campaign",
+  "role": "Art Direction",
+  "tagline": "An animal courtroom puts HR's most dreaded monthly question on trial.",
+  "summary": "A Panchatantra-style courtroom film that turned payslip confusion into a pop-culture moment for the HR community.",
+  "cover": {
+    "image": "assets/img/p/trial-1.jpg",
+    "video": ""
+  },
+  "metrics": [
+    {
+      "value": "2.1M+",
+      "label": "impressions"
+    },
+    {
+      "value": "1.5M+",
+      "label": "unique accounts reached"
+    },
+    {
+      "value": "8.64%",
+      "label": "engagement rate, 4× the B2B fintech average"
+    },
+    {
+      "value": "13%",
+      "label": "uplift in leads during the campaign"
+    },
+    {
+      "value": "16%",
+      "label": "surge in website traffic"
+    }
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "label": "The brief",
+      "title": "Reach the HR community, a relevant audience that is notoriously hard to engage.",
+      "body": "RazorpayX Payroll needed awareness among HR professionals. They are the right audience, but a finance-heavy product is a tough sell to people who rarely engage with branded content.\n\nA recent launch gave us a way in: an AI feature that lets employees talk directly to their payslips and ask salary questions. HRs showed genuine traction, which made us dig deeper into why."
+    },
+    {
+      "type": "statement",
+      "text": "For employees, Salary Day is the most anticipated day of the month. For HR, it is a week-long nightmare."
+    },
+    {
+      "type": "text",
+      "label": "The insight",
+      "title": "The same questions, every month, and everyone had accepted it.",
+      "body": "The moment salaries hit accounts, inboxes flood: *Why did my salary change? What is this deduction?* Not out of carelessness, but because payslips are dense with abbreviations, tax codes and compliance jargon that few people understand.\n\nOver time the dependency became normal. HRs absorbed it, employees assumed it. **That cultural resignation became our creative brief.**"
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/trial-1.jpg",
+      "caption": "Campaign overview: insight, design brief, idea and results",
+      "size": "full"
+    },
+    {
+      "type": "text",
+      "label": "The idea",
+      "title": "If the same questions come back every month, the system needs fixing, not the people.",
+      "body": "We reframed repeated salary queries as a payroll design flaw and put the repetition on trial, in an animal courtroom inspired by the Panchatantra and an unmistakable piece of Hindi cinema, the *sawaal pe sawaal* courtroom scene from *Damini*.\n\n- **Porcumar Rao**, a porcupine, takes every recurring query like a spoke in his back.\n- **Chulbull Pandey**, the aggressive bull, channels the courtroom cross-examination.\n- **Hathiram Trankalp**, a wise elephant, presides over the chaos.\n- **The employees** appear as a flock of chirping birds.\n\nWithin the story, RazorpayX Payroll introduces R.A.Y., an AI assistant that reads the payslip and explains any change instantly, in simple language, without HR stepping in."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/trial-3.jpg",
+      "caption": "Location design and character sheets",
+      "size": "full"
+    },
+    {
+      "type": "steps",
+      "label": "The process",
+      "title": "Animation-quality world-building without a single traditional animation tool.",
+      "items": [
+        {
+          "title": "Explore",
+          "body": "Character and mood explorations, iterated until the tone and personalities felt right.",
+          "tools": "Midjourney"
+        },
+        {
+          "title": "Lock the world",
+          "body": "A digital map of the courtroom with every camera position fixed before a frame was generated: spatial logic instead of prompt randomness.",
+          "tools": "Midjourney · Gemini · ChatGPT"
+        },
+        {
+          "title": "Frame",
+          "body": "Camera and framing prompts written with ChatGPT and Gemini, then executed through Nano Banana for consistent multi-angle shots, refined for continuity and texture.",
+          "tools": "Nano Banana · Photoshop · Firefly"
+        },
+        {
+          "title": "Animate",
+          "body": "Performances generated and iterated until body language and facial expression felt natural.",
+          "tools": "Kling · Runway · Google Veo"
+        },
+        {
+          "title": "Voice",
+          "body": "Professional voice actors chosen to embody each character, with lip-sync aligned to the recorded performance.",
+          "tools": "Kling Lip Sync · ElevenLabs"
+        },
+        {
+          "title": "Finish",
+          "body": "Composited, edited and upscaled to 4K at 60fps.",
+          "tools": "After Effects · Premiere · Topaz Labs"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/trial-2.jpg",
+      "caption": "The production workflow, from moodboard to final edit",
+      "size": "wide"
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/trial-4.jpg",
+      "caption": "Animation, expression and voice direction",
+      "size": "wide"
+    },
+    {
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=uDeZ0zKgVqY",
+      "poster": "",
+      "caption": "The film",
+      "size": "wide"
+    },
+    {
+      "type": "text",
+      "label": "Beyond the film",
+      "title": "We gave HRs a place to be heard, and a soundtrack.",
+      "body": "**The Wall of Laughter** was an anonymous digital board where HR professionals shared the funniest salary questions they had ever received. Anonymity mattered: HR professionals are cautious about being seen online, so humour became a safe way in.\n\n**\"Inbox Avalanche\"**, a debut music single, turned the monthly flood into a hook and earned 4.5 lakh+ impressions and 50+ saves. B2B content, competing with entertainment.\n\nThe movement spread through HR communities across India, including The Shape of Work, People Matters, SHRM India, Being HR and HR Breakfast Club."
+    },
+    {
+      "type": "metrics",
+      "label": "The result",
+      "items": [
+        {
+          "value": "2.1M+",
+          "label": "impressions"
+        },
+        {
+          "value": "135K+",
+          "label": "total engagements at an 8.64% rate"
+        },
+        {
+          "value": "300K",
+          "label": "HR professionals reached, of a 650K online audience"
+        },
+        {
+          "value": "300+",
+          "label": "brand mentions"
+        },
+        {
+          "value": "250+",
+          "label": "reposts"
+        },
+        {
+          "value": "13%",
+          "label": "uplift in D&O leads"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "label": "The takeaway",
+      "title": "The narrative shifted from \"HR failure\" to \"systemic gap\".",
+      "body": "What began as a feature launch turned into a pop-culture moment inside the HR ecosystem, with startups across the space (Plum, Spring Verify, ClearTax, Smartstaff, Jify, Fi) engaging with a campaign that, for once, was about HR."
+    }
+  ],
+  "team": [
+    {
+      "name": "Vibhor Mathur",
+      "role": "Art Director"
+    },
+    {
+      "name": "Sourajit Sengupta",
+      "role": "Creative Director"
+    },
+    {
+      "name": "Saurabh Soni",
+      "role": "Vice President, Design"
+    },
+    {
+      "name": "Apuarv Sethi",
+      "role": "Vice President, Marketing"
+    },
+    {
+      "name": "Subhash Dawda",
+      "role": "Marketing, RazorpayX"
+    },
+    {
+      "name": "Priyank Hegde",
+      "role": "Design"
+    },
+    {
+      "name": "Rahul Girish",
+      "role": "Design"
+    },
+    {
+      "name": "Aadithya Narayanan S",
+      "role": "Design"
+    },
+    {
+      "name": "Siddhant Tiwari",
+      "role": "Design"
+    },
+    {
+      "name": "Othneil Dutta",
+      "role": "Design"
+    },
+    {
+      "name": "Nihar Gopal Lohiya",
+      "role": "Marketing"
+    },
+    {
+      "name": "Nikita Pinto",
+      "role": "Marketing"
+    },
+    {
+      "name": "Sushmit Sengupta",
+      "role": "Marketing"
+    },
+    {
+      "name": "Nivedita Prabhu",
+      "role": "Marketing"
+    },
+    {
+      "name": "Gurnain Kaur Gopal Singh Thapar",
+      "role": "Marketing"
+    },
+    {
+      "name": "Gurunicketan S",
+      "role": "Content"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Shorty Awards",
+      "detail": "Winner, Generative AI"
+    },
+    {
+      "title": "Shorty Awards",
+      "detail": "Gold Honor, Financial Services"
+    },
+    {
+      "title": "Shorty Awards",
+      "detail": "Finalist, Community Engagement"
+    },
+    {
+      "title": "Kyoorius Creative Awards 2026",
+      "detail": "First List: Film Craft; Use of Technology & AI"
+    },
+    {
+      "title": "ET Brand Disruption Awards 2026",
+      "detail": "Silver, Most Disruptive B2B Campaign"
+    }
+  ],
+  "links": [
+    {
+      "label": "Watch the film",
+      "url": "https://www.youtube.com/watch?v=uDeZ0zKgVqY"
+    },
+    {
+      "label": "Shorty Awards entry",
+      "url": "https://shortyawards.com/18th/razorpayx-trial-of-the-century"
+    },
+    {
+      "label": "Kyoorius listing",
+      "url": "https://winners.kyoorius.com/winners/2026/kca/13684-trial-of-the-century/"
+    },
+    {
+      "label": "Wall of Laughter",
+      "url": "https://razorpayxwalloflaughter.razorpay.com/"
+    },
+    {
+      "label": "Behance case study",
+      "url": "https://www.behance.net/gallery/254333269/Trial-of-the-century"
+    }
+  ],
+  "categories": [
+    "AI Film",
+    "Campaign"
+  ],
+  "external_url": ""
+}

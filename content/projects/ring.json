@@ -1,0 +1,127 @@
+{
+  "title": "Back in the Ring",
+  "slug": "ring",
+  "published": false,
+  "featured": false,
+  "order": 4,
+  "title_lines": "Back in\nthe Ring",
+  "card_title": "Back in\nthe Ring",
+  "client": "Razorpay Netbanking",
+  "year": "2026",
+  "category": "Film · Landing page · Game",
+  "role": "Creative Direction",
+  "tagline": "A fallen champion, written off by one-tap payments, gets its redemption arc.",
+  "summary": "A boxing-film trailer, a parallax landing page and a playable game, built end to end in-house to relaunch Netbanking.",
+  "cover": {
+    "image": "assets/img/p/ring-2.jpg",
+    "video": ""
+  },
+  "metrics": [],
+  "sections": [
+    {
+      "type": "text",
+      "label": "The brief",
+      "title": "Bring Netbanking back into the conversation.",
+      "body": "Netbanking had quietly powered online payments for decades. In the age of one-tap UPI and cards it felt like an old champion written off by everyone. The brief was to bring it back not as a legacy payment method, but as a trusted contender making its comeback."
+    },
+    {
+      "type": "steps",
+      "label": "Three pieces, one story",
+      "title": "Don't just watch the comeback. Play it.",
+      "items": [
+        {
+          "title": "The film",
+          "body": "Netbanking in the gym, drilling new features into knockout punches, training every round toward one goal: champion status, reclaimed."
+        },
+        {
+          "title": "The arena",
+          "body": "An interactive one-page landing page that breaks down the new tech powering the comeback, with parallax scrolling that pulls you deeper into the ring, every feature landing like a fresh combo."
+        },
+        {
+          "title": "The game",
+          "body": "Clear level after level; each opponent defeated unlocks a new feature, until the championship belt is back where it belongs."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/ring-2.jpg",
+      "caption": "100% AI-powered filmmaking",
+      "size": "wide"
+    },
+    {
+      "type": "text",
+      "label": "Production",
+      "title": "A cinematic, trailer-like experience rather than a conventional fintech film.",
+      "body": "Every character was created with AI, from environments to every visual detail, combined with art direction and a visual language designed to match international cinematic standards: a bold, premium take on a Netbanking comeback.\n\n**Add the film and screen recordings of the landing page and game in the CMS before publishing this one.**"
+    },
+    {
+      "type": "tools",
+      "label": "Stack",
+      "items": [
+        "Claude",
+        "Higgsfield",
+        "Runway",
+        "Gemini",
+        "OpenAI",
+        "Adobe",
+        "Suno"
+      ]
+    }
+  ],
+  "team": [
+    {
+      "name": "Vibhor Mathur",
+      "role": ""
+    },
+    {
+      "name": "Sourajit Sengupta",
+      "role": ""
+    },
+    {
+      "name": "Neil Dutta",
+      "role": ""
+    },
+    {
+      "name": "Rahul Girish",
+      "role": ""
+    },
+    {
+      "name": "Aastha Bhat",
+      "role": ""
+    },
+    {
+      "name": "Aadithya Narayanan S",
+      "role": ""
+    },
+    {
+      "name": "Jasleen Kaur",
+      "role": ""
+    },
+    {
+      "name": "Aditya Mohan Gupta",
+      "role": ""
+    },
+    {
+      "name": "Vidushi S.",
+      "role": ""
+    },
+    {
+      "name": "Varun Thakar",
+      "role": ""
+    }
+  ],
+  "awards": [],
+  "links": [
+    {
+      "label": "Behance case study",
+      "url": "https://www.behance.net/gallery/254798253/Back-in-the-ring-Netbanking-Comeback-Razorpay"
+    }
+  ],
+  "categories": [
+    "AI Film",
+    "Landing Page / Web",
+    "Campaign"
+  ],
+  "external_url": ""
+}

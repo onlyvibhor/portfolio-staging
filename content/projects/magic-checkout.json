@@ -1,0 +1,33 @@
+{
+  "title": "Magic Checkout Landing Page",
+  "slug": "magic-checkout",
+  "published": true,
+  "featured": false,
+  "order": 5,
+  "title_lines": "Magic Checkout Landing Page",
+  "card_title": "Magic Checkout Landing Page",
+  "client": "Razorpay",
+  "year": "",
+  "category": "",
+  "role": "",
+  "tagline": "",
+  "summary": "",
+  "categories": [
+    "Landing Page / Web"
+  ],
+  "external_url": "https://www.behance.net/gallery/254362459/Magic-Checkout-Landing-Page",
+  "cover": {
+    "image": "",
+    "video": ""
+  },
+  "metrics": [],
+  "sections": [],
+  "team": [],
+  "awards": [],
+  "links": [
+    {
+      "label": "View on Behance",
+      "url": "https://www.behance.net/gallery/254362459/Magic-Checkout-Landing-Page"
+    }
+  ]
+}

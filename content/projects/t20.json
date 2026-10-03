@@ -1,0 +1,178 @@
+{
+  "title": "Backing India's Start-Up Champions",
+  "slug": "t20",
+  "published": true,
+  "featured": true,
+  "order": 3,
+  "title_lines": "Start-Up\nChampions",
+  "card_title": "Start-Up\nChampions",
+  "client": "Razorpay × T20 World Cup",
+  "year": "2026",
+  "category": "Broadcast · Print · Social",
+  "role": "Art Direction",
+  "tagline": "India celebrates cricketers and founders equally. Only one gets a stadium. We built one for both.",
+  "summary": "81 television films, a newspaper front page and 200+ social posts for 20 founders, with no cameras, sets or lights.",
+  "cover": {
+    "image": "assets/img/p/t20-1.jpg",
+    "video": ""
+  },
+  "metrics": [
+    {
+      "value": "81",
+      "label": "television films"
+    },
+    {
+      "value": "8.1M",
+      "label": "unique viewers"
+    },
+    {
+      "value": "133%",
+      "label": "increase in purchase intent"
+    },
+    {
+      "value": "200+",
+      "label": "extended social posts"
+    }
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "label": "The idea",
+      "title": "Put founders on the screen cricket fans are already watching.",
+      "body": "The T20 World Cup season is when the nation watches together. Razorpay set out to back its start-up champions where attention already was, treating founders the way the country treats cricketers: with a stadium, a jersey and a player card."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/t20-1.jpg",
+      "caption": "Backing India's Start-Up Champions",
+      "size": "full"
+    },
+    {
+      "type": "statement",
+      "text": "Viewers didn't see an ad. They saw a founder who belonged on that screen."
+    },
+    {
+      "type": "text",
+      "label": "TV ads",
+      "title": "Designed to look like the broadcast, not interrupt it.",
+      "body": "**81 films. 20 match dates. Zero shoots.** Each founder was lit three ways, warm daylight, floodlit blue and night drama, matched to every match slot.\n\nEvery film mirrored cricket player-card aesthetics: centre-composed, sportsman poses, stadium environment."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/t20-5.jpg",
+      "caption": "Television: lower-thirds, player cards and three lighting environments",
+      "size": "wide"
+    },
+    {
+      "type": "text",
+      "label": "The pipeline",
+      "title": "20 founders. One photo each. No shoots, no studios, no waiting.",
+      "body": "A custom avatar tool, built on the Nano Banana API and Gemini AI Studio, took a single reference image and returned a full campaign visual library: sportsman poses, campaign costume, expressions tuned to each founder's personality. 4K output, one click.\n\nEvery founder walked into the campaign looking like they had always belonged on that stage."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/t20-4.jpg",
+      "caption": "The custom avatar generation tool",
+      "size": "wide"
+    },
+    {
+      "type": "text",
+      "label": "Social",
+      "title": "Every founder. Every platform. One pipeline.",
+      "body": "200+ extended social posts carried the campaign forward, including founders who did not appear in the TV spots. Drop in a founder photo and their business story and the pipeline returns a fully composed, campaign-ready post: title layouts per personality, costume, pose, lighting and background, all handled.\n\nNo individual design sessions. No back and forth. Just output."
+    },
+    {
+      "type": "tools",
+      "label": "Stack",
+      "items": [
+        "Gemini",
+        "Nano Banana",
+        "Replit",
+        "ChatGPT",
+        "Banner Bear"
+      ]
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/t20-6.jpg",
+      "caption": "Social content generation",
+      "size": "wide"
+    },
+    {
+      "type": "text",
+      "label": "Print",
+      "title": "The nation reads the paper. We put founders on the front page.",
+      "body": "The same pipeline that built the TV assets produced full-page newspaper ads: same founder, same costume, same campaign language, in the hands of the same audience the morning after the match."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/t20-7.jpg",
+      "caption": "Print: founders on the front page",
+      "size": "wide"
+    },
+    {
+      "type": "image_grid",
+      "columns": 1,
+      "images": [
+        {
+          "image": "assets/img/p/t20-3.jpg",
+          "caption": "81 ad films, 1 newspaper ad, 200+ social posts. No cameras. No sets. No lights."
+        },
+        {
+          "image": "assets/img/p/t20-2.jpg",
+          "caption": "Results"
+        }
+      ]
+    },
+    {
+      "type": "metrics",
+      "label": "The result",
+      "items": [
+        {
+          "value": "450K+",
+          "label": "CTV impressions"
+        },
+        {
+          "value": "8.1M",
+          "label": "unique viewers"
+        },
+        {
+          "value": "928K",
+          "label": "LinkedIn impressions"
+        },
+        {
+          "value": "133%",
+          "label": "purchase intent up"
+        }
+      ]
+    }
+  ],
+  "team": [
+    {
+      "name": "Vibhor Mathur",
+      "role": "Art Direction"
+    },
+    {
+      "name": "Razorpay Communication Design",
+      "role": "Design"
+    },
+    {
+      "name": "Razorpay Marketing",
+      "role": "Marketing"
+    }
+  ],
+  "awards": [],
+  "links": [
+    {
+      "label": "Behance case study",
+      "url": "https://www.behance.net/gallery/254656865/Backing-Indias-Start-Up-Champions-T20-Campaign"
+    }
+  ],
+  "categories": [
+    "AI Film",
+    "Campaign",
+    "Social",
+    "Print"
+  ],
+  "external_url": ""
+}

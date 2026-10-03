@@ -1,0 +1,119 @@
+{
+  "title": "Habitats without the life",
+  "slug": "habitats",
+  "published": true,
+  "order": 1,
+  "year": "2023",
+  "medium": [
+    "AI art"
+  ],
+  "tools": "Stable Diffusion, ControlNet",
+  "title_lines": "Habitats\nwithout\nthe life",
+  "tagline": "Landscapes that carry the silhouette of the creatures that belong in them.",
+  "summary": "AI landscapes built from animal silhouettes with Stable Diffusion and ControlNet.",
+  "cover": {
+    "image": "assets/img/lab/habitats-02.jpg",
+    "video": ""
+  },
+  "external_url": "",
+  "sections": [
+    {
+      "type": "text",
+      "label": "The idea",
+      "title": "Wildlife and habitat are one picture.",
+      "body": "A visual representation of the interconnectedness between wildlife and their habitats, and a reminder of the delicate balance of our ecosystems.\n\nUsing Stable Diffusion and its ControlNet feature, I made landscapes that blend the essence of iconic creatures with their natural environments."
+    },
+    {
+      "type": "text",
+      "label": "The method",
+      "title": "Start from a silhouette, grow a landscape.",
+      "body": "The control images are plain black-and-white silhouettes: a bear, a camel, an elephant and a rhino. Each generated landscape sits next to the shape it was built from, so you can see how the creature's outline organises the terrain."
+    },
+    {
+      "type": "image_grid",
+      "columns": "3",
+      "images": [
+        {
+          "image": "assets/img/lab/habitats-01.jpg",
+          "caption": "Bear: control silhouette"
+        },
+        {
+          "image": "assets/img/lab/habitats-02.jpg",
+          "caption": "Result"
+        },
+        {
+          "image": "assets/img/lab/habitats-03.jpg",
+          "caption": "Result"
+        }
+      ]
+    },
+    {
+      "type": "image_grid",
+      "columns": "3",
+      "images": [
+        {
+          "image": "assets/img/lab/habitats-04.jpg",
+          "caption": "Camel: control silhouette"
+        },
+        {
+          "image": "assets/img/lab/habitats-05.jpg",
+          "caption": "Result"
+        },
+        {
+          "image": "assets/img/lab/habitats-06.jpg",
+          "caption": "Result"
+        }
+      ]
+    },
+    {
+      "type": "image_grid",
+      "columns": "3",
+      "images": [
+        {
+          "image": "assets/img/lab/habitats-07.jpg",
+          "caption": "Elephant: control silhouette"
+        },
+        {
+          "image": "assets/img/lab/habitats-08.jpg",
+          "caption": "Result"
+        },
+        {
+          "image": "assets/img/lab/habitats-09.jpg",
+          "caption": "Result"
+        }
+      ]
+    },
+    {
+      "type": "image_grid",
+      "columns": "3",
+      "images": [
+        {
+          "image": "assets/img/lab/habitats-10.jpg",
+          "caption": "Rhino: control silhouette"
+        },
+        {
+          "image": "assets/img/lab/habitats-11.jpg",
+          "caption": "Result"
+        },
+        {
+          "image": "assets/img/lab/habitats-12.jpg",
+          "caption": "Result"
+        }
+      ]
+    },
+    {
+      "type": "tools",
+      "label": "Tools",
+      "items": [
+        "Stable Diffusion",
+        "ControlNet"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "Original post (Dec 2023)",
+      "url": "https://www.onlyvibhor.com/post/habitats-without-the-life"
+    }
+  ]
+}

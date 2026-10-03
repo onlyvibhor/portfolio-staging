@@ -1,0 +1,33 @@
+{
+  "title": "Magic Conversations Videos",
+  "slug": "magic-conversations",
+  "published": true,
+  "featured": false,
+  "order": 8,
+  "title_lines": "Magic Conversations Videos",
+  "card_title": "Magic Conversations Videos",
+  "client": "Razorpay",
+  "year": "",
+  "category": "",
+  "role": "",
+  "tagline": "",
+  "summary": "",
+  "categories": [
+    "Video"
+  ],
+  "external_url": "https://www.behance.net/gallery/185745413/Magic-Conversations-Videos",
+  "cover": {
+    "image": "",
+    "video": ""
+  },
+  "metrics": [],
+  "sections": [],
+  "team": [],
+  "awards": [],
+  "links": [
+    {
+      "label": "View on Behance",
+      "url": "https://www.behance.net/gallery/185745413/Magic-Conversations-Videos"
+    }
+  ]
+}

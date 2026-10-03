@@ -1,0 +1,14 @@
+# Netlify: rebuilds content/content.js from the CMS files on every publish.
+[build]
+  command = "python3 scripts/build_content.py"
+  publish = "."
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/content/content.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

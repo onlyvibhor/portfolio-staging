@@ -1,0 +1,88 @@
+{
+  "title": "Absolut Landscapes",
+  "slug": "absolut",
+  "published": true,
+  "order": 2,
+  "year": "2023",
+  "medium": [
+    "AI art"
+  ],
+  "tools": "SMUGO.ai, Stable Diffusion, ControlNet (Canny)",
+  "title_lines": "Absolut\nLandscapes",
+  "tagline": "A modern AI take on a campaign built around one bottle shape.",
+  "summary": "Landscapes shaped by the Absolut bottle, made with Stable Diffusion and ControlNet.",
+  "cover": {
+    "image": "assets/img/lab/absolut-4.jpg",
+    "video": ""
+  },
+  "external_url": "",
+  "sections": [
+    {
+      "type": "text",
+      "label": "The reference",
+      "title": "Absolut has built a campaign around one shape for decades.",
+      "body": "Absolut Vodka's long-running advertising features the distinctive shape of its bottle, promoting artistic interpretations of it. Its collaborations with visual artists date back to the 1980s, and Andy Warhol once said: *\"I love the bottle. I'd like to do something.\"*\n\nA modern AI version of the idea felt like the obvious next experiment. This is a personal exploration inspired by that campaign."
+    },
+    {
+      "type": "text",
+      "label": "The method",
+      "title": "The bottle becomes the structure.",
+      "body": "I used SMUGO.ai, a free platform with an interface close to Automatic1111 that offers Stable Diffusion's img2img, ControlNet and HiResFix.\n\nThe shape of the bottle went into ControlNet using the Canny processor, with some prompt engineering on top. The images are low resolution because I did not have access to my own PC when I made them."
+    },
+    {
+      "type": "image_grid",
+      "columns": "2",
+      "images": [
+        {
+          "image": "assets/img/lab/absolut-1.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/absolut-2.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/absolut-3.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/absolut-4.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/absolut-5.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/absolut-6.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/absolut-7.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/absolut-8.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "tools",
+      "label": "Tools",
+      "items": [
+        "SMUGO.ai",
+        "Stable Diffusion",
+        "ControlNet (Canny)",
+        "img2img",
+        "HiResFix"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "Original post (Nov 2023)",
+      "url": "https://www.onlyvibhor.com/post/stable-diffusion-ai-and-controlnet"
+    }
+  ]
+}

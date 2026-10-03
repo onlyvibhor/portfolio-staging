@@ -1,0 +1,1041 @@
+# Decap CMS configuration.
+# 1. Replace `repo` with your GitHub "owner/repo".
+# 2. Follow README.md ("Publish + edit in the browser") for the one-time login setup.
+
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/portfolio
+  branch: main
+local_backend: true
+media_folder: assets/uploads
+public_folder: /assets/uploads
+site_url: https://YOUR-SITE.netlify.app
+display_url: https://YOUR-SITE.netlify.app
+collections:
+- name: projects
+  label: Projects (case studies)
+  label_singular: Project
+  folder: content/projects
+  extension: json
+  format: json
+  create: true
+  slug: '{{fields.slug}}'
+  identifier_field: title
+  summary: '{{title}} ({{year}}) {{published}}'
+  sortable_fields:
+  - order
+  - title
+  - year
+  fields:
+  - label: Title
+    name: title
+    widget: string
+    hint: Full project name, used in the page title and SEO.
+  - label: URL slug
+    name: slug
+    widget: string
+    pattern:
+    - ^[a-z0-9-]+$
+    - Lowercase letters, numbers and hyphens only
+    hint: 'Page URL: case.html?c=<slug>. Do not change after publishing.'
+  - label: Published
+    name: published
+    widget: boolean
+    default: false
+    hint: Off = draft. Drafts are hidden from the site.
+  - label: Featured on home page
+    name: featured
+    widget: boolean
+    default: false
+  - label: Order
+    name: order
+    widget: number
+    value_type: int
+    min: 1
+    default: 10
+    hint: Lower numbers come first on the home page and in 'Next project'.
+  - label: Big title (case page; one line per row)
+    name: title_lines
+    widget: text
+    hint: Case page headline, one line per row (e.g. 'Break' then 'To Build'). Not needed for external-link projects.
+    required: false
+  - label: Card title (home gallery)
+    name: card_title
+    widget: text
+    required: false
+    hint: Defaults to the big title.
+  - label: Client
+    name: client
+    widget: string
+    required: false
+  - label: Year
+    name: year
+    widget: string
+    required: false
+  - label: Category
+    name: category
+    widget: string
+    hint: A short descriptor shown on the case page, e.g. 'AI film · Campaign'.
+    required: false
+  - label: Your role
+    name: role
+    widget: string
+    required: false
+  - label: Categories
+    name: categories
+    widget: list
+    min: 1
+    hint: 'Drives the filter chips on the Work page. Suggested: AI Film, Campaign, Video, Landing Page / Web, Brand
+      & Identity, Social, Print. Any new name becomes a new filter automatically.'
+    field:
+      label: Category
+      name: category
+      widget: string
+  - label: External link (optional)
+    name: external_url
+    widget: string
+    required: false
+    hint: If set, the project card links here (e.g. its Behance page) instead of opening a case-study page here.
+      Leave empty for a full case study.
+  - label: Tagline
+    name: tagline
+    widget: text
+    hint: One strong sentence. Shown large under the cover.
+    required: false
+  - label: Summary
+    name: summary
+    widget: text
+    required: false
+    hint: One or two sentences, used for SEO and sharing.
+  - label: Cover
+    name: cover
+    widget: object
+    fields:
+    - label: Cover image
+      name: image
+      widget: image
+      required: false
+      hint: JPG, 2400px wide max, under 600 KB. Landscape (16:9 to 16:10) works best.
+    - label: Cover video (optional)
+      name: video
+      widget: file
+      required: false
+      hint: MP4 (H.264), muted loop, 1280-1920px wide, under 8 MB. Plays instead of the image.
+  - label: Headline metrics
+    name: metrics
+    widget: list
+    required: false
+    summary: '{{fields.value}} {{fields.label}}'
+    hint: Shown big under the tagline and counted up on scroll. 3 to 5 works best.
+    fields:
+    - label: Value
+      name: value
+      widget: string
+      hint: e.g. 2.1M+ or 13% or 81
+    - label: Label
+      name: label
+      widget: string
+  - label: Case study sections
+    name: sections
+    widget: list
+    required: false
+    hint: Build the story with blocks, in order. Add as many as you need.
+    types:
+    - label: Text
+      name: text
+      widget: object
+      summary: 'Text: {{fields.label}} - {{fields.title}}'
+      fields:
+      - label: Small label
+        name: label
+        widget: string
+        required: false
+        hint: e.g. The brief, The insight
+      - label: Heading
+        name: title
+        widget: text
+        required: false
+      - label: Body
+        name: body
+        widget: markdown
+        required: false
+        buttons:
+        - bold
+        - italic
+        - link
+        - bulleted-list
+        - numbered-list
+    - label: Big statement
+      name: statement
+      widget: object
+      summary: 'Statement: {{fields.text}}'
+      fields:
+      - label: Statement
+        name: text
+        widget: text
+        hint: One huge sentence that reveals word by word.
+    - label: Image
+      name: image
+      widget: object
+      summary: 'Image: {{fields.caption}}'
+      fields:
+      - label: Image
+        name: image
+        widget: image
+      - label: Caption
+        name: caption
+        widget: string
+        required: false
+      - label: Size
+        name: size
+        widget: select
+        options:
+        - full
+        - wide
+        - narrow
+        default: wide
+        hint: full = edge to edge, wide = large, narrow = portrait/tall images
+    - label: Image grid
+      name: image_grid
+      widget: object
+      summary: 'Grid: {{fields.images.length}} images'
+      fields:
+      - label: Columns (desktop)
+        name: columns
+        widget: select
+        options:
+        - '1'
+        - '2'
+        - '3'
+        default: '2'
+      - label: Images
+        name: images
+        widget: list
+        summary: '{{fields.caption}}'
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Caption
+          name: caption
+          widget: string
+          required: false
+    - label: Video
+      name: video
+      widget: object
+      summary: 'Video: {{fields.caption}}'
+      fields:
+      - label: Video URL
+        name: url
+        widget: string
+        hint: YouTube or Vimeo link, or the path to an MP4 you uploaded.
+      - label: Poster image (optional)
+        name: poster
+        widget: image
+        required: false
+      - label: Caption
+        name: caption
+        widget: string
+        required: false
+      - label: Size
+        name: size
+        widget: select
+        options:
+        - full
+        - wide
+        default: wide
+    - label: Process steps
+      name: steps
+      widget: object
+      summary: 'Steps: {{fields.label}} ({{fields.items.length}})'
+      fields:
+      - label: Small label
+        name: label
+        widget: string
+        required: false
+      - label: Heading
+        name: title
+        widget: text
+        required: false
+      - label: Steps
+        name: items
+        widget: list
+        summary: '{{fields.title}}'
+        fields:
+        - label: Step title
+          name: title
+          widget: string
+        - label: Description
+          name: body
+          widget: text
+        - label: Tools used
+          name: tools
+          widget: string
+          required: false
+    - label: Tools / stack
+      name: tools
+      widget: object
+      summary: 'Tools: {{fields.label}}'
+      fields:
+      - label: Small label
+        name: label
+        widget: string
+        required: false
+      - label: Tools
+        name: items
+        widget: list
+        field:
+          label: Tool
+          name: tool
+          widget: string
+    - label: Metrics
+      name: metrics
+      widget: object
+      summary: 'Metrics: {{fields.label}}'
+      fields:
+      - label: Small label
+        name: label
+        widget: string
+        required: false
+      - label: Numbers
+        name: items
+        widget: list
+        summary: '{{fields.value}} {{fields.label}}'
+        fields:
+        - label: Value
+          name: value
+          widget: string
+        - label: Label
+          name: label
+          widget: string
+    - label: Quote
+      name: quote
+      widget: object
+      summary: 'Quote: {{fields.who}}'
+      fields:
+      - label: Quote
+        name: text
+        widget: text
+      - label: Who said it
+        name: who
+        widget: string
+        required: false
+  - label: Team and credits
+    name: team
+    widget: list
+    required: false
+    summary: '{{fields.name}} {{fields.role}}'
+    fields:
+    - label: Name
+      name: name
+      widget: string
+    - label: Role
+      name: role
+      widget: string
+      required: false
+  - label: Awards and recognition
+    name: awards
+    widget: list
+    required: false
+    summary: '{{fields.title}}: {{fields.detail}}'
+    fields:
+    - label: Award
+      name: title
+      widget: string
+    - label: Detail
+      name: detail
+      widget: string
+      required: false
+  - label: Links
+    name: links
+    widget: list
+    required: false
+    summary: '{{fields.label}}'
+    fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: URL
+      name: url
+      widget: string
+- name: experiments
+  label: Lab (art experiments)
+  label_singular: Experiment
+  folder: content/experiments
+  extension: json
+  format: json
+  create: true
+  slug: '{{fields.slug}}'
+  identifier_field: title
+  summary: '{{title}} ({{year}})'
+  sortable_fields:
+  - order
+  - title
+  - year
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - label: URL slug
+    name: slug
+    widget: string
+    pattern:
+    - ^[a-z0-9-]+$
+    - Lowercase letters, numbers and hyphens only
+    hint: 'Page URL: case.html?e=<slug>'
+  - label: Published
+    name: published
+    widget: boolean
+    default: false
+  - label: Order
+    name: order
+    widget: number
+    value_type: int
+    min: 1
+    default: 10
+  - label: Big title (one line per row)
+    name: title_lines
+    widget: text
+    required: false
+  - label: Year
+    name: year
+    widget: string
+    required: false
+  - label: Medium
+    name: medium
+    widget: list
+    min: 1
+    hint: Drives the filter on the Lab page. e.g. AI art, Stop motion, Found objects, Conceptual art, Type & text.
+    field:
+      label: Medium
+      name: m
+      widget: string
+  - label: Tools
+    name: tools
+    widget: string
+    required: false
+    hint: e.g. Stable Diffusion, ControlNet
+  - label: Tagline
+    name: tagline
+    widget: text
+    required: false
+  - label: Summary
+    name: summary
+    widget: text
+    required: false
+  - label: Cover
+    name: cover
+    widget: object
+    fields:
+    - label: Cover image
+      name: image
+      widget: image
+      required: false
+      hint: Square works best (1:1), JPG, under 600 KB.
+    - label: Cover video (optional)
+      name: video
+      widget: file
+      required: false
+  - label: External link (optional)
+    name: external_url
+    widget: string
+    required: false
+    hint: If set, the card links out instead of opening a page here.
+  - label: Case study sections
+    name: sections
+    widget: list
+    required: false
+    hint: Build the story with blocks, in order. Add as many as you need.
+    types:
+    - label: Text
+      name: text
+      widget: object
+      summary: 'Text: {{fields.label}} - {{fields.title}}'
+      fields:
+      - label: Small label
+        name: label
+        widget: string
+        required: false
+        hint: e.g. The brief, The insight
+      - label: Heading
+        name: title
+        widget: text
+        required: false
+      - label: Body
+        name: body
+        widget: markdown
+        required: false
+        buttons:
+        - bold
+        - italic
+        - link
+        - bulleted-list
+        - numbered-list
+    - label: Big statement
+      name: statement
+      widget: object
+      summary: 'Statement: {{fields.text}}'
+      fields:
+      - label: Statement
+        name: text
+        widget: text
+        hint: One huge sentence that reveals word by word.
+    - label: Image
+      name: image
+      widget: object
+      summary: 'Image: {{fields.caption}}'
+      fields:
+      - label: Image
+        name: image
+        widget: image
+      - label: Caption
+        name: caption
+        widget: string
+        required: false
+      - label: Size
+        name: size
+        widget: select
+        options:
+        - full
+        - wide
+        - narrow
+        default: wide
+        hint: full = edge to edge, wide = large, narrow = portrait/tall images
+    - label: Image grid
+      name: image_grid
+      widget: object
+      summary: 'Grid: {{fields.images.length}} images'
+      fields:
+      - label: Columns (desktop)
+        name: columns
+        widget: select
+        options:
+        - '1'
+        - '2'
+        - '3'
+        default: '2'
+      - label: Images
+        name: images
+        widget: list
+        summary: '{{fields.caption}}'
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Caption
+          name: caption
+          widget: string
+          required: false
+    - label: Video
+      name: video
+      widget: object
+      summary: 'Video: {{fields.caption}}'
+      fields:
+      - label: Video URL
+        name: url
+        widget: string
+        hint: YouTube or Vimeo link, or the path to an MP4 you uploaded.
+      - label: Poster image (optional)
+        name: poster
+        widget: image
+        required: false
+      - label: Caption
+        name: caption
+        widget: string
+        required: false
+      - label: Size
+        name: size
+        widget: select
+        options:
+        - full
+        - wide
+        default: wide
+    - label: Process steps
+      name: steps
+      widget: object
+      summary: 'Steps: {{fields.label}} ({{fields.items.length}})'
+      fields:
+      - label: Small label
+        name: label
+        widget: string
+        required: false
+      - label: Heading
+        name: title
+        widget: text
+        required: false
+      - label: Steps
+        name: items
+        widget: list
+        summary: '{{fields.title}}'
+        fields:
+        - label: Step title
+          name: title
+          widget: string
+        - label: Description
+          name: body
+          widget: text
+        - label: Tools used
+          name: tools
+          widget: string
+          required: false
+    - label: Tools / stack
+      name: tools
+      widget: object
+      summary: 'Tools: {{fields.label}}'
+      fields:
+      - label: Small label
+        name: label
+        widget: string
+        required: false
+      - label: Tools
+        name: items
+        widget: list
+        field:
+          label: Tool
+          name: tool
+          widget: string
+    - label: Metrics
+      name: metrics
+      widget: object
+      summary: 'Metrics: {{fields.label}}'
+      fields:
+      - label: Small label
+        name: label
+        widget: string
+        required: false
+      - label: Numbers
+        name: items
+        widget: list
+        summary: '{{fields.value}} {{fields.label}}'
+        fields:
+        - label: Value
+          name: value
+          widget: string
+        - label: Label
+          name: label
+          widget: string
+    - label: Quote
+      name: quote
+      widget: object
+      summary: 'Quote: {{fields.who}}'
+      fields:
+      - label: Quote
+        name: text
+        widget: text
+      - label: Who said it
+        name: who
+        widget: string
+        required: false
+  - label: Links
+    name: links
+    widget: list
+    required: false
+    summary: '{{fields.label}}'
+    fields:
+    - label: Label
+      name: label
+      widget: string
+    - label: URL
+      name: url
+      widget: string
+- name: site
+  label: Site content
+  files:
+  - name: site
+    label: Home page and site settings
+    file: content/site.json
+    format: json
+    fields:
+    - label: SEO
+      name: meta
+      widget: object
+      fields:
+      - label: Page title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: text
+    - label: Hero
+      name: hero
+      widget: object
+      fields:
+      - label: Name (first line)
+        name: name_line_1
+        widget: string
+      - label: Name (second line)
+        name: name_line_2
+        widget: string
+      - label: Text (top left)
+        name: meta_left
+        widget: text
+      - label: Text (top right)
+        name: meta_right
+        widget: text
+      - label: Slideshow images
+        name: slides
+        widget: list
+        summary: '{{fields.image}}'
+        hint: Landscape or portrait crops of your best work. The first one is shown first.
+        fields:
+        - label: Image
+          name: image
+          widget: image
+    - label: Statement
+      name: statement
+      widget: object
+      hint: Wrap words in *asterisks* to make them italic serif.
+      fields:
+      - label: Big statement
+        name: text
+        widget: text
+      - label: Left note
+        name: left
+        widget: string
+      - label: Right note
+        name: right
+        widget: string
+    - label: Work section (home)
+      name: work
+      widget: object
+      fields:
+      - label: Section title
+        name: title
+        widget: string
+      - label: '''More'' panel title'
+        name: more_title
+        widget: string
+      - label: '''All work'' link label'
+        name: all_label
+        widget: string
+    - label: AI toolkit
+      name: tools
+      widget: object
+      fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Subtitle
+        name: sub
+        widget: text
+      - label: Tools
+        name: items
+        widget: list
+        summary: '{{fields.name}}'
+        fields:
+        - label: Name
+          name: name
+          widget: string
+        - label: Description
+          name: desc
+          widget: string
+        - label: Stack (shown on hover)
+          name: stack
+          widget: string
+          required: false
+    - label: Lab teaser (home)
+      name: lab
+      widget: object
+      fields:
+      - label: Title
+        name: title
+        widget: string
+        hint: Wrap a word in *asterisks* for the italic accent.
+      - label: Subtitle
+        name: sub
+        widget: text
+      - label: Button label
+        name: label
+        widget: string
+    - label: About teaser (home)
+      name: about_teaser
+      widget: object
+      fields:
+      - label: Intro line
+        name: lead
+        widget: text
+      - label: Button label
+        name: label
+        widget: string
+      - label: Portrait
+        name: portrait
+        widget: image
+      - label: Caption left
+        name: caption_left
+        widget: string
+      - label: Caption right
+        name: caption_right
+        widget: string
+    - label: Recognition
+      name: recognition
+      widget: object
+      fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Awards
+        name: items
+        widget: list
+        summary: '{{fields.name}}'
+        fields:
+        - label: Award
+          name: name
+          widget: string
+        - label: Detail
+          name: detail
+          widget: string
+        - label: Year
+          name: year
+          widget: string
+    - label: Contact
+      name: contact
+      widget: object
+      fields:
+      - label: Headline
+        name: headline
+        widget: text
+      - label: Email
+        name: email
+        widget: string
+      - label: Links
+        name: links
+        widget: list
+        summary: '{{fields.label}}'
+        fields:
+        - label: Label
+          name: label
+          widget: string
+        - label: URL
+          name: url
+          widget: string
+  - name: about
+    label: About page
+    file: content/about.json
+    format: json
+    fields:
+    - label: SEO
+      name: meta
+      widget: object
+      fields:
+      - label: Page title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: text
+    - label: Small label
+      name: label
+      widget: string
+    - label: Headline
+      name: headline
+      widget: text
+      hint: Wrap a word in *asterisks* for the italic accent.
+    - label: Portrait
+      name: portrait
+      widget: image
+    - label: Portrait caption
+      name: portrait_caption
+      widget: string
+    - label: Quick facts
+      name: facts
+      widget: list
+      fields:
+      - label: Label
+        name: label
+        widget: string
+      - label: Value
+        name: value
+        widget: string
+      summary: '{{fields.label}}'
+    - label: Big numbers
+      name: numbers
+      widget: list
+      fields:
+      - label: Value
+        name: value
+        widget: string
+        hint: e.g. 11 or 10+
+      - label: Label
+        name: label
+        widget: string
+      summary: '{{fields.value}} {{fields.label}}'
+    - label: Intro paragraphs
+      name: intro
+      widget: list
+      field:
+        label: Paragraph
+        name: p
+        widget: text
+      hint: Wrap words in *asterisks* for italics.
+    - label: Path (timeline)
+      name: timeline
+      widget: object
+      fields:
+      - label: Section label
+        name: label
+        widget: string
+      - label: Entries
+        name: items
+        widget: list
+        fields:
+        - label: Years
+          name: years
+          widget: string
+        - label: Organisation
+          name: org
+          widget: string
+        - label: Role
+          name: role
+          widget: string
+        - label: Note
+          name: note
+          widget: text
+        summary: '{{fields.org}}'
+    - label: Creative leadership
+      name: leadership
+      widget: object
+      fields:
+      - label: Section label
+        name: label
+        widget: string
+      - label: Heading
+        name: title
+        widget: string
+      - label: Intro
+        name: intro
+        widget: text
+      - label: Points
+        name: items
+        widget: list
+        fields:
+        - label: Title
+          name: title
+          widget: string
+        - label: Body
+          name: body
+          widget: text
+        summary: '{{fields.title}}'
+      - label: Source link
+        name: source
+        widget: object
+        fields:
+        - label: Label
+          name: label
+          widget: string
+        - label: URL
+          name: url
+          widget: string
+    - label: Studio (after hours)
+      name: studio
+      widget: object
+      fields:
+      - label: Section label
+        name: label
+        widget: string
+      - label: Heading
+        name: title
+        widget: string
+      - label: Text (blank line between paragraphs)
+        name: body
+        widget: text
+      - label: Link
+        name: link
+        widget: object
+        fields:
+        - label: Label
+          name: label
+          widget: string
+        - label: URL
+          name: url
+          widget: string
+    - label: Teaching and mentoring
+      name: teaching
+      widget: object
+      fields:
+      - label: Section label
+        name: label
+        widget: string
+      - label: Items
+        name: items
+        widget: list
+        fields:
+        - label: Name
+          name: name
+          widget: string
+        - label: Detail
+          name: detail
+          widget: string
+        summary: '{{fields.name}}'
+      - label: Quote
+        name: quote
+        widget: object
+        fields:
+        - label: Quote
+          name: text
+          widget: text
+        - label: Who
+          name: who
+          widget: string
+    - label: Recognition
+      name: recognition
+      widget: object
+      fields:
+      - label: Section label
+        name: label
+        widget: string
+      - label: Awards
+        name: items
+        widget: list
+        fields:
+        - label: Award
+          name: name
+          widget: string
+        - label: Detail
+          name: detail
+          widget: string
+        - label: Work
+          name: work
+          widget: string
+        - label: Year
+          name: year
+          widget: string
+        summary: '{{fields.name}}'
+    - label: Writing
+      name: writing
+      widget: object
+      fields:
+      - label: Section label
+        name: label
+        widget: string
+      - label: Posts
+        name: items
+        widget: list
+        fields:
+        - label: Title
+          name: title
+          widget: string
+        - label: Date
+          name: date
+          widget: string
+        - label: URL
+          name: url
+          widget: string
+        summary: '{{fields.title}}'
+    - label: Elsewhere
+      name: elsewhere
+      widget: object
+      fields:
+      - label: Section label
+        name: label
+        widget: string
+      - label: Links
+        name: items
+        widget: list
+        fields:
+        - label: Label
+          name: label
+          widget: string
+        - label: URL
+          name: url
+          widget: string
+        summary: '{{fields.label}}'
