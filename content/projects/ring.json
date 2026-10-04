@@ -1,8 +1,8 @@
 {
   "title": "Back in the Ring",
   "slug": "ring",
-  "published": false,
-  "featured": false,
+  "published": true,
+  "featured": true,
   "order": 4,
   "title_lines": "Back in\nthe Ring",
   "card_title": "Back in\nthe Ring",
@@ -13,7 +13,7 @@
   "tagline": "A fallen champion, written off by one-tap payments, gets its redemption arc.",
   "summary": "A boxing-film trailer, a parallax landing page and a playable game, built end to end in-house to relaunch Netbanking.",
   "cover": {
-    "image": "assets/img/p/ring-2.jpg",
+    "image": "assets/img/p/ring-cover.jpg",
     "video": ""
   },
   "metrics": [],
@@ -53,7 +53,7 @@
       "type": "text",
       "label": "Production",
       "title": "A cinematic, trailer-like experience rather than a conventional fintech film.",
-      "body": "Every character was created with AI, from environments to every visual detail, combined with art direction and a visual language designed to match international cinematic standards: a bold, premium take on a Netbanking comeback.\n\n**Add the film and screen recordings of the landing page and game in the CMS before publishing this one.**"
+      "body": "Every character was created with AI, from environments to every visual detail, combined with art direction and a visual language designed to match international cinematic standards: a bold, premium take on a Netbanking comeback."
     },
     {
       "type": "tools",
@@ -122,6 +122,5 @@
     "AI Film",
     "Landing Page / Web",
     "Campaign"
-  ],
-  "external_url": ""
+  ]
 }

@@ -23,7 +23,7 @@
     return '<p>' + esc(s).replace(/\n\n+/g, '</p><p>') + '</p>';
   };
   const rand = (a, b) => a + Math.random() * (b - a);
-  const projHref = (p, kind) => (p.external_url ? p.external_url : `case.html?${kind === 'e' ? 'e' : 'c'}=${encodeURIComponent(p.slug)}`);
+  const projHref = (p, kind) => `case.html?${kind === 'e' ? 'e' : 'c'}=${encodeURIComponent(p.slug)}`;
   const pad2 = (n) => String(n).padStart(2, '0');
   const clock = () => new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Kolkata' }).format(new Date());
 
@@ -126,12 +126,13 @@
   const NAV = [
     ['Work', 'work.html', 'work'],
     ['Lab', 'lab.html', 'lab'],
-    ['AI Toolkit', 'index.html#toolkit', 'toolkit'],
+    ['AI Toolkit', 'toolkit.html', 'toolkit'],
+    ['Mentorship', 'mentorship.html', 'mentorship'],
     ['About', 'about.html', 'about'],
     ['Contact', '#contact', 'contact']
   ];
   const isExp = new URLSearchParams(location.search).has('e');
-  const navCurrent = { work: 'work', case: isExp ? 'lab' : 'work', lab: 'lab', about: 'about' }[page];
+  const navCurrent = { work: 'work', case: isExp ? 'lab' : 'work', lab: 'lab', about: 'about', toolkit: 'toolkit', mentorship: 'mentorship' }[page];
   const navHTML = (cls) => NAV.map(([label, href, key]) => `<a href="${href}"${key === navCurrent ? ' class="on" aria-current="page"' : ''}>${label}</a>`).join('');
 
   document.body.insertAdjacentHTML('afterbegin', `

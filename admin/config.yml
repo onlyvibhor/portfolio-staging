@@ -91,12 +91,6 @@ collections:
       label: Category
       name: category
       widget: string
-  - label: External link (optional)
-    name: external_url
-    widget: string
-    required: false
-    hint: If set, the project card links here (e.g. its Behance page) instead of opening a case-study page here.
-      Leave empty for a full case study.
   - label: Tagline
     name: tagline
     widget: text
@@ -244,6 +238,12 @@ collections:
         - full
         - wide
         default: wide
+      - label: Silent loop (autoplay, muted)
+        name: loop
+        widget: boolean
+        default: false
+        required: false
+        hint: 'Use for short MP4 clips: they loop without controls.'
     - label: Process steps
       name: steps
       widget: object
@@ -320,6 +320,32 @@ collections:
         name: who
         widget: string
         required: false
+    - label: Looping clips
+      name: clips
+      widget: object
+      summary: 'Clips: {{fields.columns}} columns'
+      fields:
+      - label: Columns
+        name: columns
+        widget: select
+        options:
+        - '1'
+        - '2'
+        - '3'
+        default: '2'
+      - label: Clips
+        name: clips
+        widget: list
+        fields:
+        - label: MP4 file
+          name: video
+          widget: file
+        - label: Caption
+          name: caption
+          widget: string
+          required: false
+        summary: '{{fields.caption}}'
+        hint: Short silent MP4 loops (under 1.5 MB each work best).
   - label: Team and credits
     name: team
     widget: list
@@ -436,11 +462,6 @@ collections:
       name: video
       widget: file
       required: false
-  - label: External link (optional)
-    name: external_url
-    widget: string
-    required: false
-    hint: If set, the card links out instead of opening a page here.
   - label: Case study sections
     name: sections
     widget: list
@@ -550,6 +571,12 @@ collections:
         - full
         - wide
         default: wide
+      - label: Silent loop (autoplay, muted)
+        name: loop
+        widget: boolean
+        default: false
+        required: false
+        hint: 'Use for short MP4 clips: they loop without controls.'
     - label: Process steps
       name: steps
       widget: object
@@ -626,6 +653,32 @@ collections:
         name: who
         widget: string
         required: false
+    - label: Looping clips
+      name: clips
+      widget: object
+      summary: 'Clips: {{fields.columns}} columns'
+      fields:
+      - label: Columns
+        name: columns
+        widget: select
+        options:
+        - '1'
+        - '2'
+        - '3'
+        default: '2'
+      - label: Clips
+        name: clips
+        widget: list
+        fields:
+        - label: MP4 file
+          name: video
+          widget: file
+        - label: Caption
+          name: caption
+          widget: string
+          required: false
+        summary: '{{fields.caption}}'
+        hint: Short silent MP4 loops (under 1.5 MB each work best).
   - label: Links
     name: links
     widget: list
@@ -808,6 +861,453 @@ collections:
         - label: URL
           name: url
           widget: string
+  - name: toolkit
+    label: AI Toolkit page
+    file: content/toolkit.json
+    format: json
+    fields:
+    - label: Page meta
+      name: meta
+      widget: object
+      fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: text
+    - label: Small label
+      name: label
+      widget: string
+    - label: Headline (use *asterisks* for the accent)
+      name: headline
+      widget: text
+    - label: Intro
+      name: intro
+      widget: text
+    - label: Principles
+      name: principles
+      widget: list
+      fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Body
+        name: body
+        widget: text
+      summary: '{{fields.title}}'
+    - label: Why build tools (four pillars)
+      name: pillars
+      widget: list
+      fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Body
+        name: body
+        widget: text
+      - label: Proof points
+        name: proof
+        widget: list
+        fields:
+        - label: Label
+          name: label
+          widget: string
+        - label: Detail
+          name: detail
+          widget: string
+        - label: Link (optional)
+          name: href
+          widget: string
+          required: false
+          hint: case.html?c=slug for a project, or a full URL.
+        summary: '{{fields.label}}'
+      summary: '{{fields.title}}'
+    - label: 'Tools: heading'
+      name: tools_head
+      widget: object
+      fields:
+      - label: Label
+        name: label
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Body
+        name: body
+        widget: text
+    - label: Tools
+      name: tools
+      widget: list
+      fields:
+      - label: Name
+        name: name
+        widget: string
+      - label: Tag (e.g. For film and ads)
+        name: tag
+        widget: string
+      - label: Description
+        name: body
+        widget: text
+      - label: What it enables
+        name: bullets
+        widget: list
+        field:
+          label: What it enables
+          name: v
+          widget: string
+      - label: Built with
+        name: built_with
+        widget: string
+        required: false
+      - label: Interface screenshot
+        name: hero
+        widget: image
+        required: false
+      - label: Result images
+        name: gallery
+        widget: list
+        required: false
+        field:
+          label: Image
+          name: i
+          widget: image
+      summary: '{{fields.name}}'
+    - label: Interactive web
+      name: interactive
+      widget: object
+      fields:
+      - label: Label
+        name: label
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Body
+        name: body
+        widget: text
+      - label: Pieces
+        name: items
+        widget: list
+        fields:
+        - label: Title
+          name: title
+          widget: string
+        - label: Tag
+          name: tag
+          widget: string
+        - label: Description
+          name: body
+          widget: text
+        - label: Image
+          name: image
+          widget: image
+          required: false
+        - label: Link (optional)
+          name: href
+          widget: string
+          required: false
+          hint: case.html?c=slug or a full URL
+        summary: '{{fields.title}}'
+    - label: Learning
+      name: learn
+      widget: object
+      fields:
+      - label: Label
+        name: label
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Body
+        name: body
+        widget: text
+      - label: Talks, workshops, mentoring
+        name: items
+        widget: list
+        fields:
+        - label: Name
+          name: name
+          widget: string
+        - label: Detail
+          name: detail
+          widget: string
+        summary: '{{fields.name}}'
+      - label: Poster images
+        name: images
+        widget: list
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Caption
+          name: caption
+          widget: string
+        summary: '{{fields.caption}}'
+      - label: Wide photo
+        name: wide
+        widget: image
+        required: false
+      - label: Link (optional)
+        name: link
+        widget: object
+        fields:
+        - label: Label
+          name: label
+          widget: string
+        - label: URL
+          name: href
+          widget: string
+    - label: Stack
+      name: stack
+      widget: object
+      fields:
+      - label: Label
+        name: label
+        widget: string
+      - label: Tools
+        name: items
+        widget: list
+        field:
+          label: Tools
+          name: v
+          widget: string
+    - label: Team note
+      name: team
+      widget: object
+      fields:
+      - label: Label
+        name: label
+        widget: string
+      - label: Text
+        name: body
+        widget: text
+    - label: Closing link
+      name: cta
+      widget: object
+      fields:
+      - label: Label
+        name: label
+        widget: string
+      - label: Link
+        name: href
+        widget: string
+  - name: mentorship
+    label: Mentorship page
+    file: content/mentorship.json
+    format: json
+    fields:
+    - label: Page meta
+      name: meta
+      widget: object
+      fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Description
+        name: description
+        widget: text
+    - label: Small label
+      name: label
+      widget: string
+    - label: Headline (use *asterisks* for the accent)
+      name: headline
+      widget: text
+    - label: Intro
+      name: intro
+      widget: text
+    - label: Home page teaser
+      name: teaser
+      widget: object
+      fields:
+      - label: Label
+        name: label
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Body
+        name: body
+        widget: text
+      - label: Button label
+        name: cta
+        widget: string
+    - label: Numbers
+      name: numbers
+      widget: list
+      fields:
+      - label: Value
+        name: value
+        widget: string
+      - label: Label
+        name: label
+        widget: string
+      summary: '{{fields.value}} {{fields.label}}'
+    - label: Numbers note
+      name: numbers_note
+      widget: string
+      required: false
+    - label: One to one
+      name: oneonone
+      widget: object
+      fields:
+      - label: Label
+        name: label
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Body
+        name: body
+        widget: text
+      - label: Topics heading
+        name: topics_label
+        widget: string
+      - label: Topics
+        name: topics
+        widget: list
+        field:
+          label: Topics
+          name: v
+          widget: string
+      - label: Button
+        name: cta
+        widget: object
+        fields:
+        - label: Label
+          name: label
+          widget: string
+        - label: Link
+          name: href
+          widget: string
+    - label: Mentee voices
+      name: voices
+      widget: object
+      fields:
+      - label: Label
+        name: label
+        widget: string
+      - label: Note
+        name: note
+        widget: string
+        required: false
+      - label: Reviews
+        name: items
+        widget: list
+        fields:
+        - label: Text
+          name: text
+          widget: text
+        - label: Who
+          name: who
+          widget: string
+        summary: '{{fields.who}}'
+    - label: Talks and workshops
+      name: events
+      widget: object
+      fields:
+      - label: Label
+        name: label
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Body
+        name: body
+        widget: text
+      - label: Events
+        name: items
+        widget: list
+        fields:
+        - label: Title
+          name: title
+          widget: string
+        - label: Host
+          name: host
+          widget: string
+        - label: Type (Webinar, Workshop, Podcast...)
+          name: type
+          widget: string
+        - label: Date
+          name: date
+          widget: string
+          required: false
+        - label: Detail
+          name: detail
+          widget: string
+        - label: Poster / photo
+          name: image
+          widget: image
+          required: false
+        summary: '{{fields.host}}: {{fields.title}}'
+    - label: Photo gallery
+      name: gallery
+      widget: object
+      fields:
+      - label: Label
+        name: label
+        widget: string
+      - label: Photos
+        name: items
+        widget: list
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Caption
+          name: caption
+          widget: string
+        - label: Tall (portrait) photo
+          name: tall
+          widget: boolean
+          default: false
+          required: false
+        summary: '{{fields.caption}}'
+    - label: Further reading
+      name: reading
+      widget: object
+      fields:
+      - label: Label
+        name: label
+        widget: string
+      - label: Posts
+        name: items
+        widget: list
+        fields:
+        - label: Title
+          name: title
+          widget: string
+        - label: Date
+          name: date
+          widget: string
+        - label: URL
+          name: url
+          widget: string
+        summary: '{{fields.title}}'
+    - label: Closing call to action
+      name: cta
+      widget: object
+      fields:
+      - label: Label
+        name: label
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Body
+        name: body
+        widget: text
+      - label: Buttons
+        name: buttons
+        widget: list
+        fields:
+        - label: Label
+          name: label
+          widget: string
+        - label: Link
+          name: href
+          widget: string
+        summary: '{{fields.label}}'
   - name: about
     label: About page
     file: content/about.json
@@ -975,6 +1475,16 @@ collections:
           widget: text
         - label: Who
           name: who
+          widget: string
+      - label: Link under the list (optional)
+        name: link
+        widget: object
+        fields:
+        - label: Label
+          name: label
+          widget: string
+        - label: URL
+          name: url
           widget: string
     - label: Recognition
       name: recognition

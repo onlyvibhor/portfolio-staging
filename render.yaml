@@ -19,3 +19,9 @@ services:
       - type: rewrite
         source: /about
         destination: /about.html
+      - type: rewrite
+        source: /toolkit
+        destination: /toolkit.html
+      - type: rewrite
+        source: /mentorship
+        destination: /mentorship.html

@@ -1,33 +1,115 @@
 {
-  "title": "Magic Checkout Landing Page",
-  "slug": "magic-checkout",
   "published": true,
-  "featured": false,
+  "featured": true,
+  "title": "Magic Checkout Landing Page",
   "order": 5,
-  "title_lines": "Magic Checkout Landing Page",
-  "card_title": "Magic Checkout Landing Page",
+  "title_lines": "Magic\nCheckout",
+  "card_title": "Magic\nCheckout",
   "client": "Razorpay",
-  "year": "",
-  "category": "",
-  "role": "",
-  "tagline": "",
-  "summary": "",
+  "year": "2026",
+  "category": "Landing page · Motion",
+  "role": "Art Direction · Web Design",
+  "tagline": "It's not just a checkout. It's engineered magic.",
+  "summary": "An immersive landing page that lets visitors experience what Magic Checkout does, instead of reading a list of features.",
   "categories": [
-    "Landing Page / Web"
+    "Landing Page / Web",
+    "Motion"
   ],
-  "external_url": "https://www.behance.net/gallery/254362459/Magic-Checkout-Landing-Page",
   "cover": {
-    "image": "",
+    "image": "assets/img/p/magic-cover.jpg",
     "video": ""
   },
   "metrics": [],
-  "sections": [],
-  "team": [],
+  "sections": [
+    {
+      "type": "text",
+      "label": "The idea",
+      "title": "Don't explain checkout. Let people feel it.",
+      "body": "The Razorpay Magic Checkout landing page turns a complex checkout technology into an immersive magical experience. Instead of simply explaining features, the page lets you experience what Magic Checkout does, making every step of checkout feel effortless and almost automatic."
+    },
+    {
+      "type": "video",
+      "url": "assets/vid/magic-02.mp4",
+      "poster": "",
+      "caption": "The hero: \"It's Not Just A Checkout. It's Engineered Magic.\"",
+      "size": "wide",
+      "loop": true
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/magic-page.jpg",
+      "caption": "The landing page: the hero, the missing piece in D2C growth, and the first of four scenes",
+      "size": "wide"
+    },
+    {
+      "type": "text",
+      "label": "Four scenes",
+      "title": "One product story, four ways in.",
+      "body": "The page is organised around four stories a merchant cares about: **Boost Conversion**, **COD Control**, **Improve Purchase Intent** and **Build Loyalty**. Each plays out on a floating island with a mock storefront, so the product screens sit inside a world rather than on a slide."
+    },
+    {
+      "type": "statement",
+      "text": "Magic on the surface. Science underneath."
+    },
+    {
+      "type": "text",
+      "label": "Magic → Science",
+      "title": "From the magic you see to the science behind it.",
+      "body": "The experience shifts from an immersive magical world to a technical wireframe, revealing the data, logic and systems powering the seamless checkout experience."
+    },
+    {
+      "type": "video",
+      "url": "assets/vid/magic-07.mp4",
+      "poster": "",
+      "caption": "Signal-based nudges and gamified coupons, shown as the system behind the scene",
+      "size": "wide",
+      "loop": true
+    },
+    {
+      "type": "text",
+      "label": "Micro animations",
+      "title": "Making every interaction *feel alive*.",
+      "body": "A series of subtle micro-animations bring the interface and its features to life, adding moments of delight while making complex interactions feel intuitive and effortless."
+    },
+    {
+      "type": "clips",
+      "columns": 2,
+      "clips": [
+        {
+          "video": "assets/vid/magic-11.mp4",
+          "caption": "Add to cart, Buy Now"
+        },
+        {
+          "video": "assets/vid/magic-12.mp4",
+          "caption": "Coupons and payment offers"
+        },
+        {
+          "video": "assets/vid/magic-14.mp4",
+          "caption": "Payment options, cash on delivery"
+        },
+        {
+          "video": "assets/vid/magic-15.mp4",
+          "caption": "Saved offers and recommended methods"
+        }
+      ]
+    }
+  ],
+  "team": [
+    {
+      "name": "Vibhor Mathur",
+      "role": ""
+    },
+    {
+      "name": "Rahul Girish",
+      "role": ""
+    }
+  ],
   "awards": [],
   "links": [
     {
-      "label": "View on Behance",
+      "label": "Behance case study",
       "url": "https://www.behance.net/gallery/254362459/Magic-Checkout-Landing-Page"
     }
-  ]
+  ],
+  "slug": "magic-checkout"
 }

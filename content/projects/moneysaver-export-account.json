@@ -1,34 +1,95 @@
 {
-  "title": "MoneySaver Export Account",
-  "slug": "moneysaver-export-account",
   "published": true,
   "featured": false,
+  "title": "MoneySaver Export Account",
   "order": 10,
-  "title_lines": "MoneySaver Export Account",
-  "card_title": "MoneySaver Export Account",
-  "client": "Razorpay",
-  "year": "",
-  "category": "",
-  "role": "",
-  "tagline": "",
-  "summary": "",
+  "title_lines": "MoneySaver\nExport Account",
+  "card_title": "MoneySaver\nExport Account",
+  "client": "Razorpay International Payments",
+  "year": "2023",
+  "category": "AI launch video",
+  "role": "Campaign lead",
+  "tagline": "India's first PA/PG with an OPGSP compliant solution, launched with an AI-made film.",
+  "summary": "A launch video and digital media strategy for the MoneySaver Export Account, made entirely with AI design tools.",
   "categories": [
     "Campaign",
     "AI Film"
   ],
-  "external_url": "https://www.behance.net/gallery/185754027/MoneySaver-Export-Account-AI-Gen-campaign",
   "cover": {
-    "image": "",
+    "image": "assets/img/p/money-hero.jpg",
     "video": ""
   },
-  "metrics": [],
-  "sections": [],
-  "team": [],
+  "metrics": [
+    {
+      "value": "438K+",
+      "label": "views on Razorpay's social channels"
+    },
+    {
+      "value": "29.1M",
+      "label": "media reach across 32+ stories"
+    },
+    {
+      "value": "70+",
+      "label": "high-quality leads"
+    },
+    {
+      "value": "313K",
+      "label": "impressions on the behind-the-scenes post"
+    }
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "label": "The brief",
+      "title": "A high-stakes launch for Indian exporters.",
+      "body": "A launch campaign for the MoneySaver Export Account, marking India's first PA/PG with an OPGSP compliant solution, exclusively for Indian exporters. The project covered an innovative video and a comprehensive digital media strategy, positioning the product as a pivotal solution for exporters."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/money-hero.jpg",
+      "caption": "MoneySaver Export Account: India's first Smart Account for receiving international payments with ease",
+      "size": "full"
+    },
+    {
+      "type": "text",
+      "label": "The film",
+      "title": "A first in the industry, crafted entirely with AI-based design tools.",
+      "body": "The video was made with Midjourney, Studio D-ID and ElevenLabs. The goal was to capture the essence of the product: a platform that lets exporters open a bank account in their choice of country in under 5 seconds and save up to 50% on international transfer charges. Motion graphics and kinetic animation carried those points."
+    },
+    {
+      "type": "tools",
+      "label": "Stack",
+      "items": [
+        "Midjourney",
+        "Studio D-ID",
+        "ElevenLabs"
+      ]
+    },
+    {
+      "type": "text",
+      "label": "Campaign impact",
+      "title": "Razorpay's biggest product launch on its own platforms.",
+      "body": "Over 438K views on Razorpay's social channels made it the biggest product launch there. Media coverage, including an exclusive interview on MoneyControl, led to 32+ stories and a reach of 29.1 million. The launch blog saw an 89.62% engagement rate with around 3K views, and the campaign generated over 70 high-quality leads."
+    },
+    {
+      "type": "text",
+      "label": "Behind the scenes",
+      "title": "Showing the AI workflow in the open.",
+      "body": "A behind-the-scenes video detailed the use of AI tools in the campaign's creation. On LinkedIn that post received 1.2K likes, 83 comments and 33 reposts, with 313,315 impressions, and comments from the industry highlighted AI as a game-changer in marketing and B2B payments."
+    }
+  ],
+  "team": [
+    {
+      "name": "Vibhor Mathur",
+      "role": "Campaign lead"
+    }
+  ],
   "awards": [],
   "links": [
     {
-      "label": "View on Behance",
+      "label": "Behance case study",
       "url": "https://www.behance.net/gallery/185754027/MoneySaver-Export-Account-AI-Gen-campaign"
     }
-  ]
+  ],
+  "slug": "moneysaver-export-account"
 }

@@ -8,15 +8,36 @@
   "portrait": "assets/img/profile.png",
   "portrait_caption": "Jaipur → Bengaluru",
   "facts": [
-    { "label": "Currently", "value": "Communication Design Senior Manager, Razorpay" },
-    { "label": "Based", "value": "Bengaluru, India. Roots in Jaipur." },
-    { "label": "Education", "value": "B.Tech, Computer Engineering. Government Engineering College Bikaner, 2010 to 2014." },
-    { "label": "Languages", "value": "English, Hindi" }
+    {
+      "label": "Currently",
+      "value": "Communication Design Senior Manager, Razorpay"
+    },
+    {
+      "label": "Based",
+      "value": "Bengaluru, India. Roots in Jaipur."
+    },
+    {
+      "label": "Education",
+      "value": "B.Tech, Computer Engineering. Government Engineering College Bikaner, 2010 to 2014."
+    },
+    {
+      "label": "Languages",
+      "value": "English, Hindi"
+    }
   ],
   "numbers": [
-    { "value": "11", "label": "years in consumer commerce and fintech, since March 2015" },
-    { "value": "10+", "label": "product lines and business units on one deck design language" },
-    { "value": "4", "label": "AI production tools built in-house and used on live campaigns" }
+    {
+      "value": "11",
+      "label": "years in consumer commerce and fintech, since March 2015"
+    },
+    {
+      "value": "10+",
+      "label": "product lines and business units on one deck design language"
+    },
+    {
+      "value": "4",
+      "label": "AI production tools built in-house and used on live campaigns"
+    }
   ],
   "intro": [
     "I'm a self-taught designer from Jaipur with a degree in computer engineering. By day I make advertising and brand narratives. Outside the office I make art, mostly by turning everyday objects into small vessels of emotion and meaning.",
@@ -52,58 +73,155 @@
     "title": "Notes from running an in-house design team.",
     "intro": "From a 2024 post on planning the year for in-house design teams. The ideas I still work from:",
     "items": [
-      { "title": "Keep widening the toolkit", "body": "Video and animation, 3D in Blender and Spline, and AI tools such as ChatGPT, Midjourney, Ideogram and Runway. Continuous learning keeps a team competitive, and engaged." },
-      { "title": "Make goals measurable", "body": "Use analytics not only to validate creative work but to show how it contributes to the company. Aim for content that resonates, from social buzz to booklets that win over the most numbers-minded colleague." },
-      { "title": "Build a culture that can take risks", "body": "Turn brainstorms from dreaded meetings into hubs of collaboration, where trying something bold does not mean fearing failure." },
-      { "title": "Design for the business, not just the brief", "body": "Work in step with the brand marketing team so the output reflects company goals, not only creative ambition." }
+      {
+        "title": "Keep widening the toolkit",
+        "body": "Video and animation, 3D in Blender and Spline, and AI tools such as ChatGPT, Midjourney, Ideogram and Runway. Continuous learning keeps a team competitive, and engaged."
+      },
+      {
+        "title": "Make goals measurable",
+        "body": "Use analytics not only to validate creative work but to show how it contributes to the company. Aim for content that resonates, from social buzz to booklets that win over the most numbers-minded colleague."
+      },
+      {
+        "title": "Build a culture that can take risks",
+        "body": "Turn brainstorms from dreaded meetings into hubs of collaboration, where trying something bold does not mean fearing failure."
+      },
+      {
+        "title": "Design for the business, not just the brief",
+        "body": "Work in step with the brand marketing team so the output reflects company goals, not only creative ambition."
+      }
     ],
-    "source": { "label": "Read the original post", "url": "https://www.onlyvibhor.com/post/setting-up-design-lead-goals-for-2025" }
+    "source": {
+      "label": "Read the original post",
+      "url": "https://www.onlyvibhor.com/post/setting-up-design-lead-goals-for-2025"
+    }
   },
   "studio": {
     "label": "After hours",
     "title": "The studio at night.",
     "body": "In my creative studio I work on AI art, stop-motion animation and found-object art, and make fun, quirky content for platforms, especially Instagram. The work runs from introspective musings to whimsical one-liners.\n\nTwo AI experiments from 2023, built on Stable Diffusion and ControlNet, live in the Lab.",
-    "link": { "label": "Open the Lab", "url": "lab.html" }
+    "link": {
+      "label": "Open the Lab",
+      "url": "lab.html"
+    }
   },
   "teaching": {
     "label": "Teaching and mentoring",
     "items": [
-      { "name": "ADPList", "detail": "Design mentor. 60-minute one-to-one mentorship sessions." },
-      { "name": "GrowthSchool", "detail": "Mentor." },
-      { "name": "AI in art and design workshop", "detail": "Image generation, AI video and AI-assisted UI design, March 2024." },
-      { "name": "AI design workshops", "detail": "Whole Truth Foods, Wolfkrafft." },
-      { "name": "JK Lakshmipat University, Jaipur", "detail": "Short course on generative AI design." },
-      { "name": "Conversations", "detail": "Designland, Groundbreakin Podcast, Design Tank, xtended Pack Collective." }
+      {
+        "name": "ADPList",
+        "detail": "Design mentor. 60-minute one-to-one mentorship sessions."
+      },
+      {
+        "name": "GrowthSchool",
+        "detail": "Mentor."
+      },
+      {
+        "name": "AI in art and design workshop",
+        "detail": "Image generation, AI video and AI-assisted UI design, March 2024."
+      },
+      {
+        "name": "AI design workshops",
+        "detail": "Whole Truth Foods, Wolfkrafft."
+      },
+      {
+        "name": "JK Lakshmipat University, Jaipur",
+        "detail": "Short course on generative AI design."
+      },
+      {
+        "name": "Conversations",
+        "detail": "Designland, Groundbreakin Podcast, Design Tank, xtended Pack Collective."
+      }
     ],
-    "quote": { "text": "He felt more like an elder brother than just a mentor.", "who": "Vibhu Kapil, visual and motion designer, on ADPList" }
+    "quote": {
+      "text": "He felt more like an elder brother than just a mentor.",
+      "who": "Vibhu Kapil, visual and motion designer, on ADPList"
+    },
+    "link": {
+      "label": "See all mentorship, workshops and talks",
+      "url": "mentorship.html"
+    }
   },
   "recognition": {
     "label": "Recognition",
     "items": [
-      { "name": "Shorty Awards", "detail": "Winner, Generative AI. Gold Honor, Financial Services. Finalist, Community Engagement.", "work": "Trial of the Century", "year": "2026" },
-      { "name": "Kyoorius Creative Awards", "detail": "First List: Film Craft; Use of Technology & AI.", "work": "Trial of the Century", "year": "2026" },
-      { "name": "ET Brand Disruption Awards", "detail": "Gold, Most Disruptive Creative & Design Team.", "work": "Razorpay", "year": "2026" },
-      { "name": "ET Brand Disruption Awards", "detail": "Silver, Most Disruptive B2B Campaign.", "work": "Trial of the Century", "year": "2026" }
+      {
+        "name": "Shorty Awards",
+        "detail": "Winner, Generative AI. Gold Honor, Financial Services. Finalist, Community Engagement.",
+        "work": "Trial of the Century",
+        "year": "2026"
+      },
+      {
+        "name": "Kyoorius Creative Awards",
+        "detail": "First List: Film Craft; Use of Technology & AI.",
+        "work": "Trial of the Century",
+        "year": "2026"
+      },
+      {
+        "name": "ET Brand Disruption Awards",
+        "detail": "Gold, Most Disruptive Creative & Design Team.",
+        "work": "Razorpay",
+        "year": "2026"
+      },
+      {
+        "name": "ET Brand Disruption Awards",
+        "detail": "Silver, Most Disruptive B2B Campaign.",
+        "work": "Trial of the Century",
+        "year": "2026"
+      }
     ]
   },
   "writing": {
     "label": "Writing",
     "items": [
-      { "title": "Embracing Creative Leadership in 2025: Strategies for In-House Design Teams", "date": "Apr 2024", "url": "https://www.onlyvibhor.com/post/setting-up-design-lead-goals-for-2025" },
-      { "title": "Navigating the Frontier of Creativity: The Potential of AI in Art and Design", "date": "Mar 2024", "url": "https://www.onlyvibhor.com/post/navigating-the-frontier-of-creativity-unveiling-the-potential-of-ai-in-art-and-design" },
-      { "title": "Habitats without the life", "date": "Dec 2023", "url": "https://www.onlyvibhor.com/post/habitats-without-the-life" },
-      { "title": "Stable Diffusion AI and ControlNet", "date": "Nov 2023", "url": "https://www.onlyvibhor.com/post/stable-diffusion-ai-and-controlnet" }
+      {
+        "title": "Embracing Creative Leadership in 2025: Strategies for In-House Design Teams",
+        "date": "Apr 2024",
+        "url": "https://www.onlyvibhor.com/post/setting-up-design-lead-goals-for-2025"
+      },
+      {
+        "title": "Navigating the Frontier of Creativity: The Potential of AI in Art and Design",
+        "date": "Mar 2024",
+        "url": "https://www.onlyvibhor.com/post/navigating-the-frontier-of-creativity-unveiling-the-potential-of-ai-in-art-and-design"
+      },
+      {
+        "title": "Habitats without the life",
+        "date": "Dec 2023",
+        "url": "https://www.onlyvibhor.com/post/habitats-without-the-life"
+      },
+      {
+        "title": "Stable Diffusion AI and ControlNet",
+        "date": "Nov 2023",
+        "url": "https://www.onlyvibhor.com/post/stable-diffusion-ai-and-controlnet"
+      }
     ]
   },
   "elsewhere": {
     "label": "Elsewhere",
     "items": [
-      { "label": "Behance", "url": "https://www.behance.net/onlyvibhor" },
-      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/onlyvibhor/" },
-      { "label": "Instagram", "url": "https://www.instagram.com/onlyvibhor/" },
-      { "label": "YouTube", "url": "https://www.youtube.com/channel/UCYz6bkPGCR3gapGpoDKuSDg" },
-      { "label": "X", "url": "https://twitter.com/onlyvibhor" },
-      { "label": "ADPList", "url": "https://adplist.org/mentors/vibhor-mathur" }
+      {
+        "label": "Behance",
+        "url": "https://www.behance.net/onlyvibhor"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/onlyvibhor/"
+      },
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/onlyvibhor/"
+      },
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/channel/UCYz6bkPGCR3gapGpoDKuSDg"
+      },
+      {
+        "label": "X",
+        "url": "https://twitter.com/onlyvibhor"
+      },
+      {
+        "label": "ADPList",
+        "url": "https://adplist.org/mentors/vibhor-mathur"
+      }
     ]
   }
 }

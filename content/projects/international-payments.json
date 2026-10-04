@@ -1,33 +1,78 @@
 {
-  "title": "International Payments Launch Video",
-  "slug": "international-payments",
   "published": true,
   "featured": false,
+  "title": "International Payments Launch Video",
   "order": 7,
-  "title_lines": "International Payments Launch Video",
-  "card_title": "International Payments Launch Video",
+  "title_lines": "International\nPayments",
+  "card_title": "International\nPayments",
   "client": "Razorpay",
-  "year": "",
-  "category": "",
-  "role": "",
-  "tagline": "",
-  "summary": "",
+  "year": "2023",
+  "category": "Motion graphics · Launch video",
+  "role": "Design & Motion",
+  "tagline": "Launch video for the import flow of Razorpay International Payments.",
+  "summary": "A 40 to 60 second motion graphics film that makes international e-commerce payments simple to follow.",
   "categories": [
-    "Video"
+    "Video",
+    "Motion"
   ],
-  "external_url": "https://www.behance.net/gallery/185746781/Razorpay-International-Payments-Launch-Video",
   "cover": {
-    "image": "",
+    "image": "assets/img/p/intl-cover.jpg",
     "video": ""
   },
-  "metrics": [],
-  "sections": [],
-  "team": [],
+  "metrics": [
+    {
+      "value": "1000+",
+      "label": "organic views"
+    },
+    {
+      "value": "40–60s",
+      "label": "film length"
+    }
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "label": "The brief",
+      "title": "Show how Razorpay lets international businesses accept payments from India.",
+      "body": "A dive into the world of international e-commerce payments, focused on Razorpay's solution that lets international businesses accept payments from India and settle in their own currency."
+    },
+    {
+      "type": "text",
+      "label": "The approach",
+      "title": "Demystify global e-commerce transactions in under a minute.",
+      "body": "The challenge was to demystify the technicalities of global e-commerce transactions. The solution was a vibrant 40 to 60 second animation that makes the intricacies of international payments both understandable and visually compelling."
+    },
+    {
+      "type": "statement",
+      "text": "Complex financial processes, turned into a visually engaging narrative."
+    },
+    {
+      "type": "text",
+      "label": "The craft",
+      "title": "Motion graphics and kinetic animation.",
+      "body": "The film transforms complex financial processes into a visual narrative using motion graphics and kinetic animation, created with Adobe Illustrator and After Effects. It resonated with the audience, earning over 1000 organic views."
+    },
+    {
+      "type": "tools",
+      "label": "Stack",
+      "items": [
+        "Adobe Illustrator",
+        "After Effects"
+      ]
+    }
+  ],
+  "team": [
+    {
+      "name": "Vibhor Mathur",
+      "role": ""
+    }
+  ],
   "awards": [],
   "links": [
     {
-      "label": "View on Behance",
+      "label": "Behance case study",
       "url": "https://www.behance.net/gallery/185746781/Razorpay-International-Payments-Launch-Video"
     }
-  ]
+  ],
+  "slug": "international-payments"
 }

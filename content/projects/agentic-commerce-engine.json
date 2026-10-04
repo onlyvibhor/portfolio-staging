@@ -1,33 +1,111 @@
 {
-  "title": "Agentic Commerce Engine Launch Video",
-  "slug": "agentic-commerce-engine",
   "published": true,
-  "featured": false,
+  "featured": true,
+  "title": "Agentic Commerce Engine Launch Video",
   "order": 6,
-  "title_lines": "Agentic Commerce Engine Launch Video",
-  "card_title": "Agentic Commerce Engine Launch Video",
-  "client": "Razorpay",
-  "year": "",
-  "category": "",
-  "role": "",
-  "tagline": "",
-  "summary": "",
+  "title_lines": "Agentic\nCommerce\nEngine",
+  "card_title": "Agentic\nCommerce Engine",
+  "client": "Razorpay · GFF 26",
+  "year": "2026",
+  "category": "AI film · Launch video",
+  "role": "Art Direction",
+  "tagline": "One founder's POV, one continuous world, one integration.",
+  "summary": "A 100% AI-made launch film for the Razorpay Agentic Commerce Stack, made for GFF 26.",
   "categories": [
+    "AI Film",
     "Video"
   ],
-  "external_url": "https://www.behance.net/gallery/255895063/Agentic-Commerce-Engine-Launch-Video",
   "cover": {
-    "image": "",
+    "image": "assets/img/p/ace-cover.jpg",
     "video": ""
   },
   "metrics": [],
-  "sections": [],
-  "team": [],
+  "sections": [
+    {
+      "type": "text",
+      "label": "The brief",
+      "title": "Introduce one integration for agentic commerce.",
+      "body": "Razorpay Agentic Commerce Stack: a launch film for GFF 2026 introducing one integration for agentic commerce across LLMs, concierge agents, WhatsApp and brand assistants."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/ace-cover.jpg",
+      "caption": "ACE: Agentic Commerce Engine | GFF 26",
+      "size": "wide"
+    },
+    {
+      "type": "text",
+      "label": "The film",
+      "title": "Complexity gives way to the agentic era.",
+      "body": "Told entirely through one founder's POV in a single continuous world, the film shifts from a grand marble hall to a glowing tech studio as complexity gives way to the agentic era, anchored throughout by a locked, high-contrast visual style built around her."
+    },
+    {
+      "type": "statement",
+      "text": "AI was only the production medium."
+    },
+    {
+      "type": "steps",
+      "label": "How it was made",
+      "title": "100% AI-powered filmmaking, directed like a full-scale production.",
+      "items": [
+        {
+          "title": "Storyboard",
+          "body": "Storyboarding and visual exploration to find the world and the character."
+        },
+        {
+          "title": "Art direction",
+          "body": "A carefully crafted art direction, locked early so every frame belongs to the same film."
+        },
+        {
+          "title": "Key frames",
+          "body": "Designing key frames for every environment and every human character."
+        },
+        {
+          "title": "Generate and direct",
+          "body": "Generating and directing the footage itself, frame by frame."
+        },
+        {
+          "title": "Motion and stitch",
+          "body": "Creating motion graphics and stitching everything into one cohesive narrative."
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "label": "Under a tight timeline",
+      "title": "Every frame intentionally designed and refined.",
+      "body": "The film was built under an incredibly tight timeline. The entire film was created using AI, from every environment and human character to the footage itself, and every frame was treated with the same level of creative direction as a full-scale film production."
+    },
+    {
+      "type": "tools",
+      "label": "Stack",
+      "items": [
+        "Claude",
+        "Higgsfield",
+        "Runway",
+        "Gemini",
+        "OpenAI",
+        "Adobe",
+        "Suno"
+      ]
+    }
+  ],
+  "team": [
+    {
+      "name": "Vibhor Mathur",
+      "role": ""
+    },
+    {
+      "name": "Rahul Girish",
+      "role": ""
+    }
+  ],
   "awards": [],
   "links": [
     {
-      "label": "View on Behance",
+      "label": "Behance case study",
       "url": "https://www.behance.net/gallery/255895063/Agentic-Commerce-Engine-Launch-Video"
     }
-  ]
+  ],
+  "slug": "agentic-commerce-engine"
 }

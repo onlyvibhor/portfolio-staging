@@ -1,33 +1,91 @@
 {
-  "title": "Grofers Logo Guidelines",
-  "slug": "grofers-logo-guidelines",
   "published": true,
   "featured": false,
+  "title": "Grofers Logo Guidelines",
   "order": 12,
-  "title_lines": "Grofers Logo Guidelines",
-  "card_title": "Grofers Logo Guidelines",
+  "title_lines": "Grofers\nLogo Guidelines",
+  "card_title": "Grofers\nLogo Guidelines",
   "client": "Grofers",
-  "year": "",
-  "category": "",
-  "role": "",
-  "tagline": "",
-  "summary": "",
+  "year": "2021",
+  "category": "Identity system",
+  "role": "Art Direction · Graphic Design",
+  "tagline": "How the Grofers logo behaves: space, shades, placement and hierarchy.",
+  "summary": "Logo usage guidelines for Grofers, covering clear space, colourways, placement, typographic hierarchy and in-app creative templates.",
   "categories": [
     "Brand & Identity"
   ],
-  "external_url": "https://www.behance.net/gallery/123079157/grofers-logo-guidelines",
   "cover": {
-    "image": "",
+    "image": "assets/img/p/grofers-cover.jpg",
     "video": ""
   },
   "metrics": [],
-  "sections": [],
-  "team": [],
+  "sections": [
+    {
+      "type": "text",
+      "label": "The brief",
+      "title": "Give every team one way to use the logo.",
+      "body": "A guideline document for the Grofers brand so that the logo, and the creatives built around it, look consistent wherever they appear. Created in Adobe Illustrator."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/grofers-1.jpg",
+      "caption": "Brand campaign layouts",
+      "size": "narrow"
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/grofers-2.jpg",
+      "caption": "Meet the logo, clear space, and the go-to shades",
+      "size": "narrow"
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/grofers-3.jpg",
+      "caption": "Logo placement and lock-ups",
+      "size": "narrow"
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/grofers-4.jpg",
+      "caption": "Logo placement in layouts, and hierarchy examples",
+      "size": "narrow"
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/grofers-5.jpg",
+      "caption": "Typography dos, hierarchy examples and creatives",
+      "size": "narrow"
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/grofers-6.jpg",
+      "caption": "In-app templates",
+      "size": "wide"
+    },
+    {
+      "type": "tools",
+      "label": "Stack",
+      "items": [
+        "Adobe Illustrator"
+      ]
+    }
+  ],
+  "team": [
+    {
+      "name": "Vibhor Mathur",
+      "role": ""
+    },
+    {
+      "name": "Zahid Shaikh",
+      "role": ""
+    }
+  ],
   "awards": [],
   "links": [
     {
-      "label": "View on Behance",
+      "label": "Behance case study",
       "url": "https://www.behance.net/gallery/123079157/grofers-logo-guidelines"
     }
-  ]
+  ],
+  "slug": "grofers-logo-guidelines"
 }

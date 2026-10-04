@@ -9,9 +9,15 @@
     "meta_left": "Creative leader. Brand films, campaigns and AI-native production, built in-house.",
     "meta_right": "Razorpay\nBengaluru, IN",
     "slides": [
-      { "image": "assets/img/p/hero-trial.jpg" },
-      { "image": "assets/img/p/hero-t20.jpg" },
-      { "image": "assets/img/p/hero-stadium.jpg" }
+      {
+        "image": "assets/img/p/hero-trial.jpg"
+      },
+      {
+        "image": "assets/img/p/hero-t20.jpg"
+      },
+      {
+        "image": "assets/img/p/hero-stadium.jpg"
+      }
     ]
   },
   "statement": {
@@ -26,13 +32,30 @@
   },
   "tools": {
     "title": "Built in-house. *Run* by the whole studio.",
-    "sub": "Four AI production tools the Razorpay design team built, and uses on live campaigns.",
+    "sub": "Four AI production tools the Razorpay design team built, and uses on live campaigns. The full toolkit has its own page.",
     "items": [
-      { "name": "Cinematography Tool", "desc": "20+ lens simulations, lighting control, 100+ colour grades.", "stack": "Gemini Studio · Nano Banana API" },
-      { "name": "Product Image Generator", "desc": "Virtual product photography that holds the brand together.", "stack": "Gemini · Nano Banana" },
-      { "name": "Advanced Image Editor", "desc": "Continuity across angles, scenes and faces.", "stack": "Scene, style, light and face references" },
-      { "name": "Founder Image Generator", "desc": "One photo in, a full campaign library out. 4K, one click.", "stack": "Gemini AI Studio · Nano Banana" }
-    ]
+      {
+        "name": "Cinematography Tool",
+        "desc": "20+ lens simulations, lighting control, 100+ colour grades.",
+        "stack": "Gemini Studio · Nano Banana API"
+      },
+      {
+        "name": "Product Image Generator",
+        "desc": "Virtual product photography that holds the brand together.",
+        "stack": "Gemini · Nano Banana"
+      },
+      {
+        "name": "Advanced Image Editor",
+        "desc": "Continuity across angles, scenes and faces.",
+        "stack": "Scene, style, light and face references"
+      },
+      {
+        "name": "Founder Image Generator",
+        "desc": "One photo in, a full campaign library out. 4K, one click.",
+        "stack": "Gemini AI Studio · Nano Banana"
+      }
+    ],
+    "label": "Open the AI Toolkit"
   },
   "lab": {
     "title": "From the *lab*",
@@ -49,20 +72,48 @@
   "recognition": {
     "title": "Recognition",
     "items": [
-      { "name": "Shorty Awards", "detail": "Winner, Generative AI · Gold Honor, Financial Services", "year": "2026" },
-      { "name": "Kyoorius Creative Awards", "detail": "First List, Film Craft & Use of Technology/AI", "year": "2026" },
-      { "name": "ET Brand Disruption Awards", "detail": "Gold, Most Disruptive Creative & Design Team (Razorpay)", "year": "2026" },
-      { "name": "ET Brand Disruption Awards", "detail": "Silver, Most Disruptive B2B Campaign", "year": "2026" }
+      {
+        "name": "Shorty Awards",
+        "detail": "Winner, Generative AI · Gold Honor, Financial Services",
+        "year": "2026"
+      },
+      {
+        "name": "Kyoorius Creative Awards",
+        "detail": "First List, Film Craft & Use of Technology/AI",
+        "year": "2026"
+      },
+      {
+        "name": "ET Brand Disruption Awards",
+        "detail": "Gold, Most Disruptive Creative & Design Team (Razorpay)",
+        "year": "2026"
+      },
+      {
+        "name": "ET Brand Disruption Awards",
+        "detail": "Silver, Most Disruptive B2B Campaign",
+        "year": "2026"
+      }
     ]
   },
   "contact": {
     "headline": "Let's make something *people talk about.*",
     "email": "onlyvibhor@gmail.com",
     "links": [
-      { "label": "Behance", "url": "https://www.behance.net/onlyvibhor" },
-      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/onlyvibhor/" },
-      { "label": "Instagram", "url": "https://www.instagram.com/onlyvibhor/" },
-      { "label": "ADPList", "url": "https://adplist.org/mentors/vibhor-mathur" }
+      {
+        "label": "Behance",
+        "url": "https://www.behance.net/onlyvibhor"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/onlyvibhor/"
+      },
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/onlyvibhor/"
+      },
+      {
+        "label": "ADPList",
+        "url": "https://adplist.org/mentors/vibhor-mathur"
+      }
     ]
   }
 }

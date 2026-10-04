@@ -1,33 +1,121 @@
 {
-  "title": "Payments on WhatsApp",
-  "slug": "payments-on-whatsapp",
   "published": true,
   "featured": false,
+  "title": "Razorpay Payments on WhatsApp",
   "order": 11,
-  "title_lines": "Payments on WhatsApp",
-  "card_title": "Payments on WhatsApp",
+  "title_lines": "Payments on\nWhatsApp",
+  "card_title": "Payments on\nWhatsApp",
   "client": "Razorpay",
-  "year": "",
-  "category": "",
-  "role": "",
-  "tagline": "",
-  "summary": "",
+  "year": "2023",
+  "category": "AI campaign",
+  "role": "Campaign lead",
+  "tagline": "Melancholy: the silent stories of abandoned carts. Shop. Don't abandon.",
+  "summary": "A launch film where AI-generated imagery tells sad stories of abandoned carts, then turns them into stories of completion.",
   "categories": [
-    "Campaign"
+    "Campaign",
+    "AI Film"
   ],
-  "external_url": "https://www.behance.net/gallery/185779105/Razorpay-Payments-on-WhatsApp",
   "cover": {
-    "image": "",
+    "image": "assets/img/p/whatsapp-cover.jpg",
     "video": ""
   },
-  "metrics": [],
-  "sections": [],
-  "team": [],
+  "metrics": [
+    {
+      "value": "95K+",
+      "label": "impressions across social channels"
+    },
+    {
+      "value": "10%",
+      "label": "engagement rate on Twitter"
+    },
+    {
+      "value": "4.5%",
+      "label": "engagement rate on LinkedIn"
+    },
+    {
+      "value": "2000+",
+      "label": "businesses expressed interest"
+    }
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "label": "The brief",
+      "title": "Launch Razorpay payments on WhatsApp.",
+      "body": "The campaign for Razorpay's payment solution on WhatsApp, led from concept to completion: coordinating teams, managing the creative process and using AI technology to make a campaign that is both innovative and emotionally resonant."
+    },
+    {
+      "type": "statement",
+      "text": "Shop. Don't abandon."
+    },
+    {
+      "type": "text",
+      "label": "The idea",
+      "title": "Melancholy.",
+      "body": "Brainstorms with the marketing and design teams produced three campaign concepts. The chosen one, \"Melancholy\", delved into the emotive narrative of abandoned shopping carts in the digital realm, each with a story echoing the silent plea, \"Shop. Don't Abandon.\""
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/whatsapp-board.jpg",
+      "caption": "AI imagery, the script, and the Photoshop, After Effects and Premiere edit",
+      "size": "wide"
+    },
+    {
+      "type": "steps",
+      "label": "The process",
+      "title": "A solemn start, an upbeat turn.",
+      "items": [
+        {
+          "title": "Imagery",
+          "body": "Midjourney created the visual cornerstone: unique, emotionally compelling images of the silent stories of abandoned carts.",
+          "tools": "Midjourney"
+        },
+        {
+          "title": "Animation",
+          "body": "Static images were brought to life into a flowing, dynamic narrative.",
+          "tools": "Kaiber AI"
+        },
+        {
+          "title": "Voice",
+          "body": "A professional voiceover artist added a solemn tone that turns optimistic and energetic as Razorpay introduces its solution."
+        },
+        {
+          "title": "Edit",
+          "body": "Visuals and voiceover were edited together, with the visual style blending Razorpay blue and WhatsApp green.",
+          "tools": "After Effects · Premiere"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "label": "Results",
+      "title": "The highest engagement rates on Twitter and LinkedIn.",
+      "body": "With PR efforts, the launch video amassed over 95K impressions across social channels, with the highest engagement rates on Twitter (10%) and LinkedIn (4.5%). The accompanying blog captivated 6K+ unique readers, and 2000+ businesses expressed interest in the product, including a substantial number of existing Razorpay merchants."
+    },
+    {
+      "type": "tools",
+      "label": "Stack",
+      "items": [
+        "Midjourney",
+        "Kaiber AI",
+        "Photoshop",
+        "After Effects",
+        "Premiere"
+      ]
+    }
+  ],
+  "team": [
+    {
+      "name": "Vibhor Mathur",
+      "role": "Campaign lead"
+    }
+  ],
   "awards": [],
   "links": [
     {
-      "label": "View on Behance",
+      "label": "Behance case study",
       "url": "https://www.behance.net/gallery/185779105/Razorpay-Payments-on-WhatsApp"
     }
-  ]
+  ],
+  "slug": "payments-on-whatsapp"
 }

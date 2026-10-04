@@ -5,7 +5,6 @@
   const PROJECTS = window.PROJECTS || [];
   const EXPERIMENTS = window.EXPERIMENTS || [];
 
-  const extAttr = (p) => (p.external_url ? ' target="_blank" rel="noopener"' : '');
 
   function heroHTML() {
     const h = SITE.hero || {};
@@ -28,14 +27,14 @@
   function workHTML() {
     const w = SITE.work || {};
     const feat = PROJECTS.filter((p) => p.featured && p.cover && (p.cover.image || p.cover.video));
-    const rest = PROJECTS.filter((p) => !feat.includes(p)).slice(0, 5);
+    const rest = PROJECTS.filter((p) => !feat.includes(p)).slice(0, 8);
     const items = feat.map((p, i) => {
       const cover = p.cover || {};
       const media = cover.video
         ? `<video src="${esc(cover.video)}" muted loop playsinline autoplay preload="metadata" ${cover.image ? `poster="${esc(cover.image)}"` : ''}></video>`
         : `<img src="${esc(cover.image)}" alt="${esc(p.title)}" loading="${i < 2 ? 'eager' : 'lazy'}">`;
       return `
-        <a class="work-item" href="${esc(projHref(p))}"${extAttr(p)} data-cursor="View">
+        <a class="work-item" href="${esc(projHref(p))}" data-cursor="View">
           <div class="work-media" data-gl>${media}</div>
           <div class="work-meta">
             <div><span class="n mono">${pad2(i + 1)}</span><h3>${nl(p.card_title || p.title)}</h3></div>
@@ -43,7 +42,7 @@
           </div>
         </a>`;
     }).join('');
-    const more = rest.map((p) => `<a href="${esc(projHref(p))}"${extAttr(p)}><span>${esc(p.title)}</span><span aria-hidden="true">${p.external_url ? '&#8599;' : '&rarr;'}</span></a>`).join('');
+    const more = rest.map((p) => `<a href="${esc(projHref(p))}"><span>${esc(p.title)}</span><span aria-hidden="true">&rarr;</span></a>`).join('');
     return `
       <section class="work" id="work"><div class="work-pin">
         <div class="work-head"><h2>${esc(w.title || 'Selected work')}</h2><span class="mono">(${pad2(feat.length)})</span></div>
@@ -56,7 +55,7 @@
     const media = c.image
       ? `<div class="lm"><img src="${esc(c.image)}" alt="${esc(e.title)}" loading="lazy"></div>`
       : `<div class="lm type"><span class="mono">${esc((e.medium || [])[0] || 'Experiment')}</span><b>${esc(e.title)}</b></div>`;
-    return `<a class="lcard" href="${esc(projHref(e, 'e'))}"${extAttr(e)} data-cursor="View">${media}<h3>${esc(e.title)}</h3><span class="lt mono">${esc([e.year, (e.medium || []).join(', ')].filter(Boolean).join(' · '))}</span></a>`;
+    return `<a class="lcard" href="${esc(projHref(e, 'e'))}" data-cursor="View">${media}<h3>${esc(e.title)}</h3><span class="lt mono">${esc([e.year, (e.medium || []).join(', ')].filter(Boolean).join(' · '))}</span></a>`;
   }
 
   function homeHTML() {
@@ -79,6 +78,7 @@
         <h2 class="sec-title z2" data-split>${inline(tl.title)}</h2>
         <p class="sub z2" data-fade>${esc(tl.sub)}</p>
         <div class="tool-list z2">${tools}</div>
+        <a class="btn tools-more z2" href="toolkit.html" data-fade>${esc(tl.label || 'Open the AI Toolkit')}</a>
       </section>
       ${EXPERIMENTS.length ? `
       <section class="labstrip z2" id="lab">
@@ -88,6 +88,7 @@
         </div>
         <div class="lab-row" data-fade>${EXPERIMENTS.slice(0, 4).map(labCard).join('')}</div>
       </section>` : ''}
+      ${mentorHTML()}
       <section class="about-teaser z2" id="about">
         <div data-fade>
           <div class="ph"><img src="${esc(at.portrait)}" alt="Portrait of Vibhor Mathur" loading="lazy"></div>
@@ -102,6 +103,26 @@
         <h2 data-split>${esc(rc.title)}</h2>
         <div data-fade>${reco}</div>
       </section>` + contactHTML();
+  }
+
+
+  function mentorHTML() {
+    const M = window.MENTORSHIP || {}, t = M.teaser;
+    if (!t) return '';
+    const q = ((M.voices || {}).items || [])[0];
+    return `
+      <section class="mentor z2" id="mentorship">
+        <div class="mentor-l">
+          <span class="mono" data-fade>${esc(t.label)}</span>
+          <h2 class="sec-title" data-split>${inline(t.title)}</h2>
+          <p class="sub" data-fade>${esc(t.body)}</p>
+          <a class="btn" href="mentorship.html" data-fade>${esc(t.cta || 'See all mentorship')}</a>
+        </div>
+        <div class="mentor-r" data-fade>
+          <div class="numbers">${(M.numbers || []).map((n) => `<div><b data-count="${esc(n.value)}">${esc(n.value)}</b><span>${esc(n.label)}</span></div>`).join('')}</div>
+          ${q ? `<blockquote>&ldquo;${esc(q.text)}&rdquo;<cite class="mono">${esc(q.who)}</cite></blockquote>` : ''}
+        </div>
+      </section>`;
   }
 
   /* ---- hero: letters you can push around and smash ---- */

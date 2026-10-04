@@ -1,0 +1,292 @@
+{
+  "meta": {
+    "title": "AI Toolkit — Vibhor Mathur",
+    "description": "How the Razorpay design team uses AI to build its own tools: automating set tasks, scaling production, teaching beginners and shipping interactive web campaigns without waiting for a developer."
+  },
+  "label": "AI Toolkit",
+  "headline": "Tools that make the *work*, built by the people who make the work.",
+  "intro": "AI is not only a way to make images. Used properly, it lets a design team build its own software: tools for the studio, tools for marketing, and interactive web experiences that designers ship themselves. This is that toolkit, and what it changed.",
+  "principles": [
+    {
+      "title": "Prompts are inputs",
+      "body": "A prompt is one ingredient, not the product. The product is what you wrap around it."
+    },
+    {
+      "title": "Tools are modules",
+      "body": "Small tools with a single job, each with a proper interface, that can be combined and reused."
+    },
+    {
+      "title": "Systems create consistency",
+      "body": "Brand, lighting, faces and scenes are held in the tool, so the hundredth output looks like the first."
+    }
+  ],
+  "pillars": [
+    {
+      "title": "Automate the set tasks",
+      "body": "Work that repeats, such as turning one founder photo into a campaign library or one product shot into a scene, stops being a design request and becomes a button. The designers' time goes to the idea and the finish.",
+      "proof": [
+        {
+          "label": "Founder Image Generator",
+          "detail": "One photo in, a full campaign library out. 4K, one click."
+        },
+        {
+          "label": "Social Content Gen",
+          "detail": "A founder photo and a business story in, a composed, campaign-ready post out."
+        }
+      ]
+    },
+    {
+      "title": "Scale up production",
+      "body": "When the tool holds the look, volume stops costing quality. The same pipeline that produced 81 television films for 20 founders also produced a newspaper front page and more than 200 social posts, with no cameras, sets or lights.",
+      "proof": [
+        {
+          "label": "Backing India's Start-Up Champions",
+          "detail": "81 films, 1 newspaper ad, 200+ social posts.",
+          "href": "case.html?c=t20"
+        },
+        {
+          "label": "Razorbae, AI avatar",
+          "detail": "Shot once, trained into a system: 129 reels and 6.55 million views."
+        }
+      ]
+    },
+    {
+      "title": "Easy to learn, even for beginners",
+      "body": "A blank prompt box is intimidating. A panel with lenses, lighting, presets and references is not. Wrapping models in clear interfaces gives a beginner a good starting point on day one, and gives the whole team one shared way of working.",
+      "proof": [
+        {
+          "label": "Interfaces, not prompts",
+          "detail": "Every tool is built with an interface in Gemini Studio, so the controls are visible and the learning curve is short."
+        },
+        {
+          "label": "Workshops and mentoring",
+          "detail": "AI design workshops, talks and one-to-one mentoring for designers starting out."
+        }
+      ]
+    },
+    {
+      "title": "Designers shipping interactive web, themselves",
+      "body": "Campaign sites, landing pages and playable games used to wait in a developer queue. With AI-assisted building, designers take an idea from sketch to a live interactive page, and own the motion, the feel and the details end to end.",
+      "proof": [
+        {
+          "label": "Magic Checkout landing page",
+          "detail": "An immersive scroll-through world with micro-animations.",
+          "href": "case.html?c=magic-checkout"
+        },
+        {
+          "label": "Back in the Ring",
+          "detail": "A parallax landing page and a playable game.",
+          "href": "case.html?c=ring"
+        }
+      ]
+    }
+  ],
+  "tools_head": {
+    "label": "The studio's tools",
+    "title": "Built in-house. Used on live campaigns.",
+    "body": "Each one started as a repeating task on a real campaign, and became a tool the whole team could pick up."
+  },
+  "tools": [
+    {
+      "name": "Cinematography Tool",
+      "tag": "For film and ads",
+      "body": "A virtual camera department. Pick the lens, set the light, choose the grade, and the scene follows.",
+      "bullets": [
+        "20+ camera lens simulations",
+        "Advanced lighting control",
+        "100+ colour grading variations"
+      ],
+      "built_with": "Gemini Studio for the interface, Nano Banana API",
+      "hero": "assets/img/tools/cine-ui.jpg",
+      "gallery": [
+        "assets/img/tools/cine-1.jpg",
+        "assets/img/tools/cine-2.jpg",
+        "assets/img/tools/cine-4.jpg",
+        "assets/img/tools/cine-5.jpg"
+      ]
+    },
+    {
+      "name": "Product Image Generator",
+      "tag": "For product marketing",
+      "body": "Virtual product photography that keeps the brand together. Drop in a product and get it placed in an environment, lit and composed.",
+      "bullets": [
+        "Infinite variations",
+        "Consistent brand visuals",
+        "No physical shoots required"
+      ],
+      "built_with": "Gemini Studio for the interface, Nano Banana API",
+      "hero": "assets/img/tools/prod-ui.jpg",
+      "gallery": [
+        "assets/img/tools/prod-1.jpg",
+        "assets/img/tools/prod-4.jpg",
+        "assets/img/tools/prod-5.jpg",
+        "assets/img/tools/prod-7.jpg"
+      ]
+    },
+    {
+      "name": "Advanced Image Editor",
+      "tag": "For continuity",
+      "body": "One scene, many angles, the same faces. Built for the moments where a single hero image is not enough and consistency is the whole job.",
+      "bullets": [
+        "A consistent scene from different angles",
+        "Continuity frames",
+        "Multi-reference generation: scene, style, lighting, colour and face"
+      ],
+      "built_with": "Gemini Studio for the interface, Nano Banana API",
+      "hero": "assets/img/tools/edit-ui.jpg",
+      "gallery": [
+        "assets/img/tools/edit-2.jpg",
+        "assets/img/tools/edit-3.jpg",
+        "assets/img/tools/edit-4.jpg",
+        "assets/img/tools/edit-5.jpg"
+      ]
+    },
+    {
+      "name": "Founder Image Generator",
+      "tag": "For campaigns with people",
+      "body": "Converts one founder image into multiple visuals across clothing, pose and lighting. It was the engine behind the T20 campaign.",
+      "bullets": [
+        "Transformations across clothing, pose and lighting",
+        "4K generation in one click",
+        "20+ founders from a single source photo each"
+      ],
+      "built_with": "Gemini, Nano Banana API",
+      "hero": "assets/img/tools/founder-ui.jpg",
+      "gallery": [
+        "assets/img/tools/founder-grid.jpg",
+        "assets/img/tools/founder-panel.jpg",
+        "assets/img/tools/founder-1.jpg",
+        "assets/img/tools/founder-2.jpg"
+      ]
+    },
+    {
+      "name": "Social Content Gen",
+      "tag": "For high volume",
+      "body": "A high-volume, personalised post creator. Give it a founder image and a business success story; preset combinations of clothing, pose, lighting and background do the rest.",
+      "bullets": [
+        "Input: a founder image and a business story",
+        "Preset clothing, pose, lighting and background",
+        "Fully composed, campaign-ready social posts"
+      ],
+      "built_with": "Replit, Gemini, ChatGPT and Nano Banana",
+      "hero": "assets/img/tools/social-flow.jpg",
+      "gallery": [
+        "assets/img/tools/social-1.jpg",
+        "assets/img/tools/social-2.jpg",
+        "assets/img/tools/social-3.jpg",
+        "assets/img/tools/social-posts.jpg"
+      ]
+    }
+  ],
+  "interactive": {
+    "label": "Interactive web",
+    "title": "Pages you can play with, shipped by designers.",
+    "body": "Beyond images and films, the team has had interactive web experiences built for campaigns: landing pages with scroll worlds, micro-animations and a playable game. They sit alongside the toolkit because they use the same idea: design owns the idea and the feel, and AI shortens the distance to something live.",
+    "items": [
+      {
+        "title": "Magic Checkout",
+        "tag": "Landing page",
+        "body": "An immersive landing page where you experience what checkout does, from the magic you see to the science behind it.",
+        "image": "assets/img/p/magic-cover.jpg",
+        "href": "case.html?c=magic-checkout"
+      },
+      {
+        "title": "Back in the Ring",
+        "tag": "Landing page and game",
+        "body": "A parallax landing page that pulls you into the ring, plus a game where each opponent defeated unlocks a new feature.",
+        "image": "assets/img/p/ring-cover.jpg",
+        "href": "case.html?c=ring"
+      },
+      {
+        "title": "The Wall of Laughter",
+        "tag": "Interactive board",
+        "body": "An anonymous digital board where HR professionals shared the funniest salary questions they had ever received.",
+        "image": "assets/img/p/trial-1.jpg",
+        "href": "https://razorpayxwalloflaughter.razorpay.com/"
+      },
+      {
+        "title": "Backing India's Boldest",
+        "tag": "Landing page and social",
+        "body": "Glambot-style camera motion videos of founders for a landing page and social content, built around character realism and cinematic slow motion.",
+        "image": "",
+        "href": ""
+      }
+    ]
+  },
+  "learn": {
+    "label": "Learning",
+    "title": "The tools are only half of it. The team has to be able to use them.",
+    "body": "Beginners are the point. The toolkit is taught, not just handed over: through workshops, talks and mentoring that start from what AI can do for a designer.",
+    "items": [
+      {
+        "name": "Revolutionizing Design Workflows with AI",
+        "detail": "Designland workshop."
+      },
+      {
+        "name": "Revolutionizing Design Workflows with AI: Razorpay's Success Story",
+        "detail": "GrowthSchool."
+      },
+      {
+        "name": "AI in Design: A Silent Revolution",
+        "detail": "xtended Pack Collective workshop."
+      },
+      {
+        "name": "Design Tank",
+        "detail": "Feedback and mentorship from top design leaders."
+      },
+      {
+        "name": "Groundbreakin Podcast",
+        "detail": "Podcast conversation."
+      }
+    ],
+    "images": [
+      {
+        "image": "assets/img/tools/talk-designland.jpg",
+        "caption": "Designland"
+      },
+      {
+        "image": "assets/img/tools/talk-growthschool.jpg",
+        "caption": "GrowthSchool"
+      },
+      {
+        "image": "assets/img/tools/talk-extended.jpg",
+        "caption": "xtended Pack Collective"
+      },
+      {
+        "image": "assets/img/tools/talk-designtank.jpg",
+        "caption": "Design Tank"
+      }
+    ],
+    "wide": "assets/img/tools/talk-room.jpg",
+    "link": {
+      "label": "More on mentoring and workshops",
+      "href": "mentorship.html"
+    }
+  },
+  "stack": {
+    "label": "The stack",
+    "items": [
+      "Midjourney",
+      "Nano Banana API",
+      "ChatGPT",
+      "Claude",
+      "Gemini",
+      "Topaz Labs",
+      "Suno AI",
+      "Adobe Firefly",
+      "Replit",
+      "Kling",
+      "RunwayML",
+      "ElevenLabs",
+      "Veo 2"
+    ]
+  },
+  "team": {
+    "label": "With the team",
+    "body": "The tools were built and used with the Razorpay communication design team, including communication designers Aadithya Narayanan, Jasleen Kaur and Pyukil Janwani."
+  },
+  "cta": {
+    "label": "See the work these tools made",
+    "href": "work.html"
+  }
+}

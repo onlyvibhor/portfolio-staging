@@ -33,7 +33,7 @@ window.SITE = {
  },
  "tools": {
   "title": "Built in-house. *Run* by the whole studio.",
-  "sub": "Four AI production tools the Razorpay design team built, and uses on live campaigns.",
+  "sub": "Four AI production tools the Razorpay design team built, and uses on live campaigns. The full toolkit has its own page.",
   "items": [
    {
     "name": "Cinematography Tool",
@@ -55,7 +55,8 @@ window.SITE = {
     "desc": "One photo in, a full campaign library out. 4K, one click.",
     "stack": "Gemini AI Studio · Nano Banana"
    }
-  ]
+  ],
+  "label": "Open the AI Toolkit"
  },
  "lab": {
   "title": "From the *lab*",
@@ -254,6 +255,10 @@ window.ABOUT = {
   "quote": {
    "text": "He felt more like an elder brother than just a mentor.",
    "who": "Vibhu Kapil, visual and motion designer, on ADPList"
+  },
+  "link": {
+   "label": "See all mentorship, workshops and talks",
+   "url": "mentorship.html"
   }
  },
  "recognition": {
@@ -338,6 +343,491 @@ window.ABOUT = {
     "url": "https://adplist.org/mentors/vibhor-mathur"
    }
   ]
+ }
+};
+window.MENTORSHIP = {
+ "meta": {
+  "title": "Mentorship — Vibhor Mathur",
+  "description": "One-to-one design mentoring on ADPList, plus workshops, talks and conversations on AI in design, from Vibhor Mathur, Communication Design Senior Manager at Razorpay."
+ },
+ "label": "Mentorship",
+ "headline": "Sharing what I've learned, one *designer* at a time.",
+ "intro": "Alongside leading a design team, I mentor designers one to one, teach workshops on AI in design, and join panels and conversations about the craft. This page collects all of it, and how to book me.",
+ "teaser": {
+  "label": "Mentorship",
+  "title": "Mentoring designers, one conversation at a time.",
+  "body": "One-to-one sessions on ADPList, workshops on AI in design, talks and podcasts.",
+  "cta": "See all mentorship"
+ },
+ "numbers": [
+  {
+   "value": "33",
+   "label": "one-to-one sessions completed on ADPList"
+  },
+  {
+   "value": "31",
+   "label": "hours of mentoring time, 1,860 minutes"
+  },
+  {
+   "value": "60",
+   "label": "minutes per session, one to one"
+  }
+ ],
+ "numbers_note": "As listed on my ADPList profile.",
+ "oneonone": {
+  "label": "One to one",
+  "title": "Mentoring on ADPList.",
+  "body": "I'm a design mentor on ADPList, offering 60-minute one-to-one mentorship sessions. Sessions are one to one and shaped around what each mentee needs. Mentees have come for feedback on their design approach, for a clearer picture of what is expected of a designer, and for help figuring out where to push next.",
+  "topics_label": "What we can talk about",
+  "topics": [
+   "Design",
+   "Marketing",
+   "Graphic design",
+   "Motion design",
+   "Branding and identity",
+   "Design communication",
+   "Critical thinking",
+   "Presentation skills",
+   "Leadership",
+   "Video editing"
+  ],
+  "cta": {
+   "label": "Book a session on ADPList",
+   "href": "https://adplist.org/mentors/vibhor-mathur"
+  }
+ },
+ "voices": {
+  "label": "What mentees say",
+  "note": "Reviews from my ADPList profile.",
+  "items": [
+   {
+    "text": "He felt more like an elder brother than just a mentor, offering helpful lessons that were based on his journey.",
+    "who": "Vibhu Kapil, visual and motion designer"
+   },
+   {
+    "text": "His extensive experience and expertise in communication design shone through during our session. He offered invaluable insights and feedback.",
+    "who": "ADPList mentee"
+   },
+   {
+    "text": "My session with Vibhor was an eye-opener. He helped me understand the expectations for a designer and how to embark on that journey.",
+    "who": "ADPList mentee"
+   }
+  ]
+ },
+ "events": {
+  "label": "Talks and workshops",
+  "title": "Teaching what the studio is learning.",
+  "body": "The sessions draw on running an in-house design team: how AI changes the workflow, and what designers can learn next.",
+  "items": [
+   {
+    "title": "Revolutionizing Design Workflows with AI: Razorpay's Success Story",
+    "host": "GrowthSchool",
+    "type": "Webinar",
+    "date": "9 Sept 2023",
+    "detail": "A 90-minute free session on how Razorpay's design team uses AI.",
+    "image": "assets/img/mentor/growthschool.jpg"
+   },
+   {
+    "title": "Revolutionizing Design Workflows with AI",
+    "host": "Designland",
+    "type": "Virtual session",
+    "date": "27 April 2024",
+    "detail": "A one-hour free virtual session for the Designland community.",
+    "image": "assets/img/mentor/designland.jpg"
+   },
+   {
+    "title": "AI in Design: A Silent Revolution",
+    "host": "xtended Pack Collective",
+    "type": "Workshop",
+    "date": "",
+    "detail": "Exploring the future design world with the power of AI.",
+    "image": "assets/img/mentor/extended.jpg"
+   },
+   {
+    "title": "Design Tank, Season 2",
+    "host": "Design Tank",
+    "type": "Mentor",
+    "date": "",
+    "detail": "Portfolio feedback and mentorship alongside Fatema Raja and Amit Patel.",
+    "image": "assets/img/mentor/designtank.jpg"
+   },
+   {
+    "title": "The Groundbreakin Podcast, episode 046",
+    "host": "Groundbreakin",
+    "type": "Podcast",
+    "date": "",
+    "detail": "A podcast conversation about design.",
+    "image": "assets/img/mentor/groundbreakin.jpg"
+   },
+   {
+    "title": "AI in art and design",
+    "host": "Workshop",
+    "type": "Workshop",
+    "date": "March 2024",
+    "detail": "Image generation, AI video and AI-assisted UI design.",
+    "image": ""
+   },
+   {
+    "title": "AI design workshops for teams",
+    "host": "Whole Truth Foods, Wolfkrafft",
+    "type": "In-house workshops",
+    "date": "",
+    "detail": "AI design workshops for Whole Truth Foods and Wolfkrafft.",
+    "image": ""
+   },
+   {
+    "title": "Generative AI design",
+    "host": "JK Lakshmipat University, Jaipur",
+    "type": "Short course",
+    "date": "",
+    "detail": "A short course on generative AI design.",
+    "image": ""
+   }
+  ]
+ },
+ "gallery": {
+  "label": "In the room",
+  "items": [
+   {
+    "image": "assets/img/mentor/photo.jpg",
+    "caption": "Presenting at a workshop",
+    "tall": true
+   },
+   {
+    "image": "assets/img/mentor/room.jpg",
+    "caption": "On a panel"
+   },
+   {
+    "image": "assets/img/mentor/podcast.jpg",
+    "caption": "Recording a podcast"
+   },
+   {
+    "image": "assets/img/mentor/stream.jpg",
+    "caption": "A live conversation with Sanjay Reddy"
+   }
+  ]
+ },
+ "reading": {
+  "label": "Further reading",
+  "items": [
+   {
+    "title": "Navigating the Frontier of Creativity: The Potential of AI in Art and Design",
+    "date": "Mar 2024",
+    "url": "https://www.onlyvibhor.com/post/navigating-the-frontier-of-creativity-unveiling-the-potential-of-ai-in-art-and-design"
+   },
+   {
+    "title": "Embracing Creative Leadership in 2025: Strategies for In-House Design Teams",
+    "date": "Apr 2024",
+    "url": "https://www.onlyvibhor.com/post/setting-up-design-lead-goals-for-2025"
+   }
+  ]
+ },
+ "cta": {
+  "label": "Work with me",
+  "title": "Want a session, a workshop or a talk?",
+  "body": "Book a one-to-one on ADPList, or email me about a workshop for your team or community.",
+  "buttons": [
+   {
+    "label": "Book on ADPList",
+    "href": "https://adplist.org/mentors/vibhor-mathur"
+   },
+   {
+    "label": "Email about a workshop",
+    "href": "mailto:onlyvibhor@gmail.com?subject=Workshop%20or%20talk"
+   }
+  ]
+ }
+};
+window.TOOLKIT = {
+ "meta": {
+  "title": "AI Toolkit — Vibhor Mathur",
+  "description": "How the Razorpay design team uses AI to build its own tools: automating set tasks, scaling production, teaching beginners and shipping interactive web campaigns without waiting for a developer."
+ },
+ "label": "AI Toolkit",
+ "headline": "Tools that make the *work*, built by the people who make the work.",
+ "intro": "AI is not only a way to make images. Used properly, it lets a design team build its own software: tools for the studio, tools for marketing, and interactive web experiences that designers ship themselves. This is that toolkit, and what it changed.",
+ "principles": [
+  {
+   "title": "Prompts are inputs",
+   "body": "A prompt is one ingredient, not the product. The product is what you wrap around it."
+  },
+  {
+   "title": "Tools are modules",
+   "body": "Small tools with a single job, each with a proper interface, that can be combined and reused."
+  },
+  {
+   "title": "Systems create consistency",
+   "body": "Brand, lighting, faces and scenes are held in the tool, so the hundredth output looks like the first."
+  }
+ ],
+ "pillars": [
+  {
+   "title": "Automate the set tasks",
+   "body": "Work that repeats, such as turning one founder photo into a campaign library or one product shot into a scene, stops being a design request and becomes a button. The designers' time goes to the idea and the finish.",
+   "proof": [
+    {
+     "label": "Founder Image Generator",
+     "detail": "One photo in, a full campaign library out. 4K, one click."
+    },
+    {
+     "label": "Social Content Gen",
+     "detail": "A founder photo and a business story in, a composed, campaign-ready post out."
+    }
+   ]
+  },
+  {
+   "title": "Scale up production",
+   "body": "When the tool holds the look, volume stops costing quality. The same pipeline that produced 81 television films for 20 founders also produced a newspaper front page and more than 200 social posts, with no cameras, sets or lights.",
+   "proof": [
+    {
+     "label": "Backing India's Start-Up Champions",
+     "detail": "81 films, 1 newspaper ad, 200+ social posts.",
+     "href": "case.html?c=t20"
+    },
+    {
+     "label": "Razorbae, AI avatar",
+     "detail": "Shot once, trained into a system: 129 reels and 6.55 million views."
+    }
+   ]
+  },
+  {
+   "title": "Easy to learn, even for beginners",
+   "body": "A blank prompt box is intimidating. A panel with lenses, lighting, presets and references is not. Wrapping models in clear interfaces gives a beginner a good starting point on day one, and gives the whole team one shared way of working.",
+   "proof": [
+    {
+     "label": "Interfaces, not prompts",
+     "detail": "Every tool is built with an interface in Gemini Studio, so the controls are visible and the learning curve is short."
+    },
+    {
+     "label": "Workshops and mentoring",
+     "detail": "AI design workshops, talks and one-to-one mentoring for designers starting out."
+    }
+   ]
+  },
+  {
+   "title": "Designers shipping interactive web, themselves",
+   "body": "Campaign sites, landing pages and playable games used to wait in a developer queue. With AI-assisted building, designers take an idea from sketch to a live interactive page, and own the motion, the feel and the details end to end.",
+   "proof": [
+    {
+     "label": "Magic Checkout landing page",
+     "detail": "An immersive scroll-through world with micro-animations.",
+     "href": "case.html?c=magic-checkout"
+    },
+    {
+     "label": "Back in the Ring",
+     "detail": "A parallax landing page and a playable game.",
+     "href": "case.html?c=ring"
+    }
+   ]
+  }
+ ],
+ "tools_head": {
+  "label": "The studio's tools",
+  "title": "Built in-house. Used on live campaigns.",
+  "body": "Each one started as a repeating task on a real campaign, and became a tool the whole team could pick up."
+ },
+ "tools": [
+  {
+   "name": "Cinematography Tool",
+   "tag": "For film and ads",
+   "body": "A virtual camera department. Pick the lens, set the light, choose the grade, and the scene follows.",
+   "bullets": [
+    "20+ camera lens simulations",
+    "Advanced lighting control",
+    "100+ colour grading variations"
+   ],
+   "built_with": "Gemini Studio for the interface, Nano Banana API",
+   "hero": "assets/img/tools/cine-ui.jpg",
+   "gallery": [
+    "assets/img/tools/cine-1.jpg",
+    "assets/img/tools/cine-2.jpg",
+    "assets/img/tools/cine-4.jpg",
+    "assets/img/tools/cine-5.jpg"
+   ]
+  },
+  {
+   "name": "Product Image Generator",
+   "tag": "For product marketing",
+   "body": "Virtual product photography that keeps the brand together. Drop in a product and get it placed in an environment, lit and composed.",
+   "bullets": [
+    "Infinite variations",
+    "Consistent brand visuals",
+    "No physical shoots required"
+   ],
+   "built_with": "Gemini Studio for the interface, Nano Banana API",
+   "hero": "assets/img/tools/prod-ui.jpg",
+   "gallery": [
+    "assets/img/tools/prod-1.jpg",
+    "assets/img/tools/prod-4.jpg",
+    "assets/img/tools/prod-5.jpg",
+    "assets/img/tools/prod-7.jpg"
+   ]
+  },
+  {
+   "name": "Advanced Image Editor",
+   "tag": "For continuity",
+   "body": "One scene, many angles, the same faces. Built for the moments where a single hero image is not enough and consistency is the whole job.",
+   "bullets": [
+    "A consistent scene from different angles",
+    "Continuity frames",
+    "Multi-reference generation: scene, style, lighting, colour and face"
+   ],
+   "built_with": "Gemini Studio for the interface, Nano Banana API",
+   "hero": "assets/img/tools/edit-ui.jpg",
+   "gallery": [
+    "assets/img/tools/edit-2.jpg",
+    "assets/img/tools/edit-3.jpg",
+    "assets/img/tools/edit-4.jpg",
+    "assets/img/tools/edit-5.jpg"
+   ]
+  },
+  {
+   "name": "Founder Image Generator",
+   "tag": "For campaigns with people",
+   "body": "Converts one founder image into multiple visuals across clothing, pose and lighting. It was the engine behind the T20 campaign.",
+   "bullets": [
+    "Transformations across clothing, pose and lighting",
+    "4K generation in one click",
+    "20+ founders from a single source photo each"
+   ],
+   "built_with": "Gemini, Nano Banana API",
+   "hero": "assets/img/tools/founder-ui.jpg",
+   "gallery": [
+    "assets/img/tools/founder-grid.jpg",
+    "assets/img/tools/founder-panel.jpg",
+    "assets/img/tools/founder-1.jpg",
+    "assets/img/tools/founder-2.jpg"
+   ]
+  },
+  {
+   "name": "Social Content Gen",
+   "tag": "For high volume",
+   "body": "A high-volume, personalised post creator. Give it a founder image and a business success story; preset combinations of clothing, pose, lighting and background do the rest.",
+   "bullets": [
+    "Input: a founder image and a business story",
+    "Preset clothing, pose, lighting and background",
+    "Fully composed, campaign-ready social posts"
+   ],
+   "built_with": "Replit, Gemini, ChatGPT and Nano Banana",
+   "hero": "assets/img/tools/social-flow.jpg",
+   "gallery": [
+    "assets/img/tools/social-1.jpg",
+    "assets/img/tools/social-2.jpg",
+    "assets/img/tools/social-3.jpg",
+    "assets/img/tools/social-posts.jpg"
+   ]
+  }
+ ],
+ "interactive": {
+  "label": "Interactive web",
+  "title": "Pages you can play with, shipped by designers.",
+  "body": "Beyond images and films, the team has had interactive web experiences built for campaigns: landing pages with scroll worlds, micro-animations and a playable game. They sit alongside the toolkit because they use the same idea: design owns the idea and the feel, and AI shortens the distance to something live.",
+  "items": [
+   {
+    "title": "Magic Checkout",
+    "tag": "Landing page",
+    "body": "An immersive landing page where you experience what checkout does, from the magic you see to the science behind it.",
+    "image": "assets/img/p/magic-cover.jpg",
+    "href": "case.html?c=magic-checkout"
+   },
+   {
+    "title": "Back in the Ring",
+    "tag": "Landing page and game",
+    "body": "A parallax landing page that pulls you into the ring, plus a game where each opponent defeated unlocks a new feature.",
+    "image": "assets/img/p/ring-cover.jpg",
+    "href": "case.html?c=ring"
+   },
+   {
+    "title": "The Wall of Laughter",
+    "tag": "Interactive board",
+    "body": "An anonymous digital board where HR professionals shared the funniest salary questions they had ever received.",
+    "image": "assets/img/p/trial-1.jpg",
+    "href": "https://razorpayxwalloflaughter.razorpay.com/"
+   },
+   {
+    "title": "Backing India's Boldest",
+    "tag": "Landing page and social",
+    "body": "Glambot-style camera motion videos of founders for a landing page and social content, built around character realism and cinematic slow motion.",
+    "image": "",
+    "href": ""
+   }
+  ]
+ },
+ "learn": {
+  "label": "Learning",
+  "title": "The tools are only half of it. The team has to be able to use them.",
+  "body": "Beginners are the point. The toolkit is taught, not just handed over: through workshops, talks and mentoring that start from what AI can do for a designer.",
+  "items": [
+   {
+    "name": "Revolutionizing Design Workflows with AI",
+    "detail": "Designland workshop."
+   },
+   {
+    "name": "Revolutionizing Design Workflows with AI: Razorpay's Success Story",
+    "detail": "GrowthSchool."
+   },
+   {
+    "name": "AI in Design: A Silent Revolution",
+    "detail": "xtended Pack Collective workshop."
+   },
+   {
+    "name": "Design Tank",
+    "detail": "Feedback and mentorship from top design leaders."
+   },
+   {
+    "name": "Groundbreakin Podcast",
+    "detail": "Podcast conversation."
+   }
+  ],
+  "images": [
+   {
+    "image": "assets/img/tools/talk-designland.jpg",
+    "caption": "Designland"
+   },
+   {
+    "image": "assets/img/tools/talk-growthschool.jpg",
+    "caption": "GrowthSchool"
+   },
+   {
+    "image": "assets/img/tools/talk-extended.jpg",
+    "caption": "xtended Pack Collective"
+   },
+   {
+    "image": "assets/img/tools/talk-designtank.jpg",
+    "caption": "Design Tank"
+   }
+  ],
+  "wide": "assets/img/tools/talk-room.jpg",
+  "link": {
+   "label": "More on mentoring and workshops",
+   "href": "mentorship.html"
+  }
+ },
+ "stack": {
+  "label": "The stack",
+  "items": [
+   "Midjourney",
+   "Nano Banana API",
+   "ChatGPT",
+   "Claude",
+   "Gemini",
+   "Topaz Labs",
+   "Suno AI",
+   "Adobe Firefly",
+   "Replit",
+   "Kling",
+   "RunwayML",
+   "ElevenLabs",
+   "Veo 2"
+  ]
+ },
+ "team": {
+  "label": "With the team",
+  "body": "The tools were built and used with the Razorpay communication design team, including communication designers Aadithya Narayanan, Jasleen Kaur and Pyukil Janwani."
+ },
+ "cta": {
+  "label": "See the work these tools made",
+  "href": "work.html"
  }
 };
 window.PROJECTS = [
@@ -628,8 +1118,7 @@ window.PROJECTS = [
   "categories": [
    "AI Film",
    "Campaign"
-  ],
-  "external_url": ""
+  ]
  },
  {
   "title": "Break To Build",
@@ -814,8 +1303,7 @@ window.PROJECTS = [
   "categories": [
    "AI Film",
    "Campaign"
-  ],
-  "external_url": ""
+  ]
  },
  {
   "title": "Backing India's Start-Up Champions",
@@ -992,274 +1480,921 @@ window.PROJECTS = [
    "Campaign",
    "Social",
    "Print"
-  ],
-  "external_url": ""
+  ]
  },
  {
-  "title": "Magic Checkout Landing Page",
-  "slug": "magic-checkout",
+  "title": "Back in the Ring",
+  "slug": "ring",
   "published": true,
-  "featured": false,
-  "order": 5,
-  "title_lines": "Magic Checkout Landing Page",
-  "card_title": "Magic Checkout Landing Page",
-  "client": "Razorpay",
-  "year": "",
-  "category": "",
-  "role": "",
-  "tagline": "",
-  "summary": "",
-  "categories": [
-   "Landing Page / Web"
-  ],
-  "external_url": "https://www.behance.net/gallery/254362459/Magic-Checkout-Landing-Page",
+  "featured": true,
+  "order": 4,
+  "title_lines": "Back in\nthe Ring",
+  "card_title": "Back in\nthe Ring",
+  "client": "Razorpay Netbanking",
+  "year": "2026",
+  "category": "Film · Landing page · Game",
+  "role": "Creative Direction",
+  "tagline": "A fallen champion, written off by one-tap payments, gets its redemption arc.",
+  "summary": "A boxing-film trailer, a parallax landing page and a playable game, built end to end in-house to relaunch Netbanking.",
   "cover": {
-   "image": "",
+   "image": "assets/img/p/ring-cover.jpg",
    "video": ""
   },
   "metrics": [],
-  "sections": [],
-  "team": [],
+  "sections": [
+   {
+    "type": "text",
+    "label": "The brief",
+    "title": "Bring Netbanking back into the conversation.",
+    "body": "Netbanking had quietly powered online payments for decades. In the age of one-tap UPI and cards it felt like an old champion written off by everyone. The brief was to bring it back not as a legacy payment method, but as a trusted contender making its comeback."
+   },
+   {
+    "type": "steps",
+    "label": "Three pieces, one story",
+    "title": "Don't just watch the comeback. Play it.",
+    "items": [
+     {
+      "title": "The film",
+      "body": "Netbanking in the gym, drilling new features into knockout punches, training every round toward one goal: champion status, reclaimed."
+     },
+     {
+      "title": "The arena",
+      "body": "An interactive one-page landing page that breaks down the new tech powering the comeback, with parallax scrolling that pulls you deeper into the ring, every feature landing like a fresh combo."
+     },
+     {
+      "title": "The game",
+      "body": "Clear level after level; each opponent defeated unlocks a new feature, until the championship belt is back where it belongs."
+     }
+    ]
+   },
+   {
+    "type": "image",
+    "image": "assets/img/p/ring-2.jpg",
+    "caption": "100% AI-powered filmmaking",
+    "size": "wide"
+   },
+   {
+    "type": "text",
+    "label": "Production",
+    "title": "A cinematic, trailer-like experience rather than a conventional fintech film.",
+    "body": "Every character was created with AI, from environments to every visual detail, combined with art direction and a visual language designed to match international cinematic standards: a bold, premium take on a Netbanking comeback."
+   },
+   {
+    "type": "tools",
+    "label": "Stack",
+    "items": [
+     "Claude",
+     "Higgsfield",
+     "Runway",
+     "Gemini",
+     "OpenAI",
+     "Adobe",
+     "Suno"
+    ]
+   }
+  ],
+  "team": [
+   {
+    "name": "Vibhor Mathur",
+    "role": ""
+   },
+   {
+    "name": "Sourajit Sengupta",
+    "role": ""
+   },
+   {
+    "name": "Neil Dutta",
+    "role": ""
+   },
+   {
+    "name": "Rahul Girish",
+    "role": ""
+   },
+   {
+    "name": "Aastha Bhat",
+    "role": ""
+   },
+   {
+    "name": "Aadithya Narayanan S",
+    "role": ""
+   },
+   {
+    "name": "Jasleen Kaur",
+    "role": ""
+   },
+   {
+    "name": "Aditya Mohan Gupta",
+    "role": ""
+   },
+   {
+    "name": "Vidushi S.",
+    "role": ""
+   },
+   {
+    "name": "Varun Thakar",
+    "role": ""
+   }
+  ],
   "awards": [],
   "links": [
    {
-    "label": "View on Behance",
+    "label": "Behance case study",
+    "url": "https://www.behance.net/gallery/254798253/Back-in-the-ring-Netbanking-Comeback-Razorpay"
+   }
+  ],
+  "categories": [
+   "AI Film",
+   "Landing Page / Web",
+   "Campaign"
+  ]
+ },
+ {
+  "published": true,
+  "featured": true,
+  "title": "Magic Checkout Landing Page",
+  "order": 5,
+  "title_lines": "Magic\nCheckout",
+  "card_title": "Magic\nCheckout",
+  "client": "Razorpay",
+  "year": "2026",
+  "category": "Landing page · Motion",
+  "role": "Art Direction · Web Design",
+  "tagline": "It's not just a checkout. It's engineered magic.",
+  "summary": "An immersive landing page that lets visitors experience what Magic Checkout does, instead of reading a list of features.",
+  "categories": [
+   "Landing Page / Web",
+   "Motion"
+  ],
+  "cover": {
+   "image": "assets/img/p/magic-cover.jpg",
+   "video": ""
+  },
+  "metrics": [],
+  "sections": [
+   {
+    "type": "text",
+    "label": "The idea",
+    "title": "Don't explain checkout. Let people feel it.",
+    "body": "The Razorpay Magic Checkout landing page turns a complex checkout technology into an immersive magical experience. Instead of simply explaining features, the page lets you experience what Magic Checkout does, making every step of checkout feel effortless and almost automatic."
+   },
+   {
+    "type": "video",
+    "url": "assets/vid/magic-02.mp4",
+    "poster": "",
+    "caption": "The hero: \"It's Not Just A Checkout. It's Engineered Magic.\"",
+    "size": "wide",
+    "loop": true
+   },
+   {
+    "type": "image",
+    "image": "assets/img/p/magic-page.jpg",
+    "caption": "The landing page: the hero, the missing piece in D2C growth, and the first of four scenes",
+    "size": "wide"
+   },
+   {
+    "type": "text",
+    "label": "Four scenes",
+    "title": "One product story, four ways in.",
+    "body": "The page is organised around four stories a merchant cares about: **Boost Conversion**, **COD Control**, **Improve Purchase Intent** and **Build Loyalty**. Each plays out on a floating island with a mock storefront, so the product screens sit inside a world rather than on a slide."
+   },
+   {
+    "type": "statement",
+    "text": "Magic on the surface. Science underneath."
+   },
+   {
+    "type": "text",
+    "label": "Magic → Science",
+    "title": "From the magic you see to the science behind it.",
+    "body": "The experience shifts from an immersive magical world to a technical wireframe, revealing the data, logic and systems powering the seamless checkout experience."
+   },
+   {
+    "type": "video",
+    "url": "assets/vid/magic-07.mp4",
+    "poster": "",
+    "caption": "Signal-based nudges and gamified coupons, shown as the system behind the scene",
+    "size": "wide",
+    "loop": true
+   },
+   {
+    "type": "text",
+    "label": "Micro animations",
+    "title": "Making every interaction *feel alive*.",
+    "body": "A series of subtle micro-animations bring the interface and its features to life, adding moments of delight while making complex interactions feel intuitive and effortless."
+   },
+   {
+    "type": "clips",
+    "columns": 2,
+    "clips": [
+     {
+      "video": "assets/vid/magic-11.mp4",
+      "caption": "Add to cart, Buy Now"
+     },
+     {
+      "video": "assets/vid/magic-12.mp4",
+      "caption": "Coupons and payment offers"
+     },
+     {
+      "video": "assets/vid/magic-14.mp4",
+      "caption": "Payment options, cash on delivery"
+     },
+     {
+      "video": "assets/vid/magic-15.mp4",
+      "caption": "Saved offers and recommended methods"
+     }
+    ]
+   }
+  ],
+  "team": [
+   {
+    "name": "Vibhor Mathur",
+    "role": ""
+   },
+   {
+    "name": "Rahul Girish",
+    "role": ""
+   }
+  ],
+  "awards": [],
+  "links": [
+   {
+    "label": "Behance case study",
     "url": "https://www.behance.net/gallery/254362459/Magic-Checkout-Landing-Page"
    }
-  ]
+  ],
+  "slug": "magic-checkout"
  },
  {
-  "title": "Agentic Commerce Engine Launch Video",
-  "slug": "agentic-commerce-engine",
   "published": true,
-  "featured": false,
+  "featured": true,
+  "title": "Agentic Commerce Engine Launch Video",
   "order": 6,
-  "title_lines": "Agentic Commerce Engine Launch Video",
-  "card_title": "Agentic Commerce Engine Launch Video",
-  "client": "Razorpay",
-  "year": "",
-  "category": "",
-  "role": "",
-  "tagline": "",
-  "summary": "",
+  "title_lines": "Agentic\nCommerce\nEngine",
+  "card_title": "Agentic\nCommerce Engine",
+  "client": "Razorpay · GFF 26",
+  "year": "2026",
+  "category": "AI film · Launch video",
+  "role": "Art Direction",
+  "tagline": "One founder's POV, one continuous world, one integration.",
+  "summary": "A 100% AI-made launch film for the Razorpay Agentic Commerce Stack, made for GFF 26.",
   "categories": [
+   "AI Film",
    "Video"
   ],
-  "external_url": "https://www.behance.net/gallery/255895063/Agentic-Commerce-Engine-Launch-Video",
   "cover": {
-   "image": "",
+   "image": "assets/img/p/ace-cover.jpg",
    "video": ""
   },
   "metrics": [],
-  "sections": [],
-  "team": [],
+  "sections": [
+   {
+    "type": "text",
+    "label": "The brief",
+    "title": "Introduce one integration for agentic commerce.",
+    "body": "Razorpay Agentic Commerce Stack: a launch film for GFF 2026 introducing one integration for agentic commerce across LLMs, concierge agents, WhatsApp and brand assistants."
+   },
+   {
+    "type": "image",
+    "image": "assets/img/p/ace-cover.jpg",
+    "caption": "ACE: Agentic Commerce Engine | GFF 26",
+    "size": "wide"
+   },
+   {
+    "type": "text",
+    "label": "The film",
+    "title": "Complexity gives way to the agentic era.",
+    "body": "Told entirely through one founder's POV in a single continuous world, the film shifts from a grand marble hall to a glowing tech studio as complexity gives way to the agentic era, anchored throughout by a locked, high-contrast visual style built around her."
+   },
+   {
+    "type": "statement",
+    "text": "AI was only the production medium."
+   },
+   {
+    "type": "steps",
+    "label": "How it was made",
+    "title": "100% AI-powered filmmaking, directed like a full-scale production.",
+    "items": [
+     {
+      "title": "Storyboard",
+      "body": "Storyboarding and visual exploration to find the world and the character."
+     },
+     {
+      "title": "Art direction",
+      "body": "A carefully crafted art direction, locked early so every frame belongs to the same film."
+     },
+     {
+      "title": "Key frames",
+      "body": "Designing key frames for every environment and every human character."
+     },
+     {
+      "title": "Generate and direct",
+      "body": "Generating and directing the footage itself, frame by frame."
+     },
+     {
+      "title": "Motion and stitch",
+      "body": "Creating motion graphics and stitching everything into one cohesive narrative."
+     }
+    ]
+   },
+   {
+    "type": "text",
+    "label": "Under a tight timeline",
+    "title": "Every frame intentionally designed and refined.",
+    "body": "The film was built under an incredibly tight timeline. The entire film was created using AI, from every environment and human character to the footage itself, and every frame was treated with the same level of creative direction as a full-scale film production."
+   },
+   {
+    "type": "tools",
+    "label": "Stack",
+    "items": [
+     "Claude",
+     "Higgsfield",
+     "Runway",
+     "Gemini",
+     "OpenAI",
+     "Adobe",
+     "Suno"
+    ]
+   }
+  ],
+  "team": [
+   {
+    "name": "Vibhor Mathur",
+    "role": ""
+   },
+   {
+    "name": "Rahul Girish",
+    "role": ""
+   }
+  ],
   "awards": [],
   "links": [
    {
-    "label": "View on Behance",
+    "label": "Behance case study",
     "url": "https://www.behance.net/gallery/255895063/Agentic-Commerce-Engine-Launch-Video"
    }
-  ]
+  ],
+  "slug": "agentic-commerce-engine"
  },
  {
-  "title": "International Payments Launch Video",
-  "slug": "international-payments",
   "published": true,
   "featured": false,
+  "title": "International Payments Launch Video",
   "order": 7,
-  "title_lines": "International Payments Launch Video",
-  "card_title": "International Payments Launch Video",
+  "title_lines": "International\nPayments",
+  "card_title": "International\nPayments",
   "client": "Razorpay",
-  "year": "",
-  "category": "",
-  "role": "",
-  "tagline": "",
-  "summary": "",
+  "year": "2023",
+  "category": "Motion graphics · Launch video",
+  "role": "Design & Motion",
+  "tagline": "Launch video for the import flow of Razorpay International Payments.",
+  "summary": "A 40 to 60 second motion graphics film that makes international e-commerce payments simple to follow.",
   "categories": [
-   "Video"
+   "Video",
+   "Motion"
   ],
-  "external_url": "https://www.behance.net/gallery/185746781/Razorpay-International-Payments-Launch-Video",
   "cover": {
-   "image": "",
+   "image": "assets/img/p/intl-cover.jpg",
    "video": ""
   },
-  "metrics": [],
-  "sections": [],
-  "team": [],
+  "metrics": [
+   {
+    "value": "1000+",
+    "label": "organic views"
+   },
+   {
+    "value": "40–60s",
+    "label": "film length"
+   }
+  ],
+  "sections": [
+   {
+    "type": "text",
+    "label": "The brief",
+    "title": "Show how Razorpay lets international businesses accept payments from India.",
+    "body": "A dive into the world of international e-commerce payments, focused on Razorpay's solution that lets international businesses accept payments from India and settle in their own currency."
+   },
+   {
+    "type": "text",
+    "label": "The approach",
+    "title": "Demystify global e-commerce transactions in under a minute.",
+    "body": "The challenge was to demystify the technicalities of global e-commerce transactions. The solution was a vibrant 40 to 60 second animation that makes the intricacies of international payments both understandable and visually compelling."
+   },
+   {
+    "type": "statement",
+    "text": "Complex financial processes, turned into a visually engaging narrative."
+   },
+   {
+    "type": "text",
+    "label": "The craft",
+    "title": "Motion graphics and kinetic animation.",
+    "body": "The film transforms complex financial processes into a visual narrative using motion graphics and kinetic animation, created with Adobe Illustrator and After Effects. It resonated with the audience, earning over 1000 organic views."
+   },
+   {
+    "type": "tools",
+    "label": "Stack",
+    "items": [
+     "Adobe Illustrator",
+     "After Effects"
+    ]
+   }
+  ],
+  "team": [
+   {
+    "name": "Vibhor Mathur",
+    "role": ""
+   }
+  ],
   "awards": [],
   "links": [
    {
-    "label": "View on Behance",
+    "label": "Behance case study",
     "url": "https://www.behance.net/gallery/185746781/Razorpay-International-Payments-Launch-Video"
    }
-  ]
+  ],
+  "slug": "international-payments"
  },
  {
-  "title": "Magic Conversations Videos",
-  "slug": "magic-conversations",
   "published": true,
   "featured": false,
+  "title": "Magic Conversations Videos",
   "order": 8,
-  "title_lines": "Magic Conversations Videos",
-  "card_title": "Magic Conversations Videos",
-  "client": "Razorpay",
-  "year": "",
-  "category": "",
-  "role": "",
-  "tagline": "",
-  "summary": "",
+  "title_lines": "Magic\nConversations",
+  "card_title": "Magic\nConversations",
+  "client": "Razorpay Magic Checkout",
+  "year": "2023",
+  "category": "Testimonial films",
+  "role": "Design team lead",
+  "tagline": "Two merchants on how Magic Checkout changed their business.",
+  "summary": "Testimonial films with Isak Fragrances and VS Mani Filter Coffees, shot and edited by a team of young designers learning the craft.",
   "categories": [
    "Video"
   ],
-  "external_url": "https://www.behance.net/gallery/185745413/Magic-Conversations-Videos",
   "cover": {
-   "image": "",
+   "image": "assets/img/p/conv-cover.jpg",
    "video": ""
   },
   "metrics": [],
-  "sections": [],
-  "team": [],
+  "sections": [
+   {
+    "type": "text",
+    "label": "The brief",
+    "title": "Merchants in their own words.",
+    "body": "A testimonial video project that brings to life the experiences, and the tangible benefits, that two Razorpay clients, Isak Fragrances and VS Mani Filter Coffees, have enjoyed since integrating Magic Checkout into their e-commerce platforms."
+   },
+   {
+    "type": "text",
+    "label": "Isak Fragrances",
+    "title": "Embracing the digital stage.",
+    "body": "The first film was a venture into remote video production. Conducted over Zoom, it was new terrain for the team, pushing them to adapt and innovate. The result is a narrative of how Magic Checkout revolutionised Isak's online sales, told with authenticity and a fresh perspective by budding designers."
+   },
+   {
+    "type": "text",
+    "label": "VS Mani Filter Coffees",
+    "title": "Learning in the field.",
+    "body": "The second film was a different challenge: an on-site shoot at the client's office. It was hands-on learning for the team, who navigated the nuances of location shooting with determination, and the film captures how Magic Checkout transformed the business, seen through the lens of designers learning with every shot and edit."
+   },
+   {
+    "type": "statement",
+    "text": "Designers learning to direct, one shot at a time."
+   }
+  ],
+  "team": [
+   {
+    "name": "Vibhor Mathur",
+    "role": ""
+   }
+  ],
   "awards": [],
   "links": [
    {
-    "label": "View on Behance",
+    "label": "Behance case study",
     "url": "https://www.behance.net/gallery/185745413/Magic-Conversations-Videos"
    }
-  ]
+  ],
+  "slug": "magic-conversations"
  },
  {
-  "title": "Passport For Your Products",
-  "slug": "passport-for-your-products",
   "published": true,
   "featured": false,
+  "title": "Passport For Your Product",
   "order": 9,
-  "title_lines": "Passport For Your Products",
-  "card_title": "Passport For Your Products",
-  "client": "Razorpay",
-  "year": "",
-  "category": "",
-  "role": "",
-  "tagline": "",
-  "summary": "",
+  "title_lines": "Passport For\nYour Product",
+  "card_title": "Passport For\nYour Product",
+  "client": "Razorpay International Payments",
+  "year": "2023",
+  "category": "AI campaign",
+  "role": "Campaign lead",
+  "tagline": "AI-generated launch campaign for Razorpay International Payments.",
+  "summary": "A launch campaign whose entire design identity was built with a new AI workflow, then taken to YouTube, LinkedIn and Meta.",
   "categories": [
    "Campaign",
    "AI Film"
   ],
-  "external_url": "https://www.behance.net/gallery/185756345/Passport-For-Your-Products-AI-Gen-Campaign",
   "cover": {
-   "image": "",
+   "image": "assets/img/p/passport-cover.jpg",
    "video": ""
   },
-  "metrics": [],
-  "sections": [],
-  "team": [],
+  "metrics": [
+   {
+    "value": "50%",
+    "label": "view-through rate on LinkedIn"
+   },
+   {
+    "value": "94",
+    "label": "leads generated"
+   },
+   {
+    "value": "35%",
+    "label": "lower buy rates"
+   },
+   {
+    "value": "60K+",
+    "label": "impressions on the behind-the-scenes video"
+   }
+  ],
+  "sections": [
+   {
+    "type": "text",
+    "label": "The brief",
+    "title": "Make borderless business feel effortless.",
+    "body": "Razorpay's Passport For Your Product campaign was a cornerstone of the International Payments launch. Cracking the brief took a new approach: an AI workflow introduced to establish a distinctive campaign design identity, positioning Razorpay as a forerunner in fintech by showing effortless global business expansion."
+   },
+   {
+    "type": "image",
+    "image": "assets/img/p/passport-ads.jpg",
+    "caption": "Accept payments with 2X security, 2X possibilities, 2X savings",
+    "size": "narrow"
+   },
+   {
+    "type": "steps",
+    "label": "The process",
+    "title": "Where creativity and technology converge.",
+    "items": [
+     {
+      "title": "Imagery",
+      "body": "Midjourney conjured the compelling images that formed the campaign's visual backbone.",
+      "tools": "Midjourney"
+     },
+     {
+      "title": "Enhancement",
+      "body": "Photoshop generative fill extended the images to every required dimension without losing their charm.",
+      "tools": "Photoshop"
+     },
+     {
+      "title": "Animation",
+      "body": "The stills were set in motion, turning them into a seamless, flowing narrative.",
+      "tools": "Kaiber AI"
+     },
+     {
+      "title": "Edit",
+      "body": "The voiceover and visuals were brought together to create a cohesive story.",
+      "tools": "Adobe Premiere"
+     }
+    ]
+   },
+   {
+    "type": "text",
+    "label": "Performance",
+    "title": "High relevance, interaction and reach.",
+    "body": "The brand campaign beat expectations with high relevance and interaction rates, leading to 35% lower buy rates. It achieved a 50% view-through rate on LinkedIn and substantial engagement on Meta. Distribution across YouTube, LinkedIn and Meta Ads maximised reach, with 94 leads generated, signalling strong interest in Razorpay International Payments."
+   },
+   {
+    "type": "text",
+    "label": "Behind the scenes",
+    "title": "The process was content too.",
+    "body": "The behind-the-scenes video detailing the process was also well received on LinkedIn: over 60,000 impressions, and comments that appreciated the modern approach of using AI tools to push the boundaries of digital marketing."
+   },
+   {
+    "type": "tools",
+    "label": "Stack",
+    "items": [
+     "Midjourney",
+     "Photoshop",
+     "Kaiber AI",
+     "Adobe Premiere"
+    ]
+   }
+  ],
+  "team": [
+   {
+    "name": "Vibhor Mathur",
+    "role": "Campaign lead"
+   }
+  ],
   "awards": [],
   "links": [
    {
-    "label": "View on Behance",
+    "label": "Behance case study",
     "url": "https://www.behance.net/gallery/185756345/Passport-For-Your-Products-AI-Gen-Campaign"
    }
-  ]
+  ],
+  "slug": "passport-for-your-products"
  },
  {
-  "title": "MoneySaver Export Account",
-  "slug": "moneysaver-export-account",
   "published": true,
   "featured": false,
+  "title": "MoneySaver Export Account",
   "order": 10,
-  "title_lines": "MoneySaver Export Account",
-  "card_title": "MoneySaver Export Account",
-  "client": "Razorpay",
-  "year": "",
-  "category": "",
-  "role": "",
-  "tagline": "",
-  "summary": "",
+  "title_lines": "MoneySaver\nExport Account",
+  "card_title": "MoneySaver\nExport Account",
+  "client": "Razorpay International Payments",
+  "year": "2023",
+  "category": "AI launch video",
+  "role": "Campaign lead",
+  "tagline": "India's first PA/PG with an OPGSP compliant solution, launched with an AI-made film.",
+  "summary": "A launch video and digital media strategy for the MoneySaver Export Account, made entirely with AI design tools.",
   "categories": [
    "Campaign",
    "AI Film"
   ],
-  "external_url": "https://www.behance.net/gallery/185754027/MoneySaver-Export-Account-AI-Gen-campaign",
   "cover": {
-   "image": "",
+   "image": "assets/img/p/money-hero.jpg",
    "video": ""
   },
-  "metrics": [],
-  "sections": [],
-  "team": [],
+  "metrics": [
+   {
+    "value": "438K+",
+    "label": "views on Razorpay's social channels"
+   },
+   {
+    "value": "29.1M",
+    "label": "media reach across 32+ stories"
+   },
+   {
+    "value": "70+",
+    "label": "high-quality leads"
+   },
+   {
+    "value": "313K",
+    "label": "impressions on the behind-the-scenes post"
+   }
+  ],
+  "sections": [
+   {
+    "type": "text",
+    "label": "The brief",
+    "title": "A high-stakes launch for Indian exporters.",
+    "body": "A launch campaign for the MoneySaver Export Account, marking India's first PA/PG with an OPGSP compliant solution, exclusively for Indian exporters. The project covered an innovative video and a comprehensive digital media strategy, positioning the product as a pivotal solution for exporters."
+   },
+   {
+    "type": "image",
+    "image": "assets/img/p/money-hero.jpg",
+    "caption": "MoneySaver Export Account: India's first Smart Account for receiving international payments with ease",
+    "size": "full"
+   },
+   {
+    "type": "text",
+    "label": "The film",
+    "title": "A first in the industry, crafted entirely with AI-based design tools.",
+    "body": "The video was made with Midjourney, Studio D-ID and ElevenLabs. The goal was to capture the essence of the product: a platform that lets exporters open a bank account in their choice of country in under 5 seconds and save up to 50% on international transfer charges. Motion graphics and kinetic animation carried those points."
+   },
+   {
+    "type": "tools",
+    "label": "Stack",
+    "items": [
+     "Midjourney",
+     "Studio D-ID",
+     "ElevenLabs"
+    ]
+   },
+   {
+    "type": "text",
+    "label": "Campaign impact",
+    "title": "Razorpay's biggest product launch on its own platforms.",
+    "body": "Over 438K views on Razorpay's social channels made it the biggest product launch there. Media coverage, including an exclusive interview on MoneyControl, led to 32+ stories and a reach of 29.1 million. The launch blog saw an 89.62% engagement rate with around 3K views, and the campaign generated over 70 high-quality leads."
+   },
+   {
+    "type": "text",
+    "label": "Behind the scenes",
+    "title": "Showing the AI workflow in the open.",
+    "body": "A behind-the-scenes video detailed the use of AI tools in the campaign's creation. On LinkedIn that post received 1.2K likes, 83 comments and 33 reposts, with 313,315 impressions, and comments from the industry highlighted AI as a game-changer in marketing and B2B payments."
+   }
+  ],
+  "team": [
+   {
+    "name": "Vibhor Mathur",
+    "role": "Campaign lead"
+   }
+  ],
   "awards": [],
   "links": [
    {
-    "label": "View on Behance",
+    "label": "Behance case study",
     "url": "https://www.behance.net/gallery/185754027/MoneySaver-Export-Account-AI-Gen-campaign"
    }
-  ]
+  ],
+  "slug": "moneysaver-export-account"
  },
  {
-  "title": "Payments on WhatsApp",
-  "slug": "payments-on-whatsapp",
   "published": true,
   "featured": false,
+  "title": "Razorpay Payments on WhatsApp",
   "order": 11,
-  "title_lines": "Payments on WhatsApp",
-  "card_title": "Payments on WhatsApp",
+  "title_lines": "Payments on\nWhatsApp",
+  "card_title": "Payments on\nWhatsApp",
   "client": "Razorpay",
-  "year": "",
-  "category": "",
-  "role": "",
-  "tagline": "",
-  "summary": "",
+  "year": "2023",
+  "category": "AI campaign",
+  "role": "Campaign lead",
+  "tagline": "Melancholy: the silent stories of abandoned carts. Shop. Don't abandon.",
+  "summary": "A launch film where AI-generated imagery tells sad stories of abandoned carts, then turns them into stories of completion.",
   "categories": [
-   "Campaign"
+   "Campaign",
+   "AI Film"
   ],
-  "external_url": "https://www.behance.net/gallery/185779105/Razorpay-Payments-on-WhatsApp",
   "cover": {
-   "image": "",
+   "image": "assets/img/p/whatsapp-cover.jpg",
    "video": ""
   },
-  "metrics": [],
-  "sections": [],
-  "team": [],
+  "metrics": [
+   {
+    "value": "95K+",
+    "label": "impressions across social channels"
+   },
+   {
+    "value": "10%",
+    "label": "engagement rate on Twitter"
+   },
+   {
+    "value": "4.5%",
+    "label": "engagement rate on LinkedIn"
+   },
+   {
+    "value": "2000+",
+    "label": "businesses expressed interest"
+   }
+  ],
+  "sections": [
+   {
+    "type": "text",
+    "label": "The brief",
+    "title": "Launch Razorpay payments on WhatsApp.",
+    "body": "The campaign for Razorpay's payment solution on WhatsApp, led from concept to completion: coordinating teams, managing the creative process and using AI technology to make a campaign that is both innovative and emotionally resonant."
+   },
+   {
+    "type": "statement",
+    "text": "Shop. Don't abandon."
+   },
+   {
+    "type": "text",
+    "label": "The idea",
+    "title": "Melancholy.",
+    "body": "Brainstorms with the marketing and design teams produced three campaign concepts. The chosen one, \"Melancholy\", delved into the emotive narrative of abandoned shopping carts in the digital realm, each with a story echoing the silent plea, \"Shop. Don't Abandon.\""
+   },
+   {
+    "type": "image",
+    "image": "assets/img/p/whatsapp-board.jpg",
+    "caption": "AI imagery, the script, and the Photoshop, After Effects and Premiere edit",
+    "size": "wide"
+   },
+   {
+    "type": "steps",
+    "label": "The process",
+    "title": "A solemn start, an upbeat turn.",
+    "items": [
+     {
+      "title": "Imagery",
+      "body": "Midjourney created the visual cornerstone: unique, emotionally compelling images of the silent stories of abandoned carts.",
+      "tools": "Midjourney"
+     },
+     {
+      "title": "Animation",
+      "body": "Static images were brought to life into a flowing, dynamic narrative.",
+      "tools": "Kaiber AI"
+     },
+     {
+      "title": "Voice",
+      "body": "A professional voiceover artist added a solemn tone that turns optimistic and energetic as Razorpay introduces its solution."
+     },
+     {
+      "title": "Edit",
+      "body": "Visuals and voiceover were edited together, with the visual style blending Razorpay blue and WhatsApp green.",
+      "tools": "After Effects · Premiere"
+     }
+    ]
+   },
+   {
+    "type": "text",
+    "label": "Results",
+    "title": "The highest engagement rates on Twitter and LinkedIn.",
+    "body": "With PR efforts, the launch video amassed over 95K impressions across social channels, with the highest engagement rates on Twitter (10%) and LinkedIn (4.5%). The accompanying blog captivated 6K+ unique readers, and 2000+ businesses expressed interest in the product, including a substantial number of existing Razorpay merchants."
+   },
+   {
+    "type": "tools",
+    "label": "Stack",
+    "items": [
+     "Midjourney",
+     "Kaiber AI",
+     "Photoshop",
+     "After Effects",
+     "Premiere"
+    ]
+   }
+  ],
+  "team": [
+   {
+    "name": "Vibhor Mathur",
+    "role": "Campaign lead"
+   }
+  ],
   "awards": [],
   "links": [
    {
-    "label": "View on Behance",
+    "label": "Behance case study",
     "url": "https://www.behance.net/gallery/185779105/Razorpay-Payments-on-WhatsApp"
    }
-  ]
+  ],
+  "slug": "payments-on-whatsapp"
  },
  {
-  "title": "Grofers Logo Guidelines",
-  "slug": "grofers-logo-guidelines",
   "published": true,
   "featured": false,
+  "title": "Grofers Logo Guidelines",
   "order": 12,
-  "title_lines": "Grofers Logo Guidelines",
-  "card_title": "Grofers Logo Guidelines",
+  "title_lines": "Grofers\nLogo Guidelines",
+  "card_title": "Grofers\nLogo Guidelines",
   "client": "Grofers",
-  "year": "",
-  "category": "",
-  "role": "",
-  "tagline": "",
-  "summary": "",
+  "year": "2021",
+  "category": "Identity system",
+  "role": "Art Direction · Graphic Design",
+  "tagline": "How the Grofers logo behaves: space, shades, placement and hierarchy.",
+  "summary": "Logo usage guidelines for Grofers, covering clear space, colourways, placement, typographic hierarchy and in-app creative templates.",
   "categories": [
    "Brand & Identity"
   ],
-  "external_url": "https://www.behance.net/gallery/123079157/grofers-logo-guidelines",
   "cover": {
-   "image": "",
+   "image": "assets/img/p/grofers-cover.jpg",
    "video": ""
   },
   "metrics": [],
-  "sections": [],
-  "team": [],
+  "sections": [
+   {
+    "type": "text",
+    "label": "The brief",
+    "title": "Give every team one way to use the logo.",
+    "body": "A guideline document for the Grofers brand so that the logo, and the creatives built around it, look consistent wherever they appear. Created in Adobe Illustrator."
+   },
+   {
+    "type": "image",
+    "image": "assets/img/p/grofers-1.jpg",
+    "caption": "Brand campaign layouts",
+    "size": "narrow"
+   },
+   {
+    "type": "image",
+    "image": "assets/img/p/grofers-2.jpg",
+    "caption": "Meet the logo, clear space, and the go-to shades",
+    "size": "narrow"
+   },
+   {
+    "type": "image",
+    "image": "assets/img/p/grofers-3.jpg",
+    "caption": "Logo placement and lock-ups",
+    "size": "narrow"
+   },
+   {
+    "type": "image",
+    "image": "assets/img/p/grofers-4.jpg",
+    "caption": "Logo placement in layouts, and hierarchy examples",
+    "size": "narrow"
+   },
+   {
+    "type": "image",
+    "image": "assets/img/p/grofers-5.jpg",
+    "caption": "Typography dos, hierarchy examples and creatives",
+    "size": "narrow"
+   },
+   {
+    "type": "image",
+    "image": "assets/img/p/grofers-6.jpg",
+    "caption": "In-app templates",
+    "size": "wide"
+   },
+   {
+    "type": "tools",
+    "label": "Stack",
+    "items": [
+     "Adobe Illustrator"
+    ]
+   }
+  ],
+  "team": [
+   {
+    "name": "Vibhor Mathur",
+    "role": ""
+   },
+   {
+    "name": "Zahid Shaikh",
+    "role": ""
+   }
+  ],
   "awards": [],
   "links": [
    {
-    "label": "View on Behance",
+    "label": "Behance case study",
     "url": "https://www.behance.net/gallery/123079157/grofers-logo-guidelines"
    }
-  ]
+  ],
+  "slug": "grofers-logo-guidelines"
  }
 ];
 window.EXPERIMENTS = [
@@ -1280,7 +2415,6 @@ window.EXPERIMENTS = [
    "image": "assets/img/lab/habitats-02.jpg",
    "video": ""
   },
-  "external_url": "",
   "sections": [
    {
     "type": "text",
@@ -1399,7 +2533,6 @@ window.EXPERIMENTS = [
    "image": "assets/img/lab/absolut-4.jpg",
    "video": ""
   },
-  "external_url": "",
   "sections": [
    {
     "type": "text",
@@ -1475,23 +2608,68 @@ window.EXPERIMENTS = [
   "slug": "ai-experiments",
   "published": true,
   "order": 3,
-  "year": "",
+  "year": "2023",
   "medium": [
    "AI art"
   ],
-  "tools": "",
+  "tools": "Midjourney, Stable Diffusion, RunwayML, PIKA Labs, Kaiber AI",
   "title_lines": "AI\nExperiments",
-  "tagline": "",
-  "summary": "",
+  "tagline": "AI images, videos, animations and more.",
+  "summary": "A creative AI journey blending technology and artistry: landscapes, roses and video experiments across Midjourney, Stable Diffusion, RunwayML, PIKA Labs and Kaiber AI.",
   "cover": {
-   "image": "",
+   "image": "assets/img/p/aiexp-10.jpg",
    "video": ""
   },
-  "external_url": "https://www.behance.net/gallery/185757595/AI-Experiments",
-  "sections": [],
+  "sections": [
+   {
+    "type": "text",
+    "label": "The journey",
+    "title": "Blending technology and artistry.",
+    "body": "A creative AI journey blending technology and artistry to craft stunning visuals. From AI-generated images of roses to innovative video experiments, an exploration of the limitless possibilities of Midjourney, Stable Diffusion, RunwayML, PIKA Labs, Kaiber AI and other tools."
+   },
+   {
+    "type": "image_grid",
+    "columns": 2,
+    "images": [
+     {
+      "image": "assets/img/p/aiexp-10.jpg",
+      "caption": ""
+     },
+     {
+      "image": "assets/img/p/aiexp-11.jpg",
+      "caption": ""
+     },
+     {
+      "image": "assets/img/p/aiexp-12.jpg",
+      "caption": ""
+     },
+     {
+      "image": "assets/img/p/aiexp-13.jpg",
+      "caption": ""
+     }
+    ]
+   },
+   {
+    "type": "image",
+    "image": "assets/img/p/aiexp-14.jpg",
+    "caption": "",
+    "size": "narrow"
+   },
+   {
+    "type": "tools",
+    "label": "Tools",
+    "items": [
+     "Midjourney",
+     "Stable Diffusion",
+     "RunwayML",
+     "PIKA Labs",
+     "Kaiber AI"
+    ]
+   }
+  ],
   "links": [
    {
-    "label": "View on Behance",
+    "label": "Behance project",
     "url": "https://www.behance.net/gallery/185757595/AI-Experiments"
    }
   ]

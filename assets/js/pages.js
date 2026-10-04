@@ -5,11 +5,12 @@
   const PROJECTS = window.PROJECTS || [];
   const EXPERIMENTS = window.EXPERIMENTS || [];
   const ABOUT = window.ABOUT || {};
+  const TOOLKIT = window.TOOLKIT || {};
+  const MENTORSHIP = window.MENTORSHIP || {};
   const page = document.body.dataset.page;
   const root = $('#app');
-  const ext = (p) => (p.external_url ? ' target="_blank" rel="noopener"' : '');
 
-  const CAT_ORDER = ['AI Film', 'Campaign', 'Video', 'Landing Page / Web', 'Brand & Identity', 'Social', 'Print'];
+  const CAT_ORDER = ['AI Film', 'Campaign', 'Video', 'Motion', 'Landing Page / Web', 'Brand & Identity', 'Social', 'Print'];
   function orderedCats(list, key, preferred) {
     const set = new Map();
     list.forEach((p) => (p[key] || []).forEach((c) => set.set(c, (set.get(c) || 0) + 1)));
@@ -85,10 +86,10 @@
     const c = p.cover || {};
     const media = c.image
       ? `<div class="card-media"><img src="${esc(c.image)}" alt="${esc(p.title)}" loading="${i < 4 ? 'eager' : 'lazy'}"></div>`
-      : `<div class="card-media type"><span class="mono">${esc((p.categories || [])[0] || 'Project')}${p.external_url ? ' &middot; Behance ↗' : ''}</span><b>${esc(p.title)}</b></div>`;
+      : `<div class="card-media type"><span class="mono">${esc((p.categories || [])[0] || 'Project')}</span><b>${esc(p.title)}</b></div>`;
     const sub = [p.client, p.year].filter(Boolean).join(' · ');
     return `
-      <a class="card" href="${esc(projHref(p))}"${ext(p)} data-cursor="View">
+      <a class="card" href="${esc(projHref(p))}"data-cursor="View">
         ${media}
         <div class="card-meta">
           <span class="n mono">${pad2(i + 1)}</span>
@@ -103,8 +104,8 @@
     const c = e.cover || {};
     const media = c.image
       ? `<div class="lm"><img src="${esc(c.image)}" alt="${esc(e.title)}" loading="lazy"></div>`
-      : `<div class="lm type"><span class="mono">${esc((e.medium || [])[0] || 'Experiment')}${e.external_url ? ' &middot; Behance ↗' : ''}</span><b>${esc(e.title)}</b></div>`;
-    return `<a class="lcard" href="${esc(projHref(e, 'e'))}"${ext(e)} data-cursor="View">${media}<h3>${esc(e.title)}</h3><span class="lt mono">${esc([e.year, (e.medium || []).join(', ')].filter(Boolean).join(' · '))}</span></a>`;
+      : `<div class="lm type"><span class="mono">${esc((e.medium || [])[0] || 'Experiment')}</span><b>${esc(e.title)}</b></div>`;
+    return `<a class="lcard" href="${esc(projHref(e, 'e'))}"data-cursor="View">${media}<h3>${esc(e.title)}</h3><span class="lt mono">${esc([e.year, (e.medium || []).join(', ')].filter(Boolean).join(' · '))}</span></a>`;
   }
 
   /* ===================================================================== */
@@ -118,7 +119,7 @@
     const head = (n, label, title) => `<div class="asec-head"><span class="mono">${pad2(n)} / ${esc(label)}</span>${title ? `<h2 data-split>${inline(title)}</h2>` : ''}</div>`;
     const labCards = EXPERIMENTS.slice(0, 3).map((e) => {
       const c = e.cover || {};
-      return c.image ? `<a class="lcard" href="${esc(projHref(e, 'e'))}"${ext(e)} data-cursor="View"><div class="lm"><img src="${esc(c.image)}" alt="${esc(e.title)}" loading="lazy"></div><h3>${esc(e.title)}</h3><span class="lt mono">${esc([e.year, (e.medium || []).join(', ')].filter(Boolean).join(' · '))}</span></a>` : '';
+      return c.image ? `<a class="lcard" href="${esc(projHref(e, 'e'))}"data-cursor="View"><div class="lm"><img src="${esc(c.image)}" alt="${esc(e.title)}" loading="lazy"></div><h3>${esc(e.title)}</h3><span class="lt mono">${esc([e.year, (e.medium || []).join(', ')].filter(Boolean).join(' · '))}</span></a>` : '';
     }).join('');
 
     root.innerHTML = `
@@ -167,7 +168,7 @@
         ${head(4, th.label, th.label)}
         <div class="teach">
           <div data-fade>${th.quote ? `<blockquote>&ldquo;${esc(th.quote.text)}&rdquo;</blockquote><p class="who mono">${esc(th.quote.who)}</p>` : ''}</div>
-          <ul data-fade>${(th.items || []).map((r) => `<li><span>${esc(r.name)}</span><span>${esc(r.detail)}</span></li>`).join('')}</ul>
+          <div data-fade><ul>${(th.items || []).map((r) => `<li><span>${esc(r.name)}</span><span>${esc(r.detail)}</span></li>`).join('')}</ul>${th.link ? `<a class="btn" href="${esc(th.link.url)}" style="margin-top:22px">${esc(th.link.label)}</a>` : ''}</div>
         </div>
       </section>
 
@@ -191,9 +192,192 @@
     initReveals(document);
   }
 
+
+  /* ===================================================================== */
+  /* AI Toolkit                                                             */
+  /* ===================================================================== */
+  function toolkitPage() {
+    const T = TOOLKIT, th = T.tools_head || {}, it = T.interactive || {}, ln = T.learn || {}, sk = T.stack || {}, tm = T.team || {}, cta = T.cta || {};
+    document.title = (T.meta && T.meta.title) || 'AI Toolkit';
+    const d = $('meta[name="description"]'); if (d && T.meta) d.setAttribute('content', T.meta.description);
+    const head = (n, label, title) => `<div class="asec-head"><span class="mono">${pad2(n)} / ${esc(label)}</span>${title ? `<h2 data-split>${inline(title)}</h2>` : ''}</div>`;
+    const proof = (pr) => `<${pr.href ? `a href="${esc(pr.href)}"${/^https?:/.test(pr.href) ? ' target="_blank" rel="noopener"' : ''} data-cursor="View"` : 'div'} class="tk-proof"><b>${esc(pr.label)}</b><span>${esc(pr.detail)}</span>${pr.href ? '<i aria-hidden="true">&rarr;</i>' : ''}</${pr.href ? 'a' : 'div'}>`;
+
+    const pillars = (T.pillars || []).map((p, i) => `
+      <article class="tk-pillar" data-fade>
+        <div class="tk-pn"><span class="mono">${pad2(i + 1)}</span><h3>${esc(p.title)}</h3></div>
+        <div class="tk-pb"><p>${esc(p.body)}</p><div class="tk-proofs">${(p.proof || []).map(proof).join('')}</div></div>
+      </article>`).join('');
+
+    const tools = (T.tools || []).map((t, i) => `
+      <article class="tk-tool">
+        <div class="tk-th" data-fade>
+          <span class="mono">${pad2(i + 1)} / ${esc(t.tag)}</span>
+          <h3>${esc(t.name)}</h3>
+          <p>${esc(t.body)}</p>
+          <ul>${(t.bullets || []).map((b) => `<li>${esc(b)}</li>`).join('')}</ul>
+          ${t.built_with ? `<p class="bw mono">Built with: ${esc(t.built_with)}</p>` : ''}
+        </div>
+        ${t.hero ? `<figure class="tk-hero-img" data-fade><img src="${esc(t.hero)}" alt="${esc(t.name)} interface" loading="lazy"></figure>` : ''}
+        ${(t.gallery || []).length ? `<div class="tk-gal" data-fade>${t.gallery.map((g) => `<img src="${esc(g)}" alt="" loading="lazy">`).join('')}</div>` : ''}
+      </article>`).join('');
+
+    const inter = (it.items || []).map((x) => {
+      const ex = /^https?:/.test(x.href || '');
+      const tag = x.href ? `a href="${esc(x.href)}"${ex ? ' target="_blank" rel="noopener"' : ''} data-cursor="View"` : 'div';
+      return `<${tag} class="tk-int" data-fade>
+        ${x.image ? `<div class="im"><img src="${esc(x.image)}" alt="${esc(x.title)}" loading="lazy"></div>` : `<div class="im type"><b>${esc(x.title)}</b></div>`}
+        <span class="mono">${esc(x.tag)}</span><h3>${esc(x.title)}</h3><p>${esc(x.body)}</p>${x.href ? `<span class="go mono">${ex ? 'Open it' : 'Case study'} ${ex ? '&#8599;' : '&rarr;'}</span>` : ''}
+      </${x.href ? 'a' : 'div'}>`;
+    }).join('');
+
+    root.innerHTML = `
+      <section class="about-hero tk-top z2">
+        <p class="mono top">${esc(T.label || 'AI Toolkit')}</p>
+        <h1 data-split>${inline(T.headline)}</h1>
+        <p class="tk-intro" data-fade>${esc(T.intro)}</p>
+      </section>
+
+      <section class="tk-principles z2">${(T.principles || []).map((p, i) => `<div data-fade><span class="k mono">${pad2(i + 1)}</span><h3>${esc(p.title)}</h3><p>${esc(p.body)}</p></div>`).join('')}</section>
+
+      <section class="asec z2">
+        ${head(1, 'Why build tools', 'Four things that change when the studio builds its own tools.')}
+        <div class="tk-pillars">${pillars}</div>
+      </section>
+
+      <section class="asec dark dark-pad z2" style="margin-top:clamp(70px,13vh,170px)" id="tools">
+        ${head(2, th.label || 'Tools', th.title)}
+        <div class="asec-head" style="margin-top:-20px"><span></span><p class="intro-p" data-fade>${esc(th.body)}</p></div>
+        <div class="tk-tools">${tools}</div>
+      </section>
+
+      <section class="blue-panel tk-inter z2" data-cur="white">
+        <span class="mono">03 / ${esc(it.label)}</span>
+        <h2 data-split>${esc(it.title)}</h2>
+        <p data-fade>${esc(it.body)}</p>
+        <div class="tk-ints">${inter}</div>
+      </section>
+
+      <section class="asec z2">
+        ${head(4, ln.label || 'Learning', ln.title)}
+        <div class="tk-learn">
+          <div data-fade><p class="lead-p">${esc(ln.body)}</p>
+            <ul class="tk-talks">${(ln.items || []).map((r) => `<li><span>${esc(r.name)}</span><span>${esc(r.detail)}</span></li>`).join('')}</ul>${ln.link ? `<a class="btn" href="${esc(ln.link.href)}" style="margin-top:24px">${esc(ln.link.label)}</a>` : ''}</div>
+          <div class="tk-posters" data-fade>${(ln.images || []).map((g) => `<figure><img src="${esc(g.image)}" alt="${esc(g.caption)}" loading="lazy"><figcaption class="cap mono">${esc(g.caption)}</figcaption></figure>`).join('')}</div>
+        </div>
+        ${ln.wide ? `<figure class="tk-wide" data-fade><img src="${esc(ln.wide)}" alt="" loading="lazy"></figure>` : ''}
+      </section>
+
+      <section class="asec z2">
+        ${head(5, sk.label || 'Stack')}
+        <div class="chips" data-fade>${(sk.items || []).map((c) => `<span class="chip">${esc(c)}</span>`).join('')}</div>
+        ${tm.body ? `<p class="tk-team" data-fade><span class="mono">${esc(tm.label)}</span>${esc(tm.body)}</p>` : ''}
+        ${cta.href ? `<a class="btn tk-cta" href="${esc(cta.href)}" data-fade>${esc(cta.label)}</a>` : ''}
+      </section>` + contactHTML();
+
+    finish();
+    arrive(() => {});
+    initReveals(document);
+  }
+
+
+  /* ===================================================================== */
+  /* Mentorship                                                             */
+  /* ===================================================================== */
+  function mentorshipPage() {
+    const M = MENTORSHIP, o = M.oneonone || {}, v = M.voices || {}, ev = M.events || {}, g = M.gallery || {}, rd = M.reading || {}, cta = M.cta || {};
+    document.title = (M.meta && M.meta.title) || 'Mentorship';
+    const d = $('meta[name="description"]'); if (d && M.meta) d.setAttribute('content', M.meta.description);
+    const head = (n, label, title) => `<div class="asec-head"><span class="mono">${pad2(n)} / ${esc(label)}</span>${title ? `<h2 data-split>${inline(title)}</h2>` : ''}</div>`;
+    const isExt = (u) => /^https?:/.test(u || '');
+    const btn = (b, cls) => `<a class="btn ${cls || ''}" href="${esc(b.href)}"${isExt(b.href) ? ' target="_blank" rel="noopener"' : ''} data-fade>${esc(b.label)}</a>`;
+
+    const events = (ev.items || []).map((e) => `
+      <article class="mt-ev${e.image ? '' : ' noimg'}" data-fade>
+        ${e.image ? `<div class="im"><img src="${esc(e.image)}" alt="${esc(e.title)}" loading="lazy"></div>` : ''}
+        <div class="tx">
+          <p class="mono">${esc([e.type, e.date].filter(Boolean).join(' · '))}</p>
+          <h3>${esc(e.title)}</h3>
+          <p class="host">${esc(e.host)}</p>
+          <p>${esc(e.detail)}</p>
+        </div>
+      </article>`).join('');
+
+    root.innerHTML = `
+      <section class="about-hero tk-top z2">
+        <p class="mono top">${esc(M.label || 'Mentorship')}</p>
+        <h1 data-split>${inline(M.headline)}</h1>
+        <p class="tk-intro" data-fade>${esc(M.intro)}</p>
+      </section>
+
+      <section class="mt-numbers z2">
+        <div class="numbers" data-fade>${(M.numbers || []).map((n) => `<div><b data-count="${esc(n.value)}">${esc(n.value)}</b><span>${esc(n.label)}</span></div>`).join('')}</div>
+        ${M.numbers_note ? `<p class="mono mt-note">${esc(M.numbers_note)}</p>` : ''}
+      </section>
+
+      <section class="asec z2">
+        ${head(1, o.label || 'One to one', o.title)}
+        <div class="mt-one">
+          <div data-fade><p class="lead-p">${esc(o.body)}</p>${o.cta ? btn(o.cta) : ''}</div>
+          <div data-fade><h4 class="mono">${esc(o.topics_label)}</h4><div class="chips">${(o.topics || []).map((t) => `<span class="chip">${esc(t)}</span>`).join('')}</div></div>
+        </div>
+      </section>
+
+      <section class="asec dark dark-pad z2" style="margin-top:clamp(70px,13vh,170px)">
+        ${head(2, v.label || 'Voices', 'In their words.')}
+        <div class="mt-voices">${(v.items || []).map((q) => `<figure data-fade><blockquote>&ldquo;${esc(q.text)}&rdquo;</blockquote><figcaption class="mono">${esc(q.who)}</figcaption></figure>`).join('')}</div>
+        ${v.note ? `<p class="mono mt-note light">${esc(v.note)}</p>` : ''}
+      </section>
+
+      <section class="asec z2">
+        ${head(3, ev.label || 'Events', ev.title)}
+        <div class="asec-head" style="margin-top:-20px"><span></span><p class="intro-p" data-fade>${esc(ev.body)}</p></div>
+        <div class="mt-events">${events}</div>
+      </section>
+
+      ${(g.items || []).length ? `<section class="asec z2">
+        ${head(4, g.label || 'Gallery')}
+        <div class="mt-gal" data-fade>${g.items.map((i) => `<figure class="${i.tall ? 'tall' : ''}"><img src="${esc(i.image)}" alt="${esc(i.caption)}" loading="lazy"><figcaption class="cap mono">${esc(i.caption)}</figcaption></figure>`).join('')}</div>
+      </section>` : ''}
+
+      ${(rd.items || []).length ? `<section class="asec z2">
+        ${head(5, rd.label || 'Reading')}
+        <ul class="writing" data-fade>${rd.items.map((w) => `<li><a href="${esc(w.url)}" target="_blank" rel="noopener"><b>${esc(w.title)}</b><span class="mono">${esc(w.date)} &#8599;</span></a></li>`).join('')}</ul>
+      </section>` : ''}
+
+      <section class="blue-panel mt-cta z2" data-cur="white">
+        <span class="mono">${esc(cta.label)}</span>
+        <h2 data-split>${esc(cta.title)}</h2>
+        <p data-fade>${esc(cta.body)}</p>
+        <div class="mt-btns">${(cta.buttons || []).map((b) => btn(b)).join('')}</div>
+      </section>` + contactHTML();
+
+    finish();
+    arrive(() => {});
+    initReveals(document);
+  }
+
   /* ===================================================================== */
   /* Case study (?c=slug) and experiment (?e=slug)                          */
   /* ===================================================================== */
+  /* short silent loop: source is attached when scrolled near, so many clips cost nothing up front */
+  const loopVideo = (src, poster) => `<video data-loop="${esc(src)}" muted loop playsinline preload="none"${poster ? ` poster="${esc(poster)}"` : ''}${reduce ? ' controls' : ''}></video>`;
+
+  function initLoops() {
+    const vs = $$('video[data-loop]');
+    if (!vs.length) return;
+    const io = 'IntersectionObserver' in window ? new IntersectionObserver((es) => {
+      es.forEach((e) => {
+        const v = e.target;
+        if (e.isIntersecting) {
+          if (!v.getAttribute('src')) v.src = v.dataset.loop;
+          if (!reduce) { const pr = v.play(); if (pr && pr.catch) pr.catch(() => {}); }
+        } else if (!v.paused) v.pause();
+      });
+    }, { rootMargin: '200px 0px' }) : null;
+    vs.forEach((v) => { if (io) io.observe(v); else { v.src = v.dataset.loop; v.controls = true; } });
+  }
+
   function videoHTML(b) {
     const url = b.url || '';
     const size = b.size === 'full' ? 'full' : 'wide';
@@ -207,7 +391,9 @@
     } else if (vm) {
       inner = `<div class="vbox" data-embed="https://player.vimeo.com/video/${vm[1]}?autoplay=1">${b.poster ? `<img src="${esc(b.poster)}" alt="" loading="lazy">` : ''}${btn}</div>`;
     } else if (url) {
-      inner = `<div class="vbox"><video src="${esc(url)}" controls playsinline preload="metadata" ${b.poster ? `poster="${esc(b.poster)}"` : ''}></video></div>`;
+      inner = b.loop
+        ? `<div class="vbox">${loopVideo(url, b.poster)}</div>`
+        : `<div class="vbox"><video src="${esc(url)}" controls playsinline preload="metadata" ${b.poster ? `poster="${esc(b.poster)}"` : ''}></video></div>`;
     }
     return `<figure class="blk blk-video size-${size} z2" data-fade>${inner}${b.caption ? `<figcaption class="cap mono">${esc(b.caption)}</figcaption>` : ''}</figure>`;
   }
@@ -226,6 +412,10 @@
       }
       case 'video':
         return videoHTML(b);
+      case 'clips': {
+        const cols = parseInt(b.columns, 10) || 2;
+        return `<section class="blk z2"><div class="blk-grid clips" style="--cols:${cols}">${(b.clips || []).map((c) => `<figure data-fade><div class="clip">${loopVideo(c.video, c.poster)}</div>${c.caption ? `<figcaption class="cap mono">${esc(c.caption)}</figcaption>` : ''}</figure>`).join('')}</div></section>`;
+      }
       case 'steps':
         return `<section class="blk blk-steps z2"><div class="blk-row" data-fade><h4 class="mono">${esc(b.label)}</h4><div>${b.title ? `<h3 class="blk-title">${inline(b.title)}</h3>` : ''}</div></div><div class="steps-list">${(b.items || []).map((s, i) => `<div class="step" data-fade><div><span class="n mono">${pad2(i + 1)}</span><h5 style="display:inline">${esc(s.title)}</h5></div><div><p>${esc(s.body)}</p>${s.tools ? `<p class="tl2 mono">${esc(s.tools)}</p>` : ''}</div></div>`).join('')}</div></section>`;
       case 'tools':
@@ -251,12 +441,11 @@
       root.innerHTML = `<section class="case-hero z2"><h1>Not<br>found</h1><p class="case-hook" style="padding-left:0">That entry doesn't exist, or hasn't been published yet. <a href="${back[0]}" style="border-bottom:1px solid">Back to ${back[1]}</a>.</p></section>` + contactHTML();
       finish(); arrive(() => {}); return;
     }
-    if (p.external_url) { location.replace(p.external_url); return; }
 
     document.title = p.title + ' — Vibhor Mathur';
     const dsc = $('meta[name="description"]'); if (dsc && p.summary) dsc.setAttribute('content', p.summary);
 
-    const siblings = list.filter((x) => !x.external_url && (x.sections || []).length);
+    const siblings = list.filter((x) => (x.sections || []).length);
     const idx = siblings.indexOf(p);
     const next = siblings.length > 1 ? siblings[(idx + 1) % siblings.length] : null;
     const cover = p.cover || {};
@@ -297,6 +486,7 @@
     });
 
     initReveals(document);
+    initLoops();
     finish();
     arrive(() => introLines($('.case-hero h1')));
   }
@@ -311,6 +501,10 @@
     listPage({ items: EXPERIMENTS, key: 'medium', label: 'Lab', title: 'Lab', intro: (S.lab && S.lab.sub) ? 'Art experiments made after hours: AI art, stop-motion animation and found-object art.' : '', preferred: ['AI art', 'Stop motion', 'Found objects', 'Conceptual art', 'Type & text'], card: (p) => labCard(p), gridClass: 'lgrid', sortable: false });
   } else if (page === 'about') {
     aboutPage();
+  } else if (page === 'mentorship') {
+    mentorshipPage();
+  } else if (page === 'toolkit') {
+    toolkitPage();
   } else if (page === 'case') {
     casePage();
   }

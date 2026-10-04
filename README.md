@@ -7,18 +7,22 @@ index.html     home (hero, selected work, AI toolkit, lab strip, about teaser, r
 work.html      every project, with category filter + sort
 lab.html       art experiments, with medium filter
 about.html     about page
+toolkit.html   AI toolkit page (in-house tools, interactive web, learning)
+mentorship.html  mentoring, workshops, talks and podcasts
 case.html      one template for every detail page:
                  case.html?c=<slug>   project case study
                  case.html?e=<slug>   lab experiment
 content/
   site.json          home-page copy, hero slides, toolkit, recognition, contact
   about.json         the whole About page
-  projects/*.json    one file per project (case studies, or Behance-only links)
+  toolkit.json       the whole AI Toolkit page
+  mentorship.json    the whole Mentorship page, plus its home-page teaser
+  projects/*.json    one file per project (every project is a full case study page)
   experiments/*.json one file per art experiment
   content.js         GENERATED bundle the site reads (do not edit by hand)
 scripts/build_content.py   validates + bundles the content
 admin/             the CMS (Decap), opens at /admin/
-assets/            css, js, images (img/p = project images, img/lab = lab images, uploads = CMS uploads)
+assets/            css, js, images (img/p = project images, img/lab = lab images, img/tools = toolkit images, vid = looping clips, uploads = CMS uploads)
 ```
 
 ## Run it locally
@@ -36,7 +40,8 @@ After editing any file in `content/`, rebuild the bundle:
 python scripts/build_content.py
 ```
 
-It reports drafts it skipped and warns about any image path that doesn't exist.
+It reports drafts it skipped, warns about any image path that doesn't exist, and stamps `?v=` cache-busters on the
+CSS/JS links in every `.html` page so browsers always load the latest files.
 
 ## Publish + edit in the browser (one-time setup, ~15 min)
 
@@ -59,12 +64,12 @@ keep a local server running, and open `/admin/`.
 | **Lab (art experiments)** | Every entry on the Lab page, each with its own detail page. |
 | **Site content > Home page** | Hero, statement, toolkit, lab/about teasers, awards, contact. |
 | **Site content > About page** | The entire About page. |
+| **Site content > Mentorship page** | Numbers, ADPList section, mentee reviews, every talk/workshop card, photos, closing call to action. |
+| **Site content > AI Toolkit page** | Headline, principles, the four pillars, each tool (images, bullets), interactive-web pieces, learning, stack. |
 
 ### Projects
 
 - **Categories**: free-text list. Every category you use becomes a filter chip on the Work page automatically.
-- **External link**: if set, the card links out (e.g. to Behance) and no case study page is created. Leave it empty
-  for a full case study. Behance-only projects need nothing else but a title and categories.
 - **Published** off = draft (hidden). **Featured on home page** puts it in the horizontal gallery (needs a cover image).
 - **Order** controls the default sequence on Work and in "Next project".
 
@@ -78,7 +83,8 @@ Fill the header fields, then build the story from **blocks** in any order, as ma
 | **Big statement** | One huge sentence that reveals word by word on scroll |
 | **Image** | A single image: `full` (edge to edge), `wide`, or `narrow` (portrait/tall) |
 | **Image grid** | 1 to 3 columns of images with captions (great for before/after pairs) |
-| **Video** | A YouTube/Vimeo link (click-to-play poster) or an MP4 you upload |
+| **Video** | A YouTube/Vimeo link (click-to-play poster) or an MP4 you upload. Tick *Silent loop* for short autoplay clips |
+| **Looping clips** | A grid of short silent MP4 loops with captions (UI micro-animations, motion studies) |
 | **Process steps** | Numbered steps with a description and the tools used |
 | **Tools / stack** | A row of tool chips |
 | **Metrics** | Big numbers that count up on scroll |
@@ -98,7 +104,7 @@ Wrap words in `*asterisks*` in headings to get the italic accent.
 
 - Palette: black and white, with vivid cool accents (electric blue `#2d5bff`, cyan, violet, mint) defined at the top of
   `assets/css/style.css`.
-- Home hero and gallery images use a WebGL "fluid glass" lens on hover (desktop only). Everything else is plain DOM.
+- Home hero and gallery images tilt in 3D toward the cursor on hover (WebGL, perspective camera, desktop only): the plane lifts, the picture shifts for depth and the far edge falls into shade. Everything else is plain DOM.
 - Interactions: hero letters react to the cursor and can be smashed (tap or click), AI-toolkit rows show a cursor-following
   tag and fill with colour, page transitions use a curtain wipe.
 - Reduced-motion users get a calm version (no scroll hijacking, no letter physics, instant reveals).

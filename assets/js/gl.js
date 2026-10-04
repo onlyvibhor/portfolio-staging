@@ -19,7 +19,10 @@
 
   const scene = new THREE.Scene();
   let W = window.innerWidth, H = window.innerHeight;
-  const cam = new THREE.OrthographicCamera(-W / 2, W / 2, H / 2, -H / 2, -1000, 1000);
+  // perspective camera placed so the z=0 plane maps 1:1 to CSS pixels; tilting planes then gets real depth
+  const CAMZ = 1100;
+  const cam = new THREE.PerspectiveCamera(50, W / H, 1, 6000);
+  cam.position.z = CAMZ;
   const items = [];
   let dead = false;
 
@@ -28,7 +31,8 @@
     W = document.documentElement.clientWidth || window.innerWidth;
     H = window.innerHeight;
     renderer.setSize(W, H, false);
-    cam.left = -W / 2; cam.right = W / 2; cam.top = H / 2; cam.bottom = -H / 2;
+    cam.fov = 2 * Math.atan(H / 2 / CAMZ) * 180 / Math.PI;
+    cam.aspect = W / H;
     cam.updateProjectionMatrix();
   }
   size();
@@ -62,8 +66,8 @@
     uniform float uAsp2;
     uniform float uProgress;
     uniform float uHover;
-    uniform vec2 uMouse;
-    uniform float uTime;
+    uniform vec2 uTilt;     // (rotation about Y, rotation about X) in radians
+    uniform vec2 uShift;    // parallax offset in uv units
     uniform float uRadius;
     uniform float uAlpha;
     uniform float uPar;
@@ -75,13 +79,6 @@
       vec2 s = vec2(1.0);
       if (pa > asp) s.y = asp / pa; else s.x = pa / asp;
       return (uv - 0.5) * s + 0.5;
-    }
-    float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
-    float noise(vec2 p){
-      vec2 i = floor(p), f = fract(p);
-      f = f * f * (3.0 - 2.0 * f);
-      return mix(mix(hash(i), hash(i + vec2(1.0, 0.0)), f.x),
-                 mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), f.x), f.y);
     }
 
     // image colour at uv, including the slideshow transition
@@ -95,45 +92,19 @@
     }
 
     void main(){
-      vec2 uv = vUv;
+      // depth: push the picture in a little and slide it against the tilt (parallax)
+      float zoom = uZoom * (1.0 + 0.07 * uHover);
+      vec2 uv = vUv + uShift * uHover;
       uv.y += uPar;
-      uv = (uv - 0.5) / uZoom + 0.5;
+      uv = (uv - 0.5) / zoom + 0.5;
+      vec3 col = pick(uv);
 
-      // --- translucent fluid glass lens that follows the cursor ---
-      float ar = uSize.x / uSize.y;
-      vec2 p = (vUv - uMouse) * vec2(ar, 1.0);       // lens space, in image-height units
-      float d = length(p);
-      float R = 0.30;
-      float m = smoothstep(R, R * 0.55, d) * uHover; // 1 in the lens, 0 outside
-      float t = uTime * 0.45;
-
-      vec2 q = p * 5.0;
-      vec2 flow = vec2(noise(q + vec2(t, 0.0)), noise(q + vec2(0.0, t) + 7.3)) - 0.5;
-
-      // dome refraction (magnify towards the centre) + slow liquid wobble
-      vec2 off = vec2(-p.x / ar, -p.y) * m * 0.30 + flow * m * 0.040;
-      vec2 uvR = uv + off;
-
-      // frosted translucency: soft blur inside the lens only
-      float b = m * 0.0055;
-      vec3 col = pick(uvR) * 0.4;
-      col += pick(uvR + vec2( b, 0.0)) * 0.15;
-      col += pick(uvR + vec2(-b, 0.0)) * 0.15;
-      col += pick(uvR + vec2(0.0,  b)) * 0.15;
-      col += pick(uvR + vec2(0.0, -b)) * 0.15;
-
-      // cool glass tint, flowing between blue and cyan/mint
-      vec3 cool = mix(vec3(0.18, 0.36, 1.00), vec3(0.00, 0.92, 0.85), 0.5 + 0.5 * sin(d * 9.0 - t * 2.0 + flow.x * 4.0));
-      col += cool * m * 0.10;
-      col = mix(col, vec3(dot(col, vec3(0.333))) + 0.03, m * 0.07);
-
-      // liquid sheen, rim light and specular highlight
-      float sheen = noise(q * 0.8 - t) * m * 0.13;
-      col += vec3(0.75, 0.92, 1.0) * sheen;
-      float rim = smoothstep(R * 0.50, R * 0.98, d) * (1.0 - smoothstep(R * 0.98, R * 1.10, d)) * uHover;
-      col += mix(vec3(0.55, 0.85, 1.0), vec3(1.0), 0.5) * rim * 0.42;
-      float spec = smoothstep(R * 0.34, 0.0, length(p - vec2(-0.32, 0.40) * R)) * m;
-      col += vec3(1.0) * spec * 0.50;
+      // lighting: the far edge of the tilted plane falls into shade, the near edge catches light
+      float edge = dot(vUv - 0.5, vec2(uTilt.x, -uTilt.y));
+      col *= 1.0 - clamp(edge * 1.3, -0.16, 0.16);
+      vec3 n = normalize(vec3(sin(uTilt.x), -sin(uTilt.y), cos(uTilt.x) * cos(uTilt.y)));
+      vec3 L = normalize(vec3(-0.35, 0.55, 0.75));
+      col *= 1.0 + (dot(n, L) - dot(vec3(0.0, 0.0, 1.0), L)) * 0.35 * uHover;
 
       // rounded corners + fade-in
       vec2 pp = (vUv - 0.5) * uSize;
@@ -167,8 +138,8 @@
         uSize: { value: new THREE.Vector2(1, 1) },
         uAsp: { value: 1 }, uAsp2: { value: 1 },
         uProgress: { value: 0 }, uHover: { value: 0 },
-        uMouse: { value: new THREE.Vector2(0.5, 0.5) },
-        uTime: { value: 0 }, uVel: { value: 0 },
+        uTilt: { value: new THREE.Vector2(0, 0) }, uShift: { value: new THREE.Vector2(0, 0) },
+        uVel: { value: 0 },
         uRadius: { value: 0 }, uAlpha: { value: 0 },
         uPar: { value: 0 }, uZoom: { value: 1 }
       }
@@ -179,7 +150,7 @@
 
     const it = {
       el, mesh, mat, src, slides, vidEl, ready: false, loading: false, hover: 0,
-      par: false, slideTex: [], cur: 0, slideTimer: 0, mx: 0.5, my: 0.5
+      par: false, slideTex: [], cur: 0, slideTimer: 0, nx: 0, ny: 0
     };
     el.__gl = it;
     items.push(it);
@@ -286,28 +257,37 @@
       const off = r.bottom < -50 || r.top > H + 50 || r.right < -50 || r.left > W + 50 || r.width < 2 || r.height < 2;
       if (off) { it.mesh.visible = false; continue; }
       it.mesh.visible = true;
-      it.mesh.scale.set(r.width, r.height, 1);
-      it.mesh.position.set(r.left + r.width / 2 - W / 2, H / 2 - (r.top + r.height / 2), 0);
       const u = it.mat.uniforms;
       u.uSize.value.set(r.width, r.height);
       u.uVel.value = vel;
-      u.uTime.value = now / 1000;
       u.uRadius.value = parseFloat(getComputedStyle(it.el).borderTopLeftRadius) || 0;
       if (it.par) {
         u.uPar.value = ((r.top + r.height / 2) - H / 2) / H * -0.08;
         u.uZoom.value = 1.14;
       }
+
+      // 3D hover: the plane tilts toward the cursor, lifts toward you and the picture shifts for depth
+      let tx = 0, ty = 0, inside = false;
       if (fine && !reduce) {
-        const inside = mouse.x >= r.left && mouse.x <= r.right && mouse.y >= r.top && mouse.y <= r.bottom;
-        it.hover += ((inside ? 1 : 0) - it.hover) * 0.09;
+        inside = mouse.x >= r.left && mouse.x <= r.right && mouse.y >= r.top && mouse.y <= r.bottom;
         if (inside) {
-          const tx = (mouse.x - r.left) / r.width, ty = 1 - (mouse.y - r.top) / r.height;
-          if (it.hover < 0.05) { it.mx = tx; it.my = ty; }          // enter where the cursor is
-          it.mx += (tx - it.mx) * 0.14; it.my += (ty - it.my) * 0.14; // liquid follow
+          tx = Math.max(-1, Math.min(1, (mouse.x - (r.left + r.width / 2)) / (r.width / 2)));
+          ty = Math.max(-1, Math.min(1, ((r.top + r.height / 2) - mouse.y) / (r.height / 2)));
         }
-        u.uHover.value = it.hover;
-        u.uMouse.value.set(it.mx, it.my);
+        it.hover += ((inside ? 1 : 0) - it.hover) * 0.10;
+        it.nx += (tx - it.nx) * 0.09;
+        it.ny += (ty - it.ny) * 0.09;
       }
+      const MAXA = 0.24;                               // about 14 degrees
+      const ry = it.nx * MAXA, rx = -it.ny * MAXA;
+      const lift = 90 * it.hover;
+      const sc = ((CAMZ - lift) / CAMZ) * (1 + 0.015 * it.hover);
+      it.mesh.rotation.set(rx, ry, 0);
+      it.mesh.scale.set(r.width * sc, r.height * sc, 1);
+      it.mesh.position.set(r.left + r.width / 2 - W / 2, H / 2 - (r.top + r.height / 2), lift);
+      u.uHover.value = it.hover;
+      u.uTilt.value.set(ry, rx);
+      u.uShift.value.set(-it.nx * 0.03, -it.ny * 0.03);
     }
     renderer.render(scene, cam);
     requestAnimationFrame(frame);

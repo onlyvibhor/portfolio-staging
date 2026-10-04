@@ -1,34 +1,117 @@
 {
-  "title": "Passport For Your Products",
-  "slug": "passport-for-your-products",
   "published": true,
   "featured": false,
+  "title": "Passport For Your Product",
   "order": 9,
-  "title_lines": "Passport For Your Products",
-  "card_title": "Passport For Your Products",
-  "client": "Razorpay",
-  "year": "",
-  "category": "",
-  "role": "",
-  "tagline": "",
-  "summary": "",
+  "title_lines": "Passport For\nYour Product",
+  "card_title": "Passport For\nYour Product",
+  "client": "Razorpay International Payments",
+  "year": "2023",
+  "category": "AI campaign",
+  "role": "Campaign lead",
+  "tagline": "AI-generated launch campaign for Razorpay International Payments.",
+  "summary": "A launch campaign whose entire design identity was built with a new AI workflow, then taken to YouTube, LinkedIn and Meta.",
   "categories": [
     "Campaign",
     "AI Film"
   ],
-  "external_url": "https://www.behance.net/gallery/185756345/Passport-For-Your-Products-AI-Gen-Campaign",
   "cover": {
-    "image": "",
+    "image": "assets/img/p/passport-cover.jpg",
     "video": ""
   },
-  "metrics": [],
-  "sections": [],
-  "team": [],
+  "metrics": [
+    {
+      "value": "50%",
+      "label": "view-through rate on LinkedIn"
+    },
+    {
+      "value": "94",
+      "label": "leads generated"
+    },
+    {
+      "value": "35%",
+      "label": "lower buy rates"
+    },
+    {
+      "value": "60K+",
+      "label": "impressions on the behind-the-scenes video"
+    }
+  ],
+  "sections": [
+    {
+      "type": "text",
+      "label": "The brief",
+      "title": "Make borderless business feel effortless.",
+      "body": "Razorpay's Passport For Your Product campaign was a cornerstone of the International Payments launch. Cracking the brief took a new approach: an AI workflow introduced to establish a distinctive campaign design identity, positioning Razorpay as a forerunner in fintech by showing effortless global business expansion."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/passport-ads.jpg",
+      "caption": "Accept payments with 2X security, 2X possibilities, 2X savings",
+      "size": "narrow"
+    },
+    {
+      "type": "steps",
+      "label": "The process",
+      "title": "Where creativity and technology converge.",
+      "items": [
+        {
+          "title": "Imagery",
+          "body": "Midjourney conjured the compelling images that formed the campaign's visual backbone.",
+          "tools": "Midjourney"
+        },
+        {
+          "title": "Enhancement",
+          "body": "Photoshop generative fill extended the images to every required dimension without losing their charm.",
+          "tools": "Photoshop"
+        },
+        {
+          "title": "Animation",
+          "body": "The stills were set in motion, turning them into a seamless, flowing narrative.",
+          "tools": "Kaiber AI"
+        },
+        {
+          "title": "Edit",
+          "body": "The voiceover and visuals were brought together to create a cohesive story.",
+          "tools": "Adobe Premiere"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "label": "Performance",
+      "title": "High relevance, interaction and reach.",
+      "body": "The brand campaign beat expectations with high relevance and interaction rates, leading to 35% lower buy rates. It achieved a 50% view-through rate on LinkedIn and substantial engagement on Meta. Distribution across YouTube, LinkedIn and Meta Ads maximised reach, with 94 leads generated, signalling strong interest in Razorpay International Payments."
+    },
+    {
+      "type": "text",
+      "label": "Behind the scenes",
+      "title": "The process was content too.",
+      "body": "The behind-the-scenes video detailing the process was also well received on LinkedIn: over 60,000 impressions, and comments that appreciated the modern approach of using AI tools to push the boundaries of digital marketing."
+    },
+    {
+      "type": "tools",
+      "label": "Stack",
+      "items": [
+        "Midjourney",
+        "Photoshop",
+        "Kaiber AI",
+        "Adobe Premiere"
+      ]
+    }
+  ],
+  "team": [
+    {
+      "name": "Vibhor Mathur",
+      "role": "Campaign lead"
+    }
+  ],
   "awards": [],
   "links": [
     {
-      "label": "View on Behance",
+      "label": "Behance case study",
       "url": "https://www.behance.net/gallery/185756345/Passport-For-Your-Products-AI-Gen-Campaign"
     }
-  ]
+  ],
+  "slug": "passport-for-your-products"
 }

@@ -1,33 +1,60 @@
 {
-  "title": "Magic Conversations Videos",
-  "slug": "magic-conversations",
   "published": true,
   "featured": false,
+  "title": "Magic Conversations Videos",
   "order": 8,
-  "title_lines": "Magic Conversations Videos",
-  "card_title": "Magic Conversations Videos",
-  "client": "Razorpay",
-  "year": "",
-  "category": "",
-  "role": "",
-  "tagline": "",
-  "summary": "",
+  "title_lines": "Magic\nConversations",
+  "card_title": "Magic\nConversations",
+  "client": "Razorpay Magic Checkout",
+  "year": "2023",
+  "category": "Testimonial films",
+  "role": "Design team lead",
+  "tagline": "Two merchants on how Magic Checkout changed their business.",
+  "summary": "Testimonial films with Isak Fragrances and VS Mani Filter Coffees, shot and edited by a team of young designers learning the craft.",
   "categories": [
     "Video"
   ],
-  "external_url": "https://www.behance.net/gallery/185745413/Magic-Conversations-Videos",
   "cover": {
-    "image": "",
+    "image": "assets/img/p/conv-cover.jpg",
     "video": ""
   },
   "metrics": [],
-  "sections": [],
-  "team": [],
+  "sections": [
+    {
+      "type": "text",
+      "label": "The brief",
+      "title": "Merchants in their own words.",
+      "body": "A testimonial video project that brings to life the experiences, and the tangible benefits, that two Razorpay clients, Isak Fragrances and VS Mani Filter Coffees, have enjoyed since integrating Magic Checkout into their e-commerce platforms."
+    },
+    {
+      "type": "text",
+      "label": "Isak Fragrances",
+      "title": "Embracing the digital stage.",
+      "body": "The first film was a venture into remote video production. Conducted over Zoom, it was new terrain for the team, pushing them to adapt and innovate. The result is a narrative of how Magic Checkout revolutionised Isak's online sales, told with authenticity and a fresh perspective by budding designers."
+    },
+    {
+      "type": "text",
+      "label": "VS Mani Filter Coffees",
+      "title": "Learning in the field.",
+      "body": "The second film was a different challenge: an on-site shoot at the client's office. It was hands-on learning for the team, who navigated the nuances of location shooting with determination, and the film captures how Magic Checkout transformed the business, seen through the lens of designers learning with every shot and edit."
+    },
+    {
+      "type": "statement",
+      "text": "Designers learning to direct, one shot at a time."
+    }
+  ],
+  "team": [
+    {
+      "name": "Vibhor Mathur",
+      "role": ""
+    }
+  ],
   "awards": [],
   "links": [
     {
-      "label": "View on Behance",
+      "label": "Behance case study",
       "url": "https://www.behance.net/gallery/185745413/Magic-Conversations-Videos"
     }
-  ]
+  ],
+  "slug": "magic-conversations"
 }

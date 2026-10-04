@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "title": "Mentorship — Vibhor Mathur",
+    "description": "One-to-one design mentoring on ADPList, plus workshops, talks and conversations on AI in design, from Vibhor Mathur, Communication Design Senior Manager at Razorpay."
+  },
+  "label": "Mentorship",
+  "headline": "Sharing what I've learned, one *designer* at a time.",
+  "intro": "Alongside leading a design team, I mentor designers one to one, teach workshops on AI in design, and join panels and conversations about the craft. This page collects all of it, and how to book me.",
+  "teaser": {
+    "label": "Mentorship",
+    "title": "Mentoring designers, one conversation at a time.",
+    "body": "One-to-one sessions on ADPList, workshops on AI in design, talks and podcasts.",
+    "cta": "See all mentorship"
+  },
+  "numbers": [
+    { "value": "33", "label": "one-to-one sessions completed on ADPList" },
+    { "value": "31", "label": "hours of mentoring time, 1,860 minutes" },
+    { "value": "60", "label": "minutes per session, one to one" }
+  ],
+  "numbers_note": "As listed on my ADPList profile.",
+  "oneonone": {
+    "label": "One to one",
+    "title": "Mentoring on ADPList.",
+    "body": "I'm a design mentor on ADPList, offering 60-minute one-to-one mentorship sessions. Sessions are one to one and shaped around what each mentee needs. Mentees have come for feedback on their design approach, for a clearer picture of what is expected of a designer, and for help figuring out where to push next.",
+    "topics_label": "What we can talk about",
+    "topics": ["Design", "Marketing", "Graphic design", "Motion design", "Branding and identity", "Design communication", "Critical thinking", "Presentation skills", "Leadership", "Video editing"],
+    "cta": { "label": "Book a session on ADPList", "href": "https://adplist.org/mentors/vibhor-mathur" }
+  },
+  "voices": {
+    "label": "What mentees say",
+    "note": "Reviews from my ADPList profile.",
+    "items": [
+      { "text": "He felt more like an elder brother than just a mentor, offering helpful lessons that were based on his journey.", "who": "Vibhu Kapil, visual and motion designer" },
+      { "text": "His extensive experience and expertise in communication design shone through during our session. He offered invaluable insights and feedback.", "who": "ADPList mentee" },
+      { "text": "My session with Vibhor was an eye-opener. He helped me understand the expectations for a designer and how to embark on that journey.", "who": "ADPList mentee" }
+    ]
+  },
+  "events": {
+    "label": "Talks and workshops",
+    "title": "Teaching what the studio is learning.",
+    "body": "The sessions draw on running an in-house design team: how AI changes the workflow, and what designers can learn next.",
+    "items": [
+      {
+        "title": "Revolutionizing Design Workflows with AI: Razorpay's Success Story",
+        "host": "GrowthSchool",
+        "type": "Webinar",
+        "date": "9 Sept 2023",
+        "detail": "A 90-minute free session on how Razorpay's design team uses AI.",
+        "image": "assets/img/mentor/growthschool.jpg"
+      },
+      {
+        "title": "Revolutionizing Design Workflows with AI",
+        "host": "Designland",
+        "type": "Virtual session",
+        "date": "27 April 2024",
+        "detail": "A one-hour free virtual session for the Designland community.",
+        "image": "assets/img/mentor/designland.jpg"
+      },
+      {
+        "title": "AI in Design: A Silent Revolution",
+        "host": "xtended Pack Collective",
+        "type": "Workshop",
+        "date": "",
+        "detail": "Exploring the future design world with the power of AI.",
+        "image": "assets/img/mentor/extended.jpg"
+      },
+      {
+        "title": "Design Tank, Season 2",
+        "host": "Design Tank",
+        "type": "Mentor",
+        "date": "",
+        "detail": "Portfolio feedback and mentorship alongside Fatema Raja and Amit Patel.",
+        "image": "assets/img/mentor/designtank.jpg"
+      },
+      {
+        "title": "The Groundbreakin Podcast, episode 046",
+        "host": "Groundbreakin",
+        "type": "Podcast",
+        "date": "",
+        "detail": "A podcast conversation about design.",
+        "image": "assets/img/mentor/groundbreakin.jpg"
+      },
+      {
+        "title": "AI in art and design",
+        "host": "Workshop",
+        "type": "Workshop",
+        "date": "March 2024",
+        "detail": "Image generation, AI video and AI-assisted UI design.",
+        "image": ""
+      },
+      {
+        "title": "AI design workshops for teams",
+        "host": "Whole Truth Foods, Wolfkrafft",
+        "type": "In-house workshops",
+        "date": "",
+        "detail": "AI design workshops for Whole Truth Foods and Wolfkrafft.",
+        "image": ""
+      },
+      {
+        "title": "Generative AI design",
+        "host": "JK Lakshmipat University, Jaipur",
+        "type": "Short course",
+        "date": "",
+        "detail": "A short course on generative AI design.",
+        "image": ""
+      }
+    ]
+  },
+  "gallery": {
+    "label": "In the room",
+    "items": [
+      { "image": "assets/img/mentor/photo.jpg", "caption": "Presenting at a workshop", "tall": true },
+      { "image": "assets/img/mentor/room.jpg", "caption": "On a panel" },
+      { "image": "assets/img/mentor/podcast.jpg", "caption": "Recording a podcast" },
+      { "image": "assets/img/mentor/stream.jpg", "caption": "A live conversation with Sanjay Reddy" }
+    ]
+  },
+  "reading": {
+    "label": "Further reading",
+    "items": [
+      { "title": "Navigating the Frontier of Creativity: The Potential of AI in Art and Design", "date": "Mar 2024", "url": "https://www.onlyvibhor.com/post/navigating-the-frontier-of-creativity-unveiling-the-potential-of-ai-in-art-and-design" },
+      { "title": "Embracing Creative Leadership in 2025: Strategies for In-House Design Teams", "date": "Apr 2024", "url": "https://www.onlyvibhor.com/post/setting-up-design-lead-goals-for-2025" }
+    ]
+  },
+  "cta": {
+    "label": "Work with me",
+    "title": "Want a session, a workshop or a talk?",
+    "body": "Book a one-to-one on ADPList, or email me about a workshop for your team or community.",
+    "buttons": [
+      { "label": "Book on ADPList", "href": "https://adplist.org/mentors/vibhor-mathur" },
+      { "label": "Email about a workshop", "href": "mailto:onlyvibhor@gmail.com?subject=Workshop%20or%20talk" }
+    ]
+  }
+}

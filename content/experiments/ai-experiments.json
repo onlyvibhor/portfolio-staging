@@ -3,23 +3,68 @@
   "slug": "ai-experiments",
   "published": true,
   "order": 3,
-  "year": "",
+  "year": "2023",
   "medium": [
     "AI art"
   ],
-  "tools": "",
+  "tools": "Midjourney, Stable Diffusion, RunwayML, PIKA Labs, Kaiber AI",
   "title_lines": "AI\nExperiments",
-  "tagline": "",
-  "summary": "",
+  "tagline": "AI images, videos, animations and more.",
+  "summary": "A creative AI journey blending technology and artistry: landscapes, roses and video experiments across Midjourney, Stable Diffusion, RunwayML, PIKA Labs and Kaiber AI.",
   "cover": {
-    "image": "",
+    "image": "assets/img/p/aiexp-10.jpg",
     "video": ""
   },
-  "external_url": "https://www.behance.net/gallery/185757595/AI-Experiments",
-  "sections": [],
+  "sections": [
+    {
+      "type": "text",
+      "label": "The journey",
+      "title": "Blending technology and artistry.",
+      "body": "A creative AI journey blending technology and artistry to craft stunning visuals. From AI-generated images of roses to innovative video experiments, an exploration of the limitless possibilities of Midjourney, Stable Diffusion, RunwayML, PIKA Labs, Kaiber AI and other tools."
+    },
+    {
+      "type": "image_grid",
+      "columns": 2,
+      "images": [
+        {
+          "image": "assets/img/p/aiexp-10.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/p/aiexp-11.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/p/aiexp-12.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/p/aiexp-13.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/aiexp-14.jpg",
+      "caption": "",
+      "size": "narrow"
+    },
+    {
+      "type": "tools",
+      "label": "Tools",
+      "items": [
+        "Midjourney",
+        "Stable Diffusion",
+        "RunwayML",
+        "PIKA Labs",
+        "Kaiber AI"
+      ]
+    }
+  ],
   "links": [
     {
-      "label": "View on Behance",
+      "label": "Behance project",
       "url": "https://www.behance.net/gallery/185757595/AI-Experiments"
     }
   ]
