@@ -1,0 +1,250 @@
+{
+  "published": true,
+  "title": "Power",
+  "order": 1,
+  "year": "2021",
+  "medium": [
+    "Found objects",
+    "Type & text"
+  ],
+  "tools": "iPhone 12, Photoshop, Premiere",
+  "title_lines": "Power",
+  "tagline": "Finding inner power in everyday electrical accessories.",
+  "summary": "Assemblages of sockets, switches and wires with words, in photographs and short films, where electrical power becomes a metaphor for courage, inspiration and instinct.",
+  "cover": {
+    "image": "assets/img/lab/power-1.jpg",
+    "video": ""
+  },
+  "sections": [
+    {
+      "type": "text",
+      "label": "The project",
+      "title": "Expressing myself through everyday electrical accessories.",
+      "body": "Project Power is about expressing myself through everyday electrical accessories. The intrigue of finding meaning in random objects drives it. I use assemblage and typography, working with sockets, switches, wires and boards. Assembled objects form compositions that carry an emotional message while having a visual appeal of their own."
+    },
+    {
+      "type": "text",
+      "label": "The metaphor",
+      "title": "Power source, power consumption, inner power.",
+      "body": "I use the physical meaning of these objects, such as the transfer of electrical power, power sources and power consumption, as a metaphor for inner power: courage, inspiration, instinct. Where it helps, I add text, because words sometimes add clarity and strengthen the message of a composition."
+    },
+    {
+      "type": "video",
+      "url": "assets/vid/power.mp4",
+      "poster": "",
+      "caption": "Power: selected work",
+      "size": "wide",
+      "loop": false
+    },
+    {
+      "type": "text",
+      "label": "In motion",
+      "title": "Switches that talk back.",
+      "body": "Short loops where the objects move: switches flipped, wires drawn, letters pushed into place."
+    },
+    {
+      "type": "clips",
+      "columns": 2,
+      "clips": [
+        {
+          "video": "assets/vid/lab/power-if-you-dont-like-it.mp4",
+          "poster": "assets/img/lab/power-if-you-dont-like-it-poster.jpg",
+          "caption": "If you don't like it"
+        },
+        {
+          "video": "assets/vid/lab/power-mood-swing.mp4",
+          "poster": "assets/img/lab/power-mood-swing-poster.jpg",
+          "caption": "Mood swing"
+        },
+        {
+          "video": "assets/vid/lab/power-confused-thoughts.mp4",
+          "poster": "assets/img/lab/power-confused-thoughts-poster.jpg",
+          "caption": "Confused thoughts"
+        },
+        {
+          "video": "assets/vid/lab/power-destiny-sq.mp4",
+          "poster": "assets/img/lab/power-destiny-poster.jpg",
+          "caption": "Destiny"
+        },
+        {
+          "video": "assets/vid/lab/power-happy-sq.mp4",
+          "poster": "assets/img/lab/power-happy-poster.jpg",
+          "caption": "Happy"
+        },
+        {
+          "video": "assets/vid/lab/power-love-shine.mp4",
+          "poster": "assets/img/lab/power-love-shine-poster.jpg",
+          "caption": "Love, shine"
+        },
+        {
+          "video": "assets/vid/lab/power-love-sq.mp4",
+          "poster": "assets/img/lab/power-love-poster.jpg",
+          "caption": "Love"
+        },
+        {
+          "video": "assets/vid/lab/power-midnight-feelings.mp4",
+          "poster": "assets/img/lab/power-midnight-feelings-poster.jpg",
+          "caption": "Midnight feelings"
+        },
+        {
+          "video": "assets/vid/lab/power-peekaboo.mp4",
+          "poster": "assets/img/lab/power-peekaboo-poster.jpg",
+          "caption": "Peekaboo"
+        },
+        {
+          "video": "assets/vid/lab/power-procrastination-sq.mp4",
+          "poster": "assets/img/lab/power-procrastination-poster.jpg",
+          "caption": "Procrastination"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "label": "The work",
+      "title": "Photographs and videos, shot on an iPhone 12.",
+      "body": "The compositions are recorded as photographs and videos to capture the experience of the artwork. They are shot on iPhone 12, produced in Adobe Photoshop and Adobe Premiere, and rendered for print and digital viewing."
+    },
+    {
+      "type": "image_grid",
+      "columns": 2,
+      "images": [
+        {
+          "image": "assets/img/lab/power-1.jpg",
+          "caption": "Plug your thoughts, 2021"
+        },
+        {
+          "image": "assets/img/lab/power-2.jpg",
+          "caption": "Midnight feelings, 2021"
+        },
+        {
+          "image": "assets/img/lab/power-3.jpg",
+          "caption": "Love, 2021"
+        },
+        {
+          "image": "assets/img/lab/power-4.jpg",
+          "caption": "Self sufficient, 2021"
+        },
+        {
+          "image": "assets/img/lab/power-5.jpg",
+          "caption": "Take my energy, 2021"
+        },
+        {
+          "image": "assets/img/lab/power-6.jpg",
+          "caption": "Desires, 2021"
+        }
+      ]
+    },
+    {
+      "type": "statement",
+      "text": "Objects that carry power can carry feeling too."
+    },
+    {
+      "type": "image_grid",
+      "columns": 2,
+      "images": [
+        {
+          "image": "assets/img/lab/power-7.jpg",
+          "caption": "Shoe, 2021"
+        },
+        {
+          "image": "assets/img/lab/power-8.jpg",
+          "caption": "Power Play, 2021"
+        },
+        {
+          "image": "assets/img/lab/power-9.jpg",
+          "caption": "Politics, 2021"
+        },
+        {
+          "image": "assets/img/lab/power-10.jpg",
+          "caption": "Life, 2021"
+        },
+        {
+          "image": "assets/img/lab/power-11.jpg",
+          "caption": "Mood swings, 2021"
+        },
+        {
+          "image": "assets/img/lab/power-12.jpg",
+          "caption": "Destiny, 2021"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "label": "More from the series",
+      "title": "Sockets, switches and wires, in other moods.",
+      "body": "Further compositions from the Power project, from the gallery on my website."
+    },
+    {
+      "type": "image_grid",
+      "columns": 2,
+      "images": [
+        {
+          "image": "assets/img/lab/power-more-1.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/power-more-2.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/power-more-4.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/power-more-5.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/power-more-6.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "image_grid",
+      "columns": 2,
+      "images": [
+        {
+          "image": "assets/img/lab/power-more-9.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/power-more-10.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/power-more-11.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "tools",
+      "label": "Materials and tools",
+      "items": [
+        "Sockets",
+        "Switches",
+        "Wires",
+        "Boards",
+        "iPhone 12",
+        "Photoshop",
+        "Premiere"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "Collect these works on Terrain.art",
+      "url": "https://www.terrain.art/discover/artists/onlyvibhor"
+    },
+    {
+      "label": "Power documentation, 2021 (PDF)",
+      "url": "assets/docs/power-documentation-2021.pdf"
+    },
+    {
+      "label": "Original project page",
+      "url": "https://www.onlyvibhor.com/power"
+    }
+  ],
+  "slug": "power"
+}

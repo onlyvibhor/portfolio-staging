@@ -1,27 +1,18 @@
 {
   "meta": {
-    "title": "Vibhor Mathur — Creative Leader",
-    "description": "Vibhor Mathur is a creative leader and in-house studio builder. Brand films, campaigns and AI-native production at Razorpay, formerly Grofers."
+    "title": "Vibhor Mathur | Creative Director for Brand Films & AI Campaigns",
+    "description": "Creative director and design leader in Bengaluru. Brand films, campaigns and AI-native production at Razorpay, ex-Grofers (Blinkit). Hire for creative direction."
   },
   "hero": {
     "name_line_1": "Vibhor",
     "name_line_2": "Mathur",
-    "meta_left": "Creative leader. Brand films, campaigns and AI-native production, built in-house.",
+    "meta_left": "Creative director and design leader. Brand films, campaigns and AI-native production, built in-house.",
     "meta_right": "Razorpay\nBengaluru, IN",
-    "slides": [
-      {
-        "image": "assets/img/p/hero-trial.jpg"
-      },
-      {
-        "image": "assets/img/p/hero-t20.jpg"
-      },
-      {
-        "image": "assets/img/p/hero-stadium.jpg"
-      }
-    ]
+    "video": "assets/vid/hero/houseparty.mp4",
+    "poster": "assets/img/hero-houseparty-poster.jpg"
   },
   "statement": {
-    "text": "I turn *one photograph* into a full production, and a handful of designers into a *studio* that ships it.",
+    "text": "I turn *brand briefs* into campaigns through design, build *tools* that scale the visuals, and have fun doing it.",
     "left": "Communication Design Senior Manager, Razorpay.",
     "right": "Previously Associate Director, Marketing Design at Grofers (now Blinkit)."
   },
@@ -65,34 +56,12 @@
   "about_teaser": {
     "lead": "Self-taught designer from Jaipur, engineer by degree. I lead Communication Design at *Razorpay*, and make art with AI, stop motion and found objects after hours.",
     "label": "More about me",
-    "portrait": "assets/img/profile.png",
+    "portrait": "assets/img/about/portrait.jpg",
     "caption_left": "Vibhor Mathur",
     "caption_right": "Jaipur → Bengaluru"
   },
   "recognition": {
-    "title": "Recognition",
-    "items": [
-      {
-        "name": "Shorty Awards",
-        "detail": "Winner, Generative AI · Gold Honor, Financial Services",
-        "year": "2026"
-      },
-      {
-        "name": "Kyoorius Creative Awards",
-        "detail": "First List, Film Craft & Use of Technology/AI",
-        "year": "2026"
-      },
-      {
-        "name": "ET Brand Disruption Awards",
-        "detail": "Gold, Most Disruptive Creative & Design Team (Razorpay)",
-        "year": "2026"
-      },
-      {
-        "name": "ET Brand Disruption Awards",
-        "detail": "Silver, Most Disruptive B2B Campaign",
-        "year": "2026"
-      }
-    ]
+    "title": "Awards & recognition"
   },
   "contact": {
     "headline": "Let's make something *people talk about.*",
@@ -114,6 +83,141 @@
         "label": "ADPList",
         "url": "https://adplist.org/mentors/vibhor-mathur"
       }
+    ],
+    "profile": {
+      "label": "Profile (PDF)",
+      "url": "assets/docs/vibhor-mathur-profile.pdf"
+    }
+  },
+  "results": {
+    "label": "Results",
+    "title": "Numbers the work moved.",
+    "items": [
+      {
+        "value": "8.1M",
+        "label": "unique viewers",
+        "project": "Backing India's Start-Up Champions",
+        "slug": "t20"
+      },
+      {
+        "value": "2.1M+",
+        "label": "impressions",
+        "project": "Trial of the Century",
+        "slug": "trial"
+      },
+      {
+        "value": "81",
+        "label": "television films, no cameras",
+        "project": "Backing India's Start-Up Champions",
+        "slug": "t20"
+      },
+      {
+        "value": "133%",
+        "label": "increase in purchase intent",
+        "project": "Backing India's Start-Up Champions",
+        "slug": "t20"
+      },
+      {
+        "value": "30",
+        "label": "AI-led ad films, one photograph each",
+        "project": "Break To Build",
+        "slug": "btb"
+      },
+      {
+        "value": "29.1M",
+        "label": "media reach for a product launch",
+        "project": "MoneySaver Export Account",
+        "slug": "moneysaver-export-account"
+      }
     ]
+  },
+  "seo": {
+    "site_url": "https://www.onlyvibhor.com",
+    "name": "Vibhor Mathur",
+    "job_title": "Communication Design Senior Manager",
+    "role_label": "Creative director and design leader",
+    "locale": "en_IN",
+    "city": "Bengaluru",
+    "region": "Karnataka",
+    "country": "IN",
+    "og_image": "assets/img/og/og-default.jpg",
+    "home_h1": "Vibhor Mathur: creative director for brand films, campaigns and AI-native production",
+    "summary": "Vibhor Mathur is a creative director and design leader based in Bengaluru, India. He leads Communication Design at Razorpay across Payments, RazorpayX and POS, and before that spent over six years at Grofers (now Blinkit), leaving as Associate Director, Marketing Design. His work spans brand films, integrated campaigns, interactive landing pages and AI-native production, including Trial of the Century, which won Generative AI at the Shorty Awards. Hire him for creative direction, brand film and campaign work, AI-led production, building an in-house design studio, or design mentoring.",
+    "keywords": [
+      "creative director",
+      "creative director India",
+      "creative director Bengaluru",
+      "hire a creative director",
+      "brand film director",
+      "art director",
+      "head of design",
+      "in-house design team lead",
+      "AI creative director",
+      "AI film production",
+      "AI advertising campaigns",
+      "generative AI design",
+      "campaign design",
+      "fintech brand design",
+      "Razorpay design",
+      "Blinkit Grofers design",
+      "design mentor",
+      "AI in design workshops",
+      "Vibhor Mathur"
+    ],
+    "knows_about": [
+      "Creative direction",
+      "Art direction",
+      "Brand films",
+      "Integrated campaigns",
+      "AI-native film production",
+      "Generative AI design",
+      "Prompt engineering for production",
+      "Motion graphics",
+      "Landing page design",
+      "Visual identity systems",
+      "Design team leadership",
+      "Fintech marketing design",
+      "Stop-motion animation"
+    ],
+    "services": [
+      {
+        "name": "Creative direction for brand films and campaigns",
+        "desc": "Concept, art direction and craft for brand films, launch videos, keynote films and integrated campaigns, from brief to final edit."
+      },
+      {
+        "name": "AI-native film and campaign production",
+        "desc": "Fully AI-made films and campaign systems that stay consistent at scale, such as 81 television films for 20 founders with no cameras, sets or lights."
+      },
+      {
+        "name": "Interactive landing pages and games",
+        "desc": "Scroll-driven campaign sites and playable games that explain a product by letting people use it."
+      },
+      {
+        "name": "In-house design team leadership",
+        "desc": "Hiring, developing and leading creative teams, and setting the visual system, process and tools they work in."
+      },
+      {
+        "name": "Custom AI design tools for studios",
+        "desc": "In-house AI tools with real interfaces for cinematography, product imagery, image editing and founder-led campaigns."
+      },
+      {
+        "name": "Design mentoring and AI-in-design workshops",
+        "desc": "One-to-one mentoring on ADPList, plus workshops, talks and panels on AI in design and design leadership."
+      }
+    ],
+    "pages": {
+      "work": {
+        "title": "Work: Creative Direction, Brand Films & Campaigns | Vibhor Mathur",
+        "description": "Selected work by creative director Vibhor Mathur: AI films, campaigns, landing pages, motion graphics and identities for Razorpay and Grofers.",
+        "h1": "Work",
+        "intro": "Brand films, campaigns, launches and identities from Razorpay and Grofers. Filter by category."
+      },
+      "lab": {
+        "title": "Lab: Art, AI and Stop-Motion Experiments | Vibhor Mathur",
+        "description": "The after-hours studio of Vibhor Mathur: found-object art, animated collage, stop motion and personal AI work.",
+        "h1": "Lab",
+        "intro": "Art made after hours: found objects, digital collage, illustration, stop motion and AI experiments."
+      }
+    }
   }
 }

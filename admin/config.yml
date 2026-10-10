@@ -1,7 +1,3 @@
-# Decap CMS configuration.
-# 1. Replace `repo` with your GitHub "owner/repo".
-# 2. Follow README.md ("Publish + edit in the browser") for the one-time login setup.
-
 backend:
   name: github
   repo: YOUR_GITHUB_USERNAME/portfolio
@@ -85,8 +81,8 @@ collections:
     name: categories
     widget: list
     min: 1
-    hint: 'Drives the filter chips on the Work page. Suggested: AI Film, Campaign, Video, Landing Page / Web, Brand
-      & Identity, Social, Print. Any new name becomes a new filter automatically.'
+    hint: 'Drives the filter chips on the Work page. Suggested: AI Film, Campaign, Video, Landing Page / Web, Brand & Identity,
+      Social, Print. Any new name becomes a new filter automatically.'
     field:
       label: Category
       name: category
@@ -244,6 +240,11 @@ collections:
         default: false
         required: false
         hint: 'Use for short MP4 clips: they loop without controls.'
+      - label: Aspect ratio (optional)
+        name: ratio
+        widget: string
+        required: false
+        hint: For files that are not 16:9, e.g. 1276/718 or 4/5. Use width/height.
     - label: Process steps
       name: steps
       widget: object
@@ -340,12 +341,82 @@ collections:
         - label: MP4 file
           name: video
           widget: file
+        - label: Poster image (optional)
+          name: poster
+          widget: image
+          required: false
         - label: Caption
           name: caption
           widget: string
           required: false
         summary: '{{fields.caption}}'
         hint: Short silent MP4 loops (under 1.5 MB each work best).
+    - &id001
+      label: Before / after slider
+      name: compare
+      widget: object
+      summary: 'Compare: {{fields.before_label}} / {{fields.after_label}}'
+      fields:
+      - label: Before image
+        name: before
+        widget: image
+      - label: After image
+        name: after
+        widget: image
+      - label: Before label
+        name: before_label
+        widget: string
+        required: false
+      - label: After label
+        name: after_label
+        widget: string
+        required: false
+      - label: Aspect ratio (width/height)
+        name: ratio
+        widget: string
+        required: false
+        hint: e.g. 3/4 or 16/9. Both images are cropped to fit.
+      - label: Caption
+        name: caption
+        widget: string
+        required: false
+      - label: Size
+        name: size
+        widget: select
+        options:
+        - narrow
+        - wide
+        default: narrow
+    - &id002
+      label: Video grid (YouTube / Vimeo)
+      name: video_grid
+      widget: object
+      summary: 'Videos: {{fields.columns}} columns'
+      fields:
+      - label: Columns
+        name: columns
+        widget: select
+        options:
+        - '1'
+        - '2'
+        - '3'
+        default: '2'
+      - label: Videos
+        name: videos
+        widget: list
+        summary: '{{fields.caption}}'
+        fields:
+        - label: Video URL
+          name: url
+          widget: string
+        - label: Poster image (optional)
+          name: poster
+          widget: image
+          required: false
+        - label: Caption
+          name: caption
+          widget: string
+          required: false
   - label: Team and credits
     name: team
     widget: list
@@ -577,6 +648,11 @@ collections:
         default: false
         required: false
         hint: 'Use for short MP4 clips: they loop without controls.'
+      - label: Aspect ratio (optional)
+        name: ratio
+        widget: string
+        required: false
+        hint: For files that are not 16:9, e.g. 1276/718 or 4/5. Use width/height.
     - label: Process steps
       name: steps
       widget: object
@@ -673,12 +749,18 @@ collections:
         - label: MP4 file
           name: video
           widget: file
+        - label: Poster image (optional)
+          name: poster
+          widget: image
+          required: false
         - label: Caption
           name: caption
           widget: string
           required: false
         summary: '{{fields.caption}}'
         hint: Short silent MP4 loops (under 1.5 MB each work best).
+    - *id001
+    - *id002
   - label: Links
     name: links
     widget: list
@@ -725,15 +807,15 @@ collections:
       - label: Text (top right)
         name: meta_right
         widget: text
-      - label: Slideshow images
-        name: slides
-        widget: list
-        summary: '{{fields.image}}'
-        hint: Landscape or portrait crops of your best work. The first one is shown first.
-        fields:
-        - label: Image
-          name: image
-          widget: image
+      - label: Background video (MP4, muted loop)
+        name: video
+        widget: file
+        required: false
+        hint: Plays full-bleed behind the title. Keep it under about 6 MB.
+      - label: Poster image (shown while loading)
+        name: poster
+        widget: image
+        required: false
     - label: Statement
       name: statement
       widget: object
@@ -819,27 +901,13 @@ collections:
       - label: Caption right
         name: caption_right
         widget: string
-    - label: Recognition
+    - label: Recognition heading (awards come from the About page)
       name: recognition
       widget: object
       fields:
       - label: Title
         name: title
         widget: string
-      - label: Awards
-        name: items
-        widget: list
-        summary: '{{fields.name}}'
-        fields:
-        - label: Award
-          name: name
-          widget: string
-        - label: Detail
-          name: detail
-          widget: string
-        - label: Year
-          name: year
-          widget: string
     - label: Contact
       name: contact
       widget: object
@@ -861,6 +929,103 @@ collections:
         - label: URL
           name: url
           widget: string
+    - label: Search and AI answers (SEO)
+      name: seo
+      widget: object
+      fields:
+      - label: Site address (production domain, no trailing slash)
+        name: site_url
+        widget: string
+      - label: Name
+        name: name
+        widget: string
+      - label: Job title (as on LinkedIn)
+        name: job_title
+        widget: string
+      - label: Positioning line
+        name: role_label
+        widget: string
+      - label: Home page headline for search engines
+        name: home_h1
+        widget: string
+      - label: Summary (one paragraph answering "who is this and what can I hire them for")
+        name: summary
+        widget: text
+      - label: City
+        name: city
+        widget: string
+      - label: Region
+        name: region
+        widget: string
+      - label: Country code
+        name: country
+        widget: string
+      - label: Locale
+        name: locale
+        widget: string
+      - label: Share image
+        name: og_image
+        widget: image
+      - label: Keywords
+        name: keywords
+        widget: list
+        field:
+          label: Keyword
+          name: keyword
+          widget: string
+      - label: Topics he is an expert in
+        name: knows_about
+        widget: list
+        field:
+          label: Topic
+          name: topic
+          widget: string
+      - label: Services (hire for)
+        name: services
+        widget: list
+        fields:
+        - label: Name
+          name: name
+          widget: string
+        - label: Description
+          name: desc
+          widget: text
+      - label: Work and Lab page text
+        name: pages
+        widget: object
+        fields:
+        - label: Work
+          name: work
+          widget: object
+          fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: description
+            widget: text
+          - label: Heading
+            name: h1
+            widget: string
+          - label: Intro
+            name: intro
+            widget: text
+        - label: Lab
+          name: lab
+          widget: object
+          fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: description
+            widget: text
+          - label: Heading
+            name: h1
+            widget: string
+          - label: Intro
+            name: intro
+            widget: text
   - name: toolkit
     label: AI Toolkit page
     file: content/toolkit.json
@@ -1132,6 +1297,26 @@ collections:
       - label: Button label
         name: cta
         widget: string
+    - label: Photos at the top of the page
+      name: top
+      widget: object
+      fields:
+      - label: Photos
+        name: items
+        widget: list
+        summary: '{{fields.caption}}'
+        fields:
+        - label: Image
+          name: image
+          widget: image
+        - label: Caption
+          name: caption
+          widget: string
+        - label: Tall (portrait) photo
+          name: tall
+          widget: boolean
+          default: false
+          required: false
     - label: Numbers
       name: numbers
       widget: list
@@ -1238,6 +1423,14 @@ collections:
         - label: Poster / photo
           name: image
           widget: image
+          required: false
+        - label: LinkedIn / post link (optional)
+          name: link
+          widget: string
+          required: false
+        - label: Link label (optional)
+          name: link_label
+          widget: string
           required: false
         summary: '{{fields.host}}: {{fields.title}}'
     - label: Photo gallery
@@ -1531,6 +1724,26 @@ collections:
           name: url
           widget: string
         summary: '{{fields.title}}'
+    - label: Questions (FAQ)
+      name: faq
+      widget: object
+      fields:
+      - label: Label
+        name: label
+        widget: string
+      - label: Title
+        name: title
+        widget: string
+      - label: Questions
+        name: items
+        widget: list
+        fields:
+        - label: Question
+          name: q
+          widget: string
+        - label: Answer
+          name: a
+          widget: text
     - label: Elsewhere
       name: elsewhere
       widget: object
@@ -1549,3 +1762,29 @@ collections:
           name: url
           widget: string
         summary: '{{fields.label}}'
+    - label: Gallery (In pictures)
+      name: gallery
+      widget: object
+      fields:
+      - label: Label
+        name: label
+        widget: string
+        required: false
+      - label: Photos
+        name: items
+        widget: list
+        summary: '{{fields.caption}}'
+        fields:
+        - label: Image
+          name: image
+          widget: image
+          required: false
+          hint: Used as the thumbnail when a video is set.
+        - label: Looping video (optional)
+          name: video
+          widget: file
+          required: false
+          hint: Short silent MP4 loop. It plays in the gallery tile.
+        - label: Caption
+          name: caption
+          widget: string

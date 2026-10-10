@@ -44,27 +44,211 @@
       ]
     },
     {
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=c685r2Omlic",
+      "poster": "assets/img/p/yt-c685r2Omlic.jpg",
+      "caption": "Razorpay | NetBanking Back in the Ring with Banking Connect",
+      "size": "wide",
+      "loop": false
+    },
+    {
       "type": "image",
-      "image": "assets/img/p/ring-2.jpg",
-      "caption": "100% AI-powered filmmaking",
+      "image": "assets/img/p/ring-poster.jpg",
+      "alt": "Back in the Ring, the Netbanking comeback: Razorpay film poster",
       "size": "wide"
     },
     {
       "type": "text",
-      "label": "Production",
-      "title": "A cinematic, trailer-like experience rather than a conventional fintech film.",
-      "body": "Every character was created with AI, from environments to every visual detail, combined with art direction and a visual language designed to match international cinematic standards: a bold, premium take on a Netbanking comeback."
+      "label": "The campaign",
+      "title": "A boxing film, not a product update.",
+      "body": "Razorpay's Netbanking relaunch was told as a comeback story: a fallen champion, written off by one-tap payments, training its way back to the title. One idea ran across a trailer, a landing page and a playable game, so every touchpoint pointed to the same message: Netbanking is back, and here is what changed."
+    },
+    {
+      "type": "text",
+      "label": "The film",
+      "title": "A fully in-house, fully AI-made cinematic trailer.",
+      "body": "No camera crew. No actors. No sets. Just a design team, a handful of AI tools, and the conviction that Netbanking's comeback deserved to feel like a boxing film, not a product update.\n\nThat bet turned a brief for a 30-second UI video into a fully AI-generated cinematic trailer, premiering at GFF 26 in a category built almost entirely on dashboards and feature lists."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/ring-trailer.jpg",
+      "alt": "A fully in-house, fully AI-made cinematic trailer for Razorpay Netbanking",
+      "size": "wide"
+    },
+    {
+      "type": "text",
+      "label": "The process",
+      "title": "An AI-led design process.",
+      "body": "The whole film was generated, organised and edited by the Razorpay design team across Higgsfield, Seedance and Pintor, with every generation collected in a shared gallery before it went to the edit."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/ring-process.jpg",
+      "alt": "The AI-led design process: Higgsfield, Seedance and Pintor",
+      "size": "wide"
+    },
+    {
+      "type": "text",
+      "label": "Art direction",
+      "title": "Unmistakably Mumbai.",
+      "body": "The desi boxing arena, Marine Drive, Aarey Colony, BKC big screens, chai tapri TVs: every location was chosen and art directed to feel unmistakably Mumbai. Not a generic city. This city. The All-India Digital Payments Championship gave Netbanking a world to be champion of."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/ring-art-direction.jpg",
+      "alt": "Art direction: a desi boxing arena, unmistakably Mumbai",
+      "size": "wide"
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/ring-venues.jpg",
+      "alt": "Venues: Marine Drive, Aarey Colony, BKC big screens and chai tapri TVs",
+      "size": "wide"
+    },
+    {
+      "type": "text",
+      "label": "Characters",
+      "title": "Every costume tells the story.",
+      "body": "Every character detail was locked: the worn grey hoodie with holed embroidery, the cobalt blue leather jacket, the boxing robe that fits versus the one that doesn't. Each costume carries the story, so the face never has to."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/ring-film-characters.jpg",
+      "alt": "Characters: costume continuity across the Netbanking boxing film",
+      "size": "wide"
+    },
+    {
+      "type": "text",
+      "label": "Storytelling without faces",
+      "title": "The clothing is the character.",
+      "body": "Each character is identified by what is on their back: NETBANKING on the blue boxing robe, RAZORPAY on the cobalt leather jacket. By never showing a face, the film is never about a person. It is always about Netbanking, and the brand name is the hero in every frame."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/ring-no-faces.jpg",
+      "alt": "Storytelling without faces: the Netbanking and Razorpay jackets are the characters",
+      "size": "wide"
+    },
+    {
+      "type": "text",
+      "label": "Colour grading",
+      "title": "One colour world for every act.",
+      "body": "Warm amber for glory, desaturated olive for the fall, deep teal-orange for training, and punchy high contrast in brand blue for the comeback. The grade tells you where the story is before a single line is spoken."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/ring-grading.jpg",
+      "alt": "Colour grading: glory, fall, training and rise",
+      "size": "wide"
+    },
+    {
+      "type": "text",
+      "label": "Prompt consistency engine",
+      "title": "Claude as a consistent creative director.",
+      "body": "Claude was trained across the entire production workflow: shot composition, colour grade language, character continuity and art direction notes. It wrote the prompts for Pintor, Higgsfield and Runway, and the shots finished in After Effects and Premiere, so the hundredth shot matched the first."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/ring-prompt-engine.jpg",
+      "alt": "Prompt consistency engine: Claude, Pintor, Higgsfield, Runway, After Effects and Premiere",
+      "size": "wide"
+    },
+    {
+      "type": "text",
+      "label": "The website",
+      "title": "From emotion to proof.",
+      "body": "The landing page carried the film's world into the browser, then handed off from emotion to proof. Parallax scrolling pulls visitors deeper into the ring, each feature landing like a fresh combo, so they leave knowing what changed in Netbanking and how to switch it on."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/ring-website.jpg",
+      "alt": "The Back in the Ring website for Razorpay Netbanking",
+      "size": "wide"
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/ring-landing.jpg",
+      "alt": "Back in the Ring landing page: Netbanking in the arena",
+      "size": "wide"
+    },
+    {
+      "type": "text",
+      "label": "The game",
+      "title": "Don't just watch the comeback. Play it.",
+      "body": "A browser boxing game built into the campaign. Each opponent is an old Netbanking frustration, and each one defeated unlocks a new feature, until the championship belt is back where it belongs."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/ring-game-intro.jpg",
+      "alt": "Netbanking Game: the boxer",
+      "size": "wide"
+    },
+    {
+      "type": "video",
+      "url": "assets/vid/p/ring-game.mp4",
+      "poster": "assets/img/p/ring-game-poster.jpg",
+      "caption": "Back in the Ring: the boxing game",
+      "size": "wide",
+      "loop": false
+    },
+    {
+      "type": "steps",
+      "label": "The opponents",
+      "title": "Five frustrations. Five features unlocked.",
+      "items": [
+        {
+          "title": "Desktop Duke",
+          "body": "The last man on desktop. Defeat him to unlock mobile-first."
+        },
+        {
+          "title": "Typo Terror",
+          "body": "Undefeated in wasted keystrokes. Defeat him to unlock QR-enabled payments."
+        },
+        {
+          "title": "Click Titan",
+          "body": "Heavyweight of unnecessary steps. Defeat him to unlock fewer clicks."
+        },
+        {
+          "title": "Bounce Barry",
+          "body": "King of the never-ending redirect. Defeat him to unlock no redirects."
+        },
+        {
+          "title": "Partial Pete",
+          "body": "Covers a handful of banks. Defeat him to unlock 100+ banks coverage."
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/ring-game-characters.jpg",
+      "alt": "Netbanking Game opponents: Desktop Duke, Typo Terror, Click Titan, Bounce Barry and Partial Pete",
+      "size": "wide"
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/ring-game-states.jpg",
+      "alt": "Netbanking Game victory and failure states",
+      "size": "wide"
+    },
+    {
+      "type": "image",
+      "image": "assets/img/p/ring-game-actions.jpg",
+      "alt": "Netbanking Game sprite actions: uppercut, hooks, dodges, hit, knocked and failed",
+      "size": "wide"
     },
     {
       "type": "tools",
       "label": "Stack",
       "items": [
         "Claude",
+        "Pintor",
         "Higgsfield",
         "Runway",
+        "Seedance",
         "Gemini",
         "OpenAI",
-        "Adobe",
+        "After Effects",
+        "Premiere",
         "Suno"
       ]
     }

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Mentorship — Vibhor Mathur",
-    "description": "One-to-one design mentoring on ADPList, plus workshops, talks and conversations on AI in design, from Vibhor Mathur, Communication Design Senior Manager at Razorpay."
+    "title": "Design Mentorship & AI Workshops with Vibhor Mathur",
+    "description": "Book one-to-one design mentoring on ADPList, or invite Vibhor Mathur to run a workshop or talk on AI in design. 33 sessions completed."
   },
   "label": "Mentorship",
   "headline": "Sharing what I've learned, one *designer* at a time.",
@@ -13,9 +13,18 @@
     "cta": "See all mentorship"
   },
   "numbers": [
-    { "value": "33", "label": "one-to-one sessions completed on ADPList" },
-    { "value": "31", "label": "hours of mentoring time, 1,860 minutes" },
-    { "value": "60", "label": "minutes per session, one to one" }
+    {
+      "value": "33",
+      "label": "one-to-one sessions completed on ADPList"
+    },
+    {
+      "value": "31",
+      "label": "hours of mentoring time, 1,860 minutes"
+    },
+    {
+      "value": "60",
+      "label": "minutes per session, one to one"
+    }
   ],
   "numbers_note": "As listed on my ADPList profile.",
   "oneonone": {
@@ -23,16 +32,39 @@
     "title": "Mentoring on ADPList.",
     "body": "I'm a design mentor on ADPList, offering 60-minute one-to-one mentorship sessions. Sessions are one to one and shaped around what each mentee needs. Mentees have come for feedback on their design approach, for a clearer picture of what is expected of a designer, and for help figuring out where to push next.",
     "topics_label": "What we can talk about",
-    "topics": ["Design", "Marketing", "Graphic design", "Motion design", "Branding and identity", "Design communication", "Critical thinking", "Presentation skills", "Leadership", "Video editing"],
-    "cta": { "label": "Book a session on ADPList", "href": "https://adplist.org/mentors/vibhor-mathur" }
+    "topics": [
+      "Design",
+      "Marketing",
+      "Graphic design",
+      "Motion design",
+      "Branding and identity",
+      "Design communication",
+      "Critical thinking",
+      "Presentation skills",
+      "Leadership",
+      "Video editing"
+    ],
+    "cta": {
+      "label": "Book a session on ADPList",
+      "href": "https://adplist.org/mentors/vibhor-mathur"
+    }
   },
   "voices": {
     "label": "What mentees say",
     "note": "Reviews from my ADPList profile.",
     "items": [
-      { "text": "He felt more like an elder brother than just a mentor, offering helpful lessons that were based on his journey.", "who": "Vibhu Kapil, visual and motion designer" },
-      { "text": "His extensive experience and expertise in communication design shone through during our session. He offered invaluable insights and feedback.", "who": "ADPList mentee" },
-      { "text": "My session with Vibhor was an eye-opener. He helped me understand the expectations for a designer and how to embark on that journey.", "who": "ADPList mentee" }
+      {
+        "text": "He felt more like an elder brother than just a mentor, offering helpful lessons that were based on his journey.",
+        "who": "Vibhu Kapil, visual and motion designer"
+      },
+      {
+        "text": "His extensive experience and expertise in communication design shone through during our session. He offered invaluable insights and feedback.",
+        "who": "ADPList mentee"
+      },
+      {
+        "text": "My session with Vibhor was an eye-opener. He helped me understand the expectations for a designer and how to embark on that journey.",
+        "who": "ADPList mentee"
+      }
     ]
   },
   "events": {
@@ -40,6 +72,15 @@
     "title": "Teaching what the studio is learning.",
     "body": "The sessions draw on running an in-house design team: how AI changes the workflow, and what designers can learn next.",
     "items": [
+      {
+        "title": "Design in brand building",
+        "host": "Samanvaya, Rotaract District 3191",
+        "type": "Workshop",
+        "date": "27 Aug 2023",
+        "detail": "My first live workshop: how design builds a brand, for 30 to 40 college design students at BMS College of Engineering, Bengaluru.",
+        "image": "assets/img/mentor/samanvaya-poster.jpg",
+        "link": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7108524630130233344/"
+      },
       {
         "title": "Revolutionizing Design Workflows with AI: Razorpay's Success Story",
         "host": "GrowthSchool",
@@ -49,12 +90,22 @@
         "image": "assets/img/mentor/growthschool.jpg"
       },
       {
+        "title": "Design leadership fireside chat",
+        "host": "IIIT-Delhi E-Summit",
+        "type": "Panel",
+        "date": "16 Mar 2024",
+        "detail": "A fireside chat with Sushant Ajnikar, Mini Gautam and Anshul Patria on the journey of young designers, design processes, brand building and strategic design in high-growth startups.",
+        "image": "assets/img/mentor/iiitd-panel-poster.jpg",
+        "link": "https://www.linkedin.com/posts/onlyvibhor_futureofdesign-designinindia-ugcPost-7178051869905182721-0cdu/"
+      },
+      {
         "title": "Revolutionizing Design Workflows with AI",
         "host": "Designland",
         "type": "Virtual session",
         "date": "27 April 2024",
-        "detail": "A one-hour free virtual session for the Designland community.",
-        "image": "assets/img/mentor/designland.jpg"
+        "detail": "A one-hour free virtual session covering AI models, crafting prompts and integrating AI into design workflows.",
+        "image": "assets/img/mentor/designland.jpg",
+        "link": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7190406843943256064/"
       },
       {
         "title": "AI in Design: A Silent Revolution",
@@ -107,19 +158,74 @@
     ]
   },
   "gallery": {
-    "label": "In the room",
+    "label": "Gallery",
     "items": [
-      { "image": "assets/img/mentor/photo.jpg", "caption": "Presenting at a workshop", "tall": true },
-      { "image": "assets/img/mentor/room.jpg", "caption": "On a panel" },
-      { "image": "assets/img/mentor/podcast.jpg", "caption": "Recording a podcast" },
-      { "image": "assets/img/mentor/stream.jpg", "caption": "A live conversation with Sanjay Reddy" }
+      {
+        "image": "assets/img/mentor/podcast.jpg",
+        "caption": "Recording a podcast"
+      },
+      {
+        "image": "assets/img/mentor/samanvaya-talk.jpg",
+        "caption": "Samanvaya workshop, Bengaluru"
+      },
+      {
+        "image": "assets/img/mentor/iiitd-panel.jpg",
+        "caption": "IIIT-Delhi E-Summit, design panel"
+      },
+      {
+        "image": "assets/img/mentor/samanvaya-class.jpg",
+        "caption": "Samanvaya: a classroom of design students"
+      },
+      {
+        "image": "assets/img/mentor/stream.jpg",
+        "caption": "A live conversation with Sanjay Reddy"
+      },
+      {
+        "image": "assets/img/mentor/iiitd-gift.jpg",
+        "caption": "IIIT-Delhi E-Summit"
+      },
+      {
+        "image": "assets/img/mentor/designland-session.jpg",
+        "caption": "Designland session, live"
+      },
+      {
+        "image": "assets/img/mentor/iiitd-room.jpg",
+        "caption": "Between sessions at the IIIT-Delhi E-Summit"
+      },
+      {
+        "image": "assets/img/mentor/iiitd-chat.jpg",
+        "caption": "IIIT-Delhi E-Summit"
+      }
     ]
   },
   "reading": {
     "label": "Further reading",
     "items": [
-      { "title": "Navigating the Frontier of Creativity: The Potential of AI in Art and Design", "date": "Mar 2024", "url": "https://www.onlyvibhor.com/post/navigating-the-frontier-of-creativity-unveiling-the-potential-of-ai-in-art-and-design" },
-      { "title": "Embracing Creative Leadership in 2025: Strategies for In-House Design Teams", "date": "Apr 2024", "url": "https://www.onlyvibhor.com/post/setting-up-design-lead-goals-for-2025" }
+      {
+        "title": "Samanvaya: nostalgia and inspiration, on my first live workshop",
+        "date": "Sep 2023",
+        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7108524630130233344/"
+      },
+      {
+        "title": "Navigating the Frontier of Creativity: The Potential of AI in Art and Design",
+        "date": "Mar 2024",
+        "url": "https://www.onlyvibhor.com/post/navigating-the-frontier-of-creativity-unveiling-the-potential-of-ai-in-art-and-design"
+      },
+      {
+        "title": "Embracing Creative Leadership in 2025: Strategies for In-House Design Teams",
+        "date": "Apr 2024",
+        "url": "https://www.onlyvibhor.com/post/setting-up-design-lead-goals-for-2025"
+      },
+      {
+        "title": "IIIT-D E-Summit: highlights from a fireside chat on design leadership",
+        "date": "Mar 2024",
+        "url": "https://www.linkedin.com/posts/onlyvibhor_futureofdesign-designinindia-ugcPost-7178051869905182721-0cdu/"
+      },
+      {
+        "title": "Designland workshop: revolutionising design workflows with AI",
+        "date": "Apr 2024",
+        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7190406843943256064/"
+      }
     ]
   },
   "cta": {
@@ -127,8 +233,28 @@
     "title": "Want a session, a workshop or a talk?",
     "body": "Book a one-to-one on ADPList, or email me about a workshop for your team or community.",
     "buttons": [
-      { "label": "Book on ADPList", "href": "https://adplist.org/mentors/vibhor-mathur" },
-      { "label": "Email about a workshop", "href": "mailto:onlyvibhor@gmail.com?subject=Workshop%20or%20talk" }
+      {
+        "label": "Book on ADPList",
+        "href": "https://adplist.org/mentors/vibhor-mathur"
+      },
+      {
+        "label": "Email about a workshop",
+        "href": "mailto:onlyvibhor@gmail.com?subject=Workshop%20or%20talk"
+      }
+    ]
+  },
+  "top": {
+    "items": [
+      {
+        "image": "assets/img/mentor/room.jpg",
+        "caption": "On a panel",
+        "tall": false
+      },
+      {
+        "image": "assets/img/mentor/photo.jpg",
+        "caption": "Presenting at a workshop",
+        "tall": true
+      }
     ]
   }
 }

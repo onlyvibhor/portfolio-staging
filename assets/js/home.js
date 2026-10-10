@@ -1,26 +1,25 @@
 // Home page
 (function () {
   'use strict';
-  const { SITE, $, $$, esc, inline, nl, rand, pad2, projHref, reduce, fine, html, gsap, lenis, scrubWords, initReveals, contactHTML, arrive, finish } = window.VM;
+  const { awardsTicker, toolMarks, toolMarksFromText, awardTiles, SITE, $, $$, esc, inline, nl, rand, pad2, projHref, reduce, fine, html, gsap, lenis, scrubWords, initReveals, contactHTML, arrive, finish } = window.VM;
   const PROJECTS = window.PROJECTS || [];
   const EXPERIMENTS = window.EXPERIMENTS || [];
 
 
   function heroHTML() {
     const h = SITE.hero || {};
-    const slides = (h.slides || []).map((x) => x.image).filter(Boolean);
     const lines = [h.name_line_1, h.name_line_2].filter(Boolean);
     const letters = (t) => Array.from(t).map((c) => `<span class="ch"><span class="chi">${esc(c)}</span></span>`).join('');
     const titleInner = lines.map((t) => `<span class="l"><span class="ln" aria-hidden="true">${letters(t)}</span></span>`).join('');
     return `
       <section class="hero" id="top"><div class="hero-pin">
-        <div class="hero-media" data-gl ${slides.length > 1 ? `data-gl-slides="${esc(slides.join(','))}"` : ''}>${slides[0] ? `<img src="${esc(slides[0])}" alt="">` : ''}</div>
+        ${h.video ? `<video class="hero-video" src="${esc(h.video)}" ${h.poster ? `poster="${esc(h.poster)}"` : ''} muted loop playsinline ${reduce ? '' : 'autoplay'} preload="auto" aria-hidden="true" tabindex="-1"></video>` : (h.poster ? `<img class="hero-video" src="${esc(h.poster)}" alt="">` : '')}
         <div class="hero-meta mono">
           <p>${inline(h.meta_left)}</p>
           <p style="text-align:right">${inline(h.meta_right)}<br><br><span class="hint">Try breaking the title</span></p>
         </div>
-        <h1 class="hero-title" aria-label="${esc(lines.join(' '))}">${titleInner}</h1>
-        <div class="hero-clip" aria-hidden="true"><div class="layer"><div class="hero-title w">${titleInner}</div></div></div>
+        <h1 class="hero-title" aria-label="${esc((SITE.seo || {}).home_h1 || lines.join(' '))}">${titleInner}<span class="sr-only">${esc((SITE.seo || {}).home_h1 || '')}</span></h1>
+        ${awardsTicker('tick-hero')}
       </div></section>`;
   }
 
@@ -32,7 +31,7 @@
       const cover = p.cover || {};
       const media = cover.video
         ? `<video src="${esc(cover.video)}" muted loop playsinline autoplay preload="metadata" ${cover.image ? `poster="${esc(cover.image)}"` : ''}></video>`
-        : `<img src="${esc(cover.image)}" alt="${esc(p.title)}" loading="${i < 2 ? 'eager' : 'lazy'}">`;
+        : `<img src="${esc(cover.image)}" alt="${esc(p.title.replace(/\n/g, ' ') + (p.category ? ', ' + p.category.replace(/\s*·\s*/g, ', ') : ''))}" loading="${i < 2 ? 'eager' : 'lazy'}">`;
       return `
         <a class="work-item" href="${esc(projHref(p))}" data-cursor="View">
           <div class="work-media" data-gl>${media}</div>
@@ -59,21 +58,33 @@
   }
 
   function homeHTML() {
+    const awardsSec = `<section class="awards z2" id="recognition">
+        <div class="awards-head"><span class="mono" data-fade>Recognition</span><h2 class="sec-title" data-split>${esc((SITE.recognition || {}).title || 'Awards & recognition')}</h2></div>
+        ${awardTiles()}
+        <a class="btn" href="about.html#recognition" data-fade>All recognition</a>
+      </section>`;
+    const rs = SITE.results || {};
+    const resultsSec = (rs.items || []).length ? `<section class="results z2" id="results" data-cur="white">
+        <div class="awards-head"><span class="mono" data-fade>${esc(rs.label || 'Results')}</span><h2 class="sec-title" data-split>${esc(rs.title || '')}</h2></div>
+        <div class="results-grid">${rs.items.map((r) => `<a class="res" href="projects/${encodeURIComponent(r.slug)}/" data-fade data-cursor="View"><b data-count="${esc(r.value)}">${esc(r.value)}</b><span>${esc(r.label)}</span><em class="mono">${esc(r.project)}</em></a>`).join('')}</div>
+      </section>` : '';
     const st = SITE.statement || {}, tl = SITE.tools || {}, lab = SITE.lab || {}, at = SITE.about_teaser || {}, rc = SITE.recognition || {};
     const tools = (tl.items || []).map((t, i) => `
       <div class="tool" data-fade data-cur="${i < 2 ? 'white' : 'ink'}" data-stack="${esc(t.stack || '')}">
         <span class="mono">${pad2(i + 1)}</span>
         <h3>${esc(t.name)}</h3>
-        <div><p>${esc(t.desc)}</p>${t.stack ? `<span class="stack mono">${esc(t.stack)}</span>` : ''}</div>
+        <div><p>${esc(t.desc)}</p>${t.stack ? `<span class="stack">${toolMarksFromText(t.stack, 'sm') || `<span class="mono">${esc(t.stack)}</span>`}</span>` : ''}</div>
         <span class="a" aria-hidden="true">&#8599;</span>
       </div>`).join('');
-    const reco = (rc.items || []).map((r) => `<div class="reco-row"><span>${esc(r.name)}</span><span>${esc(r.detail)}</span><span class="mono">${esc(r.year)}</span></div>`).join('');
 
     return heroHTML() + `
       <section class="statement z2">
         <p class="big">${inline(st.text)}</p>
         <div class="row mono" data-fade><p>${esc(st.left)}</p><p>${esc(st.right)}</p></div>
-      </section>` + workHTML() + `
+      </section>
+      ` + workHTML() + `
+      ${awardsSec}
+      ${resultsSec}
       <section class="tools" id="toolkit">
         <h2 class="sec-title z2" data-split>${inline(tl.title)}</h2>
         <p class="sub z2" data-fade>${esc(tl.sub)}</p>
@@ -84,12 +95,12 @@
       <section class="labstrip z2" id="lab">
         <div class="labstrip-head">
           <div><h2 class="sec-title" data-split>${inline(lab.title)}</h2><p class="sub" data-fade>${esc(lab.sub)}</p></div>
-          <a class="btn" href="lab.html" data-fade>${esc(lab.label || 'Open the Lab')}</a>
+          <div class="lab-btns"><a class="btn" href="lab.html" data-fade>${esc(lab.label || 'Open the Lab')}</a><a class="btn" href="lab.html" data-shuffle data-fade>Surprise me</a></div>
         </div>
         <div class="lab-row" data-fade>${EXPERIMENTS.slice(0, 4).map(labCard).join('')}</div>
       </section>` : ''}
       ${mentorHTML()}
-      <section class="about-teaser z2" id="about">
+      <section class="about-teaser tint-mint z2" id="about" data-cur="ink">
         <div data-fade>
           <div class="ph"><img src="${esc(at.portrait)}" alt="Portrait of Vibhor Mathur" loading="lazy"></div>
           <div class="cap mono"><span>${esc(at.caption_left)}</span><span>${esc(at.caption_right)}</span></div>
@@ -99,10 +110,7 @@
           <a class="btn" href="about.html" data-fade>${esc(at.label || 'More about me')}</a>
         </div>
       </section>
-      <section class="reco z2">
-        <h2 data-split>${esc(rc.title)}</h2>
-        <div data-fade>${reco}</div>
-      </section>` + contactHTML();
+      ` + contactHTML();
   }
 
 
@@ -111,7 +119,7 @@
     if (!t) return '';
     const q = ((M.voices || {}).items || [])[0];
     return `
-      <section class="mentor z2" id="mentorship">
+      <section class="mentor tint-violet z2" id="mentorship" data-cur="white">
         <div class="mentor-l">
           <span class="mono" data-fade>${esc(t.label)}</span>
           <h2 class="sec-title" data-split>${inline(t.title)}</h2>
@@ -124,6 +132,7 @@
         </div>
       </section>`;
   }
+
 
   /* ---- hero: letters you can push around and smash ---- */
   function initHeroLetters(onAllBroken) {
@@ -207,7 +216,7 @@
       fl.style.transform = `translate3d(${cx + 20}px,${cy + 20}px,0) rotate(${rot}deg)`;
     });
     $$('.tool').forEach((row) => {
-      row.addEventListener('mouseenter', () => { if (!row.dataset.stack) return; fl.textContent = row.dataset.stack; fl.classList.add('on'); });
+      row.addEventListener('mouseenter', () => { if (!row.dataset.stack) return; fl.innerHTML = toolMarksFromText(row.dataset.stack, 'sm') || esc(row.dataset.stack); fl.classList.add('on'); });
       row.addEventListener('mouseleave', () => fl.classList.remove('on'));
     });
   }
@@ -230,27 +239,24 @@
   $('#app').innerHTML = homeHTML();
   if (window.GL) GL.scan();
 
+  /* hero background video: plain, muted loop; starts reliably, and rests while the hero is off screen */
+  const hv = $('.hero-video');
+  if (hv && hv.tagName === 'VIDEO' && !reduce) {
+    hv.muted = true;
+    const go = () => { const pr = hv.play(); if (pr && pr.catch) pr.catch(() => {}); };
+    go();
+    if ('IntersectionObserver' in window) new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) go(); else hv.pause(); }), { threshold: 0.05 }).observe(hv);
+  }
+
   const lines = $$('.hero-title .ln');
   const heroTitles = $$('.hero-title');
   const heroIntro = () => {
     const tl = gsap.timeline({ onComplete: () => heroTitles.forEach((t) => t.classList.add('done')) });
-    tl.fromTo(lines, { yPercent: 105, y: 0 }, { yPercent: 0, duration: reduce ? 0.01 : 1.4, ease: 'power4.out', stagger: 0.12 })
+    tl.fromTo(lines, { yPercent: 130, y: 0 }, { yPercent: 0, duration: reduce ? 0.01 : 1.4, ease: 'power4.out', stagger: 0.12 })
       .to('.hero-meta', { opacity: 1, duration: reduce ? 0.01 : 1 }, '-=.9');
   };
 
   const big = $('.statement .big'); if (big) scrubWords(big);
-
-  // hero expansion: the framed image grows to full-bleed as you scroll
-  const pin = $('.hero-pin');
-  const layer = $('.hero-clip .layer');
-  const syncLayer = () => { layer.style.width = pin.clientWidth + 'px'; layer.style.height = pin.clientHeight + 'px'; };
-  syncLayer();
-  window.addEventListener('resize', syncLayer);
-  ScrollTrigger.addEventListener('refresh', syncLayer);
-  gsap.timeline({ scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom bottom', scrub: true, invalidateOnRefresh: true } })
-    .to('.hero-media,.hero-clip', { width: () => pin.clientWidth, height: () => pin.clientHeight, borderRadius: 0, ease: 'none', duration: 0.55 }, 0)
-    .to('.hero-meta', { opacity: 0, duration: 0.12, ease: 'none' }, 0)
-    .to({}, { duration: 0.45 });
 
   // horizontal gallery (desktop / large tablet only)
   gsap.matchMedia().add('(min-width: 900px)', () => {
@@ -264,7 +270,7 @@
   });
 
   initReveals(document);
-  initHeroLetters(() => toast('You broke it. <a href="case.html?c=btb">See how we built it &rarr;</a>'));
+  initHeroLetters(() => toast('You broke it. <a href="projects/btb/">See how we built it &rarr;</a>'));
   initToolFloat();
   initMagnetic('.contact .mail');
   finish();
@@ -278,7 +284,8 @@
   } else if (loader && !seen && !reduce) {
     lenis.stop();
     try { sessionStorage.setItem('vmseen', '1'); } catch (e) {}
-    const num = $('.count', loader), bar = $('.bar', loader), o = { v: 0 };
+    const num = $('.count', loader), bar = $('.bar', loader), av = $('.ld-av', loader), o = { v: 0 };
+    if (av) gsap.set(av, { opacity: 0, rotateY: 72, rotateX: -6, scale: 0.86, transformPerspective: 900 });
     let loaded = document.readyState === 'complete';
     window.addEventListener('load', () => { loaded = true; });
     const t0 = performance.now();
@@ -289,7 +296,10 @@
     };
     gsap.to(o, {
       v: 100, duration: 1.8, ease: 'power2.inOut',
-      onUpdate: () => { num.textContent = pad2(Math.round(o.v)); if (bar) bar.style.width = o.v + '%'; },
+      onUpdate: () => {
+        num.textContent = pad2(Math.round(o.v)); if (bar) bar.style.width = o.v + '%';
+        if (av) { const k = o.v / 100; gsap.set(av, { opacity: Math.min(1, k * 4), rotateY: 72 * (1 - k) - 8 * k, rotateX: -6 * (1 - k), scale: 0.86 + 0.14 * k }); }
+      },
       onComplete: function wait() { if (loaded || performance.now() - t0 > 6000) done(); else setTimeout(wait, 150); }
     });
   } else {

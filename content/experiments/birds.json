@@ -1,0 +1,191 @@
+{
+  "published": true,
+  "title": "Birds",
+  "order": 4,
+  "year": "2018–2020",
+  "medium": [
+    "Digital collage",
+    "Illustration"
+  ],
+  "tools": "",
+  "title_lines": "Birds",
+  "tagline": "Three years of one subject, in three different languages.",
+  "summary": "A series of animated birds from 2018 to 2020: collages of flowers, leaves and fruit, surreal city-and-nature scenes, and birds drawn in single white lines.",
+  "cover": {
+    "image": "assets/img/lab/birds-v08.jpg",
+    "video": ""
+  },
+  "sections": [
+    {
+      "type": "text",
+      "label": "2020",
+      "title": "Birds built from flowers, leaves, fruit and an eye.",
+      "body": "The 2020 birds are portraits assembled from petals, leaves, fruit and found fragments, each set on a flat colour, and animated."
+    },
+    {
+      "type": "clips",
+      "columns": 2,
+      "clips": [
+        {
+          "video": "assets/vid/lab/birds-07.mp4",
+          "poster": "assets/img/lab/birds-v07.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/birds-08.mp4",
+          "poster": "assets/img/lab/birds-v08.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/birds-09.mp4",
+          "poster": "assets/img/lab/birds-v09.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/birds-10.mp4",
+          "poster": "assets/img/lab/birds-v10.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/birds-11.mp4",
+          "poster": "assets/img/lab/birds-v11.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/birds-12.mp4",
+          "poster": "assets/img/lab/birds-v12.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/birds-13.mp4",
+          "poster": "assets/img/lab/birds-v13.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/birds-14.mp4",
+          "poster": "assets/img/lab/birds-v14.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/birds-15.mp4",
+          "poster": "assets/img/lab/birds-v15.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/birds-16.mp4",
+          "poster": "assets/img/lab/birds-v16.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "label": "2019",
+      "title": "Birds in imagined cities and landscapes.",
+      "body": "In 2019 the birds moved into surreal, saturated collages: a single bird at the centre of invented cities, gardens and doorways, each in motion."
+    },
+    {
+      "type": "clips",
+      "columns": 3,
+      "clips": [
+        {
+          "video": "assets/vid/lab/birds-01.mp4",
+          "poster": "assets/img/lab/birds-v01.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/birds-02.mp4",
+          "poster": "assets/img/lab/birds-v02.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/birds-03.mp4",
+          "poster": "assets/img/lab/birds-v03.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/birds-04.mp4",
+          "poster": "assets/img/lab/birds-v04.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/birds-05.mp4",
+          "poster": "assets/img/lab/birds-v05.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/birds-06.mp4",
+          "poster": "assets/img/lab/birds-v06.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "label": "2018",
+      "title": "Birds drawn in single white lines.",
+      "body": "The 2018 series reduces each bird to fine white lines on black."
+    },
+    {
+      "type": "image_grid",
+      "columns": 3,
+      "images": [
+        {
+          "image": "assets/img/lab/birds-15.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/birds-16.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/birds-17.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/birds-18.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/birds-19.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/birds-20.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/birds-21.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/birds-22.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/birds-23.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/birds-24.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/birds-25.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/lab/birds-26.jpg",
+          "caption": ""
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "Original project page",
+      "url": "https://www.onlyvibhor.com/birds"
+    }
+  ],
+  "slug": "birds"
+}

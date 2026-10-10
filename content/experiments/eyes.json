@@ -1,0 +1,225 @@
+{
+  "published": true,
+  "title": "Eyes",
+  "order": 3,
+  "year": "2021",
+  "medium": [
+    "Digital collage"
+  ],
+  "tools": "Adobe software",
+  "title_lines": "Eyes",
+  "tagline": "An emotion diary, told through the sense we trust most. Thirty collages, each in motion.",
+  "summary": "Thirty animated collages about emotions, dreams, fears and the lessons we learn through our eyes.",
+  "cover": {
+    "image": "assets/img/lab/eyes-v05.jpg",
+    "video": ""
+  },
+  "sections": [
+    {
+      "type": "text",
+      "label": "The project",
+      "title": "An emotion diary where dreams, feelings and lessons become visual forms.",
+      "body": "I think of my work as an emotion diary, where I project my dreams, feelings and lessons I've learned into visual forms and abstract video collages. I chose the theme Eyes because I think it is the most important of the five body senses. Most of what we learn and feel comes from what we see, and sometimes from what we don't see."
+    },
+    {
+      "type": "text",
+      "label": "Why eyes",
+      "title": "Everyone sees the same thing differently.",
+      "body": "The things that make us happy and the things that make us cry, we see and visualise them. We feel different emotions based on what we see, and everybody has different experiences even when they see the same thing. Eyes also help us express: every emotion we feel is projected outward through them. In these works I explore the meaning of emotions and feelings through our eyes, our dreams, our fears and the moral lessons we learn from experience."
+    },
+    {
+      "type": "text",
+      "label": "Why collage",
+      "title": "A way to merge different ideas into one space.",
+      "body": "I chose collage as the art style because it let me merge different ideas into one space, with a sense of abstraction while staying connected to the theme. All artworks are made digitally using Adobe software."
+    },
+    {
+      "type": "clips",
+      "columns": 3,
+      "clips": [
+        {
+          "video": "assets/vid/lab/eyes-01.mp4",
+          "poster": "assets/img/lab/eyes-v01.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-02.mp4",
+          "poster": "assets/img/lab/eyes-v02.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-03.mp4",
+          "poster": "assets/img/lab/eyes-v03.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-04.mp4",
+          "poster": "assets/img/lab/eyes-v04.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-05.mp4",
+          "poster": "assets/img/lab/eyes-v05.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-06.mp4",
+          "poster": "assets/img/lab/eyes-v06.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-07.mp4",
+          "poster": "assets/img/lab/eyes-v07.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-08.mp4",
+          "poster": "assets/img/lab/eyes-v08.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-09.mp4",
+          "poster": "assets/img/lab/eyes-v09.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "clips",
+      "columns": 3,
+      "clips": [
+        {
+          "video": "assets/vid/lab/eyes-10.mp4",
+          "poster": "assets/img/lab/eyes-v10.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-11.mp4",
+          "poster": "assets/img/lab/eyes-v11.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-12.mp4",
+          "poster": "assets/img/lab/eyes-v12.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-13.mp4",
+          "poster": "assets/img/lab/eyes-v13.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-14.mp4",
+          "poster": "assets/img/lab/eyes-v14.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-15.mp4",
+          "poster": "assets/img/lab/eyes-v15.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-16.mp4",
+          "poster": "assets/img/lab/eyes-v16.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-17.mp4",
+          "poster": "assets/img/lab/eyes-v17.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-18.mp4",
+          "poster": "assets/img/lab/eyes-v18.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "statement",
+      "text": "Every emotion we feel is projected outside through our eyes."
+    },
+    {
+      "type": "clips",
+      "columns": 3,
+      "clips": [
+        {
+          "video": "assets/vid/lab/eyes-19.mp4",
+          "poster": "assets/img/lab/eyes-v19.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-20.mp4",
+          "poster": "assets/img/lab/eyes-v20.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-21.mp4",
+          "poster": "assets/img/lab/eyes-v21.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-22.mp4",
+          "poster": "assets/img/lab/eyes-v22.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-23.mp4",
+          "poster": "assets/img/lab/eyes-v23.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-24.mp4",
+          "poster": "assets/img/lab/eyes-v24.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-25.mp4",
+          "poster": "assets/img/lab/eyes-v25.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-26.mp4",
+          "poster": "assets/img/lab/eyes-v26.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-27.mp4",
+          "poster": "assets/img/lab/eyes-v27.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-28.mp4",
+          "poster": "assets/img/lab/eyes-v28.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-29.mp4",
+          "poster": "assets/img/lab/eyes-v29.jpg",
+          "caption": ""
+        },
+        {
+          "video": "assets/vid/lab/eyes-30.mp4",
+          "poster": "assets/img/lab/eyes-v30.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "tools",
+      "label": "Made with",
+      "items": [
+        "Adobe software",
+        "Digital collage",
+        "Video collage"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "Original project page",
+      "url": "https://www.onlyvibhor.com/eyes"
+    }
+  ],
+  "slug": "eyes"
+}

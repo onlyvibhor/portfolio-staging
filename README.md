@@ -63,7 +63,7 @@ keep a local server running, and open `/admin/`.
 | **Projects (case studies)** | Every project on the Work page. Categories drive the filter chips. |
 | **Lab (art experiments)** | Every entry on the Lab page, each with its own detail page. |
 | **Site content > Home page** | Hero, statement, toolkit, lab/about teasers, awards, contact. |
-| **Site content > About page** | The entire About page. |
+| **Site content > About page** | The entire About page. Its Recognition list is the single source for the awards ticker (header, every page) and the award tiles on Home and About. |
 | **Site content > Mentorship page** | Numbers, ADPList section, mentee reviews, every talk/workshop card, photos, closing call to action. |
 | **Site content > AI Toolkit page** | Headline, principles, the four pillars, each tool (images, bullets), interactive-web pieces, learning, stack. |
 
@@ -93,6 +93,18 @@ Fill the header fields, then build the story from **blocks** in any order, as ma
 Images on project and lab pages are shown plainly (no hover effects), so what you upload is what visitors see.
 Wrap words in `*asterisks*` in headings to get the italic accent.
 
+## SEO and answer engines (AEO)
+
+`python scripts/build_content.py` also runs `scripts/seo.py`, so search is kept in sync with the CMS automatically:
+
+- **Every page** gets a title, description, canonical URL, robots, Open Graph, Twitter, geo and JSON-LD (Person, WebSite, ProfilePage, AboutPage, CollectionPage, FAQPage, Service, CreativeWork, BreadcrumbList).
+- **Prerendered copy** sits inside `<main>` so crawlers and AI answer engines that do not run JavaScript still read the whole site. The app replaces it the moment it loads.
+- **Static, indexable URLs** for every project and lab entry: `projects/<slug>/` and `lab/<slug>/`. The old `case.html?c=<slug>` links redirect to them.
+- **Files for crawlers**: `sitemap.xml` (with images), `robots.txt`, `llms.txt` and `llms-full.txt`.
+- **Visible FAQ** on the About page (`about.json` -> `faq`), mirrored as FAQPage structured data.
+- Edit titles, descriptions, services, keywords and the FAQ in the CMS: *Site settings* -> *Search and AI answers (SEO)*, and each page's own SEO box.
+- **Before launch:** set `seo.site_url` in `content/site.json` to the production domain, then rebuild. The staging `render.yaml` sends `X-Robots-Tag: noindex`; remove that header when the real domain goes live. Share image: `python scripts/make_og.py`.
+
 ## Media guidelines
 
 - **Images:** JPG, at most 2400px wide, ideally under 600 KB. Lab covers: square.
@@ -111,3 +123,10 @@ Wrap words in `*asterisks*` in headings to get the italic accent.
 
 Layouts are fluid from 320px phones to ultrawide monitors; hover-only effects have touch equivalents, and the pinned
 horizontal gallery becomes a vertical stack under 900px.
+
+## Extras
+
+- **Profile PDF**: `python scripts/build_resume.py` rebuilds `assets/docs/vibhor-mathur-profile.pdf` from the content files (About, Results, Recognition, projects). Run it after editing those, then commit the PDF. Needs Pillow and the Windows Arial fonts (only to measure text). Add `--preview out.png` to check the layout.
+- **Home**: Results strip (`site.json > results`), loader with the 3D avatar.
+- **Case studies**: the *Before / after slider* block compares two images.
+- **Lab**: "Surprise me" opens a random experiment. **Work**: "By year" view groups every project by year.

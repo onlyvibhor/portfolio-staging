@@ -1,0 +1,110 @@
+{
+  "title": "Modern Junkyard",
+  "slug": "modern-junkyard",
+  "published": true,
+  "order": 5,
+  "year": "2017–2018",
+  "medium": [
+    "Stop motion"
+  ],
+  "tools": "",
+  "title_lines": "Modern\nJunkyard",
+  "tagline": "Our studio of stop motion, with an UrbanClap film at its heart.",
+  "summary": "Modern Junkyard is a stop-motion studio: an April Fool film for UrbanClap, dancing vegetables, wool typography and a Holi film for Grofers.",
+  "cover": {
+    "image": "assets/img/lab/modern-junkyard-urbanclap.jpg",
+    "video": ""
+  },
+  "sections": [
+    {
+      "type": "text",
+      "label": "The studio",
+      "title": "Stop motion animation, made one frame at a time.",
+      "body": "Modern Junkyard is my stop-motion studio. Its YouTube channel describes it as stop-motion animation for now, with short films, DIY and behind-the-scenes to come. The work so far is small and playful: a paper-craft world for UrbanClap, vegetables that skateboard, juggle and dance, typography written in wool, and short animations for festivals and campaigns."
+    },
+    {
+      "type": "text",
+      "label": "Featured · UrbanClap",
+      "title": "All Things A: an April Fool digital film for UrbanClap.",
+      "body": "The studio's brand film for UrbanClap: a 41-second stop-motion digital film for April Fool's, set in a paper-craft room, with a doll in a saree introduced on screen as Aunty."
+    },
+    {
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=JS8qOYDIngM",
+      "poster": "assets/img/lab/modern-junkyard-urbanclap.jpg",
+      "caption": "UrbanClap All Things A: April Fool digital film",
+      "size": "full",
+      "loop": false
+    },
+    {
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=rhfcFDIY9Ss",
+      "poster": "assets/img/lab/modern-junkyard-lettuce.jpg",
+      "caption": "Lettuce Dance",
+      "size": "wide",
+      "loop": false
+    },
+    {
+      "type": "text",
+      "label": "Veggie People",
+      "title": "Vegetables with personalities.",
+      "body": "The Veggie People series gives everyday produce a life of its own. It includes Lettuce Dance, Citrush Ride, Skateboarding Loki, Juggling with Peace / Peas and Walking Banana."
+    },
+    {
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=IApjyY245Us",
+      "poster": "assets/img/lab/modern-junkyard-holi.jpg",
+      "caption": "Grofers Holi Stop Motion Animation",
+      "size": "wide",
+      "loop": false
+    },
+    {
+      "type": "text",
+      "label": "For a brand",
+      "title": "Happy Holi, in colour powder and petals.",
+      "body": "A short stop-motion film made for Grofers for Holi, where the greeting is built from colour and petals. It has over 11,000 views on YouTube."
+    },
+    {
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=a1UiBuCb8zI",
+      "poster": "assets/img/lab/modern-junkyard-valentines.jpg",
+      "caption": "Valentines Week 2018",
+      "size": "wide",
+      "loop": false
+    },
+    {
+      "type": "text",
+      "label": "Valentines Week 2018",
+      "title": "A week of small animations.",
+      "body": "Valentine's week, 2018, told as a grid of Instagram posts, one animation for each day, including Hug Day and Kiss Day."
+    },
+    {
+      "type": "text",
+      "label": "More from the channel",
+      "title": "Wool Typography and festival animations.",
+      "body": "The channel also holds a Wool Typography series (Pakoda, Gajar Ka Halwa, Makki ki Roti, Tea and Soup) and an Olitia Diwali stop-motion animation."
+    }
+  ],
+  "links": [
+    {
+      "label": "Modern Junkyard on YouTube",
+      "url": "https://www.youtube.com/@modernjunkyard606"
+    },
+    {
+      "label": "UrbanClap All Things A, April Fool film",
+      "url": "https://www.youtube.com/watch?v=JS8qOYDIngM"
+    },
+    {
+      "label": "Lettuce Dance",
+      "url": "https://www.youtube.com/watch?v=rhfcFDIY9Ss"
+    },
+    {
+      "label": "Grofers Holi Stop Motion Animation",
+      "url": "https://www.youtube.com/watch?v=IApjyY245Us"
+    },
+    {
+      "label": "Valentines Week 2018",
+      "url": "https://www.youtube.com/watch?v=a1UiBuCb8zI"
+    }
+  ]
+}

@@ -125,7 +125,7 @@
     {
       "type": "video",
       "url": "https://www.youtube.com/watch?v=uDeZ0zKgVqY",
-      "poster": "",
+      "poster": "assets/img/p/trial-film-poster.jpg",
       "caption": "The film",
       "size": "wide"
     },

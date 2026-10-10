@@ -1,7 +1,7 @@
 // Work, Lab, About and case-study / experiment pages
 (function () {
   'use strict';
-  const { SITE, $, $$, esc, inline, nl, md, pad2, projHref, reduce, html, gsap, initReveals, lineSpans, introLines, contactHTML, arrive, finish } = window.VM;
+  const { toolMark, toolMarks, toolMarksFromText, awardTiles, SITE, $, $$, esc, inline, nl, md, pad2, projHref, reduce, html, gsap, initReveals, lineSpans, introLines, contactHTML, arrive, finish } = window.VM;
   const PROJECTS = window.PROJECTS || [];
   const EXPERIMENTS = window.EXPERIMENTS || [];
   const ABOUT = window.ABOUT || {};
@@ -30,10 +30,25 @@
   /* ===================================================================== */
   /* Filterable list pages (Work, Lab)                                       */
   /* ===================================================================== */
+  /* work wall: every project grouped by year, newest first */
+  function wallHTML(l) {
+    const by = new Map();
+    l.forEach((p) => { const y = (String(p.year || '').match(/\d{4}/) || ['Earlier'])[0]; if (!by.has(y)) by.set(y, []); by.get(y).push(p); });
+    const years = [...by.keys()].sort((a, b) => (b === 'Earlier' ? 0 : parseInt(b, 10)) - (a === 'Earlier' ? 0 : parseInt(a, 10)));
+    return years.map((y) => `
+      <section class="wall-y">
+        <h3 class="wall-year">${esc(y)}<span class="mono">${by.get(y).length} project${by.get(y).length === 1 ? '' : 's'}</span></h3>
+        <div class="wall-items">${by.get(y).map((p) => {
+          const c = p.cover || {};
+          return `<a class="wall-item" href="${esc(projHref(p))}" data-cursor="View">${c.image ? `<img src="${esc(c.image)}" alt="${esc(p.title)}" loading="lazy">` : `<span class="wi-t mono">${esc(p.title)}</span>`}<b>${esc(p.title)}</b><span class="mono">${esc([p.client, (p.categories || [])[0]].filter(Boolean).join(' · '))}</span></a>`;
+        }).join('')}</div>
+      </section>`).join('');
+  }
+
   function listPage(cfg) {
-    const { items, key, label, title, intro, kind, preferred, card, gridClass, sortable } = cfg;
+    const { items, key, label, title, intro, kind, preferred, card, gridClass, sortable, extra, wall } = cfg;
     const cats = orderedCats(items, key, preferred);
-    const state = { cat: 'All', sort: 'featured' };
+    const state = { cat: 'All', sort: 'featured', view: 'grid' };
 
     root.innerHTML = pageHead(label, title, intro, items.length) + `
       <div class="filters z2" role="group" aria-label="Filter by category">
@@ -42,6 +57,8 @@
           ${cats.map(([c, n]) => `<button class="fchip" type="button" data-cat="${esc(c)}" aria-pressed="false">${esc(c)} <span class="n">${n}</span></button>`).join('')}
         </div>
         ${sortable ? `<label class="fsort mono">Sort <select id="sort" aria-label="Sort projects"><option value="featured">Featured</option><option value="newest">Newest</option><option value="az">A to Z</option></select></label>` : ''}
+        ${wall ? '<div class="fview mono" role="group" aria-label="View"><button type="button" data-view="grid" aria-pressed="true">Grid</button><button type="button" data-view="year" aria-pressed="false">By year</button></div>' : ''}
+        ${extra || ''}
       </div>
       <div class="${gridClass} z2" id="grid" aria-live="polite"></div>` + contactHTML();
 
@@ -55,7 +72,8 @@
     }
     function paint(animate) {
       const l = list();
-      grid.innerHTML = l.length ? l.map((p, i) => card(p, i)).join('') : '<p class="empty">Nothing here yet.</p>';
+      grid.className = (state.view === 'year' ? 'wall' : gridClass) + ' z2';
+      grid.innerHTML = !l.length ? '<p class="empty">Nothing here yet.</p>' : state.view === 'year' ? wallHTML(l) : l.map((p, i) => card(p, i)).join('');
       if (animate && !reduce) gsap.fromTo($$('.card,.lcard', grid), { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', stagger: 0.05 });
       window.ScrollTrigger && ScrollTrigger.refresh();
     }
@@ -68,6 +86,12 @@
       state.cat = b.dataset.cat;
       $$('.fchip').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
       apply();
+    }));
+    $$('.fview button').forEach((b) => b.addEventListener('click', () => {
+      state.view = b.dataset.view;
+      $$('.fview button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      const so = $('.fsort'); if (so) so.style.display = state.view === 'year' ? 'none' : '';
+      paint(false);
     }));
     const sel = $('#sort');
     if (sel) sel.addEventListener('change', () => { state.sort = sel.value; apply(); });
@@ -124,6 +148,7 @@
 
     root.innerHTML = `
       <section class="about-hero z2">
+        <img class="av-hero" src="assets/img/avatar/avatar.webp" alt="3D avatar of Vibhor Mathur wearing blue sunglasses" width="691" height="1000" data-tilt="20">
         <p class="mono top">${esc(A.label || 'About')}</p>
         <h1 data-split>${inline(A.headline)}</h1>
       </section>
@@ -133,15 +158,21 @@
           <div class="ph"><img src="${esc(A.portrait)}" alt="Portrait of Vibhor Mathur"></div>
           <div class="cap mono"><span>Vibhor Mathur</span><span>${esc(A.portrait_caption)}</span></div>
           <dl class="facts">${(A.facts || []).map((f) => `<div><dt class="mono">${esc(f.label)}</dt><dd>${esc(f.value)}</dd></div>`).join('')}</dl>
+          ${(SITE.contact || {}).profile ? `<a class="btn" href="${esc(SITE.contact.profile.url)}" download style="margin-top:22px">Download one-page profile (PDF)</a>` : ''}
         </aside>
         <div class="about-copy">
           ${(A.intro || []).map((t, i) => `<p data-fade>${inline(t)}</p>`).join('')}
-          <div class="numbers" data-fade>${(A.numbers || []).map((n) => `<div><b data-count="${esc(n.value)}">${esc(n.value)}</b><span>${esc(n.label)}</span></div>`).join('')}</div>
+          <div class="numbers tiles" data-fade>${(A.numbers || []).map((n) => `<div><b data-count="${esc(n.value)}">${esc(n.value)}</b><span>${esc(n.label)}</span></div>`).join('')}</div>
         </div>
       </section>
 
+      <section class="asec z2" id="recognition">
+        ${head(1, rc.label || 'Recognition', rc.label || 'Recognition')}
+        ${awardTiles()}
+      </section>
+
       <section class="asec z2">
-        ${head(1, tl.label || 'Path', tl.label)}
+        ${head(2, tl.label || 'Path', tl.label)}
         <div class="tl">${(tl.items || []).map((r) => `
           <div class="tl-row" data-fade>
             <p class="yrs mono">${esc(r.years)}</p>
@@ -150,22 +181,22 @@
       </section>
 
       <section class="asec dark dark-pad z2" style="margin-top:clamp(70px,13vh,170px)">
-        <div class="asec-head"><span class="mono">02 / ${esc(ld.label)}</span><h2 data-split>${esc(ld.title)}</h2></div>
+        <div class="asec-head"><span class="mono">03 / ${esc(ld.label)}</span><h2 data-split>${esc(ld.title)}</h2></div>
         <div class="asec-head" style="margin-top:-20px"><span></span><p class="intro-p" data-fade>${esc(ld.intro)}</p></div>
         <div class="lead-grid">${(ld.items || []).map((it, i) => `<div data-fade><span class="k mono">${pad2(i + 1)}</span><h3>${esc(it.title)}</h3><p>${esc(it.body)}</p></div>`).join('')}</div>
         ${ld.source ? `<a class="btn src" href="${esc(ld.source.url)}" target="_blank" rel="noopener">${esc(ld.source.label)}</a>` : ''}
       </section>
 
       <section class="blue-panel z2" data-cur="white">
-        <span class="mono">03 / ${esc(st.label)}</span>
+        <span class="mono">04 / ${esc(st.label)}</span>
         <h2 data-split>${esc(st.title)}</h2>
         ${String(st.body || '').split(/\n\n/).map((t) => `<p data-fade>${esc(t)}</p>`).join('')}
         ${st.link ? `<a class="btn" href="${esc(st.link.url)}" data-fade>${esc(st.link.label)}</a>` : ''}
         ${labCards ? `<div class="lab-row" data-fade style="grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr))">${labCards}</div>` : ''}
       </section>
 
-      <section class="asec z2">
-        ${head(4, th.label, th.label)}
+      <section class="asec tint tint-mint z2" data-cur="ink">
+        ${head(5, th.label, th.label)}
         <div class="teach">
           <div data-fade>${th.quote ? `<blockquote>&ldquo;${esc(th.quote.text)}&rdquo;</blockquote><p class="who mono">${esc(th.quote.who)}</p>` : ''}</div>
           <div data-fade><ul>${(th.items || []).map((r) => `<li><span>${esc(r.name)}</span><span>${esc(r.detail)}</span></li>`).join('')}</ul>${th.link ? `<a class="btn" href="${esc(th.link.url)}" style="margin-top:22px">${esc(th.link.label)}</a>` : ''}</div>
@@ -173,23 +204,30 @@
       </section>
 
       <section class="asec z2">
-        ${head(5, rc.label, rc.label)}
-        <div data-fade>${(rc.items || []).map((r) => `<div class="reco-row w4"><span>${esc(r.name)}</span><span>${esc(r.detail)}</span><span>${esc(r.work)}</span><span class="mono">${esc(r.year)}</span></div>`).join('')}</div>
-      </section>
-
-      <section class="asec z2">
         ${head(6, wr.label, wr.label)}
         <ul class="writing" data-fade>${(wr.items || []).map((w) => `<li><a href="${esc(w.url)}" target="_blank" rel="noopener"><b>${esc(w.title)}</b><span class="mono">${esc(w.date)} &#8599;</span></a></li>`).join('')}</ul>
       </section>
 
-      <section class="asec z2">
-        ${head(7, el.label, el.label)}
+
+
+      ${((A.faq || {}).items || []).length ? `<section class="asec z2" id="faq">
+        ${head(7, A.faq.label || 'Questions', A.faq.title || 'Questions')}
+        <div class="faq" data-fade>${A.faq.items.map((f) => `<div class="faq-row"><h3>${esc(f.q)}</h3><p>${esc(f.a)}</p></div>`).join('')}</div>
+      </section>` : ''}
+
+      <section class="asec tint tint-violet z2" data-cur="white">
+        ${head(8, el.label, el.label)}
         <div class="elsewhere" data-fade>${(el.items || []).map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} <span aria-hidden="true" style="font-size:.5em">&#8599;</span></a>`).join('')}</div>
-      </section>` + contactHTML();
+      </section>
+
+      ${((A.gallery || {}).items || []).length ? `<section class="asec z2" style="padding-bottom:clamp(70px,13vh,160px)">
+        ${head(9, A.gallery.label || 'In pictures', A.gallery.label || 'In pictures')}
+        <div class="mt-gal" data-fade>${A.gallery.items.map((i) => `<figure>${i.video ? loopVideo(i.video, i.image) : `<img src="${esc(i.image)}" alt="${esc(i.caption)}" loading="lazy">`}<figcaption class="cap mono">${esc(i.caption)}</figcaption></figure>`).join('')}</div>
+      </section>` : ''}` + contactHTML();
 
     finish();
     arrive(() => {});
-    initReveals(document);
+    initReveals(document); initLoops();
   }
 
 
@@ -216,7 +254,7 @@
           <h3>${esc(t.name)}</h3>
           <p>${esc(t.body)}</p>
           <ul>${(t.bullets || []).map((b) => `<li>${esc(b)}</li>`).join('')}</ul>
-          ${t.built_with ? `<p class="bw mono">Built with: ${esc(t.built_with)}</p>` : ''}
+          ${t.built_with ? `<div class="bw"><span class="mono">Built with</span><span class="tms">${toolMarksFromText(t.built_with) || esc(t.built_with)}</span></div>` : ''}
         </div>
         ${t.hero ? `<figure class="tk-hero-img" data-fade><img src="${esc(t.hero)}" alt="${esc(t.name)} interface" loading="lazy"></figure>` : ''}
         ${(t.gallery || []).length ? `<div class="tk-gal" data-fade>${t.gallery.map((g) => `<img src="${esc(g)}" alt="" loading="lazy">`).join('')}</div>` : ''}
@@ -270,7 +308,7 @@
 
       <section class="asec z2">
         ${head(5, sk.label || 'Stack')}
-        <div class="chips" data-fade>${(sk.items || []).map((c) => `<span class="chip">${esc(c)}</span>`).join('')}</div>
+        <div class="tms tms-lg" data-fade>${toolMarks(sk.items || [], 'lg')}</div>
         ${tm.body ? `<p class="tk-team" data-fade><span class="mono">${esc(tm.label)}</span>${esc(tm.body)}</p>` : ''}
         ${cta.href ? `<a class="btn tk-cta" href="${esc(cta.href)}" data-fade>${esc(cta.label)}</a>` : ''}
       </section>` + contactHTML();
@@ -300,6 +338,7 @@
           <h3>${esc(e.title)}</h3>
           <p class="host">${esc(e.host)}</p>
           <p>${esc(e.detail)}</p>
+          ${e.link ? `<a class="btn" href="${esc(e.link)}" target="_blank" rel="noopener">${esc(e.link_label || 'Read the LinkedIn post')}</a>` : ''}
         </div>
       </article>`).join('');
 
@@ -310,12 +349,14 @@
         <p class="tk-intro" data-fade>${esc(M.intro)}</p>
       </section>
 
+      ${((M.top || {}).items || []).length ? `<section class="mt-top z2" data-fade>${M.top.items.map((i) => `<figure class="${i.tall ? 'tall' : 'wide'}"><img src="${esc(i.image)}" alt="${esc(i.caption)}"><figcaption class="cap mono">${esc(i.caption)}</figcaption></figure>`).join('')}</section>` : ''}
+
       <section class="mt-numbers z2">
-        <div class="numbers" data-fade>${(M.numbers || []).map((n) => `<div><b data-count="${esc(n.value)}">${esc(n.value)}</b><span>${esc(n.label)}</span></div>`).join('')}</div>
+        <div class="numbers tiles" data-fade>${(M.numbers || []).map((n) => `<div><b data-count="${esc(n.value)}">${esc(n.value)}</b><span>${esc(n.label)}</span></div>`).join('')}</div>
         ${M.numbers_note ? `<p class="mono mt-note">${esc(M.numbers_note)}</p>` : ''}
       </section>
 
-      <section class="asec z2">
+      <section class="asec tint tint-cyan z2" data-cur="ink">
         ${head(1, o.label || 'One to one', o.title)}
         <div class="mt-one">
           <div data-fade><p class="lead-p">${esc(o.body)}</p>${o.cta ? btn(o.cta) : ''}</div>
@@ -323,7 +364,7 @@
         </div>
       </section>
 
-      <section class="asec dark dark-pad z2" style="margin-top:clamp(70px,13vh,170px)">
+      <section class="asec dark dark-pad z2">
         ${head(2, v.label || 'Voices', 'In their words.')}
         <div class="mt-voices">${(v.items || []).map((q) => `<figure data-fade><blockquote>&ldquo;${esc(q.text)}&rdquo;</blockquote><figcaption class="mono">${esc(q.who)}</figcaption></figure>`).join('')}</div>
         ${v.note ? `<p class="mono mt-note light">${esc(v.note)}</p>` : ''}
@@ -335,14 +376,16 @@
         <div class="mt-events">${events}</div>
       </section>
 
-      ${(g.items || []).length ? `<section class="asec z2">
-        ${head(4, g.label || 'Gallery')}
-        <div class="mt-gal" data-fade>${g.items.map((i) => `<figure class="${i.tall ? 'tall' : ''}"><img src="${esc(i.image)}" alt="${esc(i.caption)}" loading="lazy"><figcaption class="cap mono">${esc(i.caption)}</figcaption></figure>`).join('')}</div>
-      </section>` : ''}
+
 
       ${(rd.items || []).length ? `<section class="asec z2">
-        ${head(5, rd.label || 'Reading')}
+        ${head(4, rd.label || 'Reading')}
         <ul class="writing" data-fade>${rd.items.map((w) => `<li><a href="${esc(w.url)}" target="_blank" rel="noopener"><b>${esc(w.title)}</b><span class="mono">${esc(w.date)} &#8599;</span></a></li>`).join('')}</ul>
+      </section>` : ''}
+
+      ${(g.items || []).length ? `<section class="asec tint tint-mint z2" data-cur="ink">
+        ${head(5, g.label || 'Gallery')}
+        <div class="mt-gal" data-fade>${g.items.map((i) => `<figure><img src="${esc(i.image)}" alt="${esc(i.caption)}" loading="lazy"><figcaption class="cap mono">${esc(i.caption)}</figcaption></figure>`).join('')}</div>
       </section>` : ''}
 
       <section class="blue-panel mt-cta z2" data-cur="white">
@@ -363,6 +406,14 @@
   /* short silent loop: source is attached when scrolled near, so many clips cost nothing up front */
   const loopVideo = (src, poster) => `<video data-loop="${esc(src)}" muted loop playsinline preload="none"${poster ? ` poster="${esc(poster)}"` : ''}${reduce ? ' controls' : ''}></video>`;
 
+  function initCompare() {
+    $$('[data-cmp]').forEach((el) => {
+      const r = $('.cmp-r', el);
+      const set = () => el.style.setProperty('--p', r.value + '%');
+      r.addEventListener('input', set); set();
+    });
+  }
+
   function initLoops() {
     const vs = $$('video[data-loop]');
     if (!vs.length) return;
@@ -380,7 +431,7 @@
 
   function videoHTML(b) {
     const url = b.url || '';
-    const size = b.size === 'full' ? 'full' : 'wide';
+    const size = b.size === 'full' ? 'full' : (b.size === 'narrow' ? 'narrow' : 'wide');
     const yt = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{6,})/);
     const vm = url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
     const btn = '<button class="play-btn" type="button" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></button>';
@@ -388,6 +439,10 @@
     if (yt) {
       const id = yt[1];
       inner = `<div class="vbox" data-embed="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1"><img src="${esc(b.poster || `https://i.ytimg.com/vi/${id}/hqdefault.jpg`)}" alt="" loading="lazy">${btn}</div>`;
+    } else if (/linkedin\.com\//.test(url) && (/urn:li:(?:activity|ugcPost|share):\d+/.test(url) || /activity-(\d+)/.test(url))) {
+      const m1 = url.match(/urn:li:(activity|ugcPost|share):(\d+)/), m2 = url.match(/activity-(\d+)/);
+      const urn = m1 ? `urn:li:${m1[1]}:${m1[2]}` : `urn:li:activity:${m2[1]}`;
+      inner = `<div class="vbox li" data-embed="https://www.linkedin.com/embed/feed/update/${urn}" style="aspect-ratio:${esc(b.ratio || '4/5')}"><div class="li-face"><span class="mono">LinkedIn post</span><b>${esc(b.caption || 'Open the post')}</b><span class="li-note">Loads the post from LinkedIn when you press play.</span></div>${btn}</div>`;
     } else if (vm) {
       inner = `<div class="vbox" data-embed="https://player.vimeo.com/video/${vm[1]}?autoplay=1">${b.poster ? `<img src="${esc(b.poster)}" alt="" loading="lazy">` : ''}${btn}</div>`;
     } else if (url) {
@@ -395,6 +450,7 @@
         ? `<div class="vbox">${loopVideo(url, b.poster)}</div>`
         : `<div class="vbox"><video src="${esc(url)}" controls playsinline preload="metadata" ${b.poster ? `poster="${esc(b.poster)}"` : ''}></video></div>`;
     }
+    if (b.ratio && !/linkedin/.test(url) && /^[\d.]+\s*\/\s*[\d.]+$/.test(b.ratio)) inner = inner.replace('class="vbox"', `class="vbox" style="aspect-ratio:${b.ratio}"`);
     return `<figure class="blk blk-video size-${size} z2" data-fade>${inner}${b.caption ? `<figcaption class="cap mono">${esc(b.caption)}</figcaption>` : ''}</figure>`;
   }
 
@@ -412,14 +468,27 @@
       }
       case 'video':
         return videoHTML(b);
+      case 'video_grid': {
+        const cols = parseInt(b.columns, 10) || 2;
+        return `<section class="blk z2"><div class="blk-grid vgrid" style="--cols:${cols}">${(b.videos || []).map((v) => videoHTML({ ...v, size: 'wide' }).replace('blk blk-video size-wide z2', 'vg')).join('')}</div></section>`;
+      }
+      case 'compare':
+        return `<figure class="blk blk-compare size-${esc(b.size || 'narrow')} z2" data-fade>
+          <div class="cmp" style="--p:50%;--r:${esc(b.ratio || '3/4')}" data-cmp>
+            <img class="cmp-a" src="${esc(b.after)}" alt="${esc(b.after_label || 'After')}" loading="lazy" draggable="false">
+            <img class="cmp-b" src="${esc(b.before)}" alt="${esc(b.before_label || 'Before')}" loading="lazy" draggable="false">
+            <span class="cmp-l cmp-lb mono">${esc(b.before_label || 'Before')}</span><span class="cmp-l cmp-la mono">${esc(b.after_label || 'After')}</span>
+            <span class="cmp-h" aria-hidden="true"></span>
+            <input class="cmp-r" type="range" min="0" max="100" value="50" aria-label="Drag to compare: ${esc(b.before_label || 'before')} and ${esc(b.after_label || 'after')}">
+          </div>${b.caption ? `<figcaption class="cap mono">${esc(b.caption)}</figcaption>` : ''}</figure>`;
       case 'clips': {
         const cols = parseInt(b.columns, 10) || 2;
         return `<section class="blk z2"><div class="blk-grid clips" style="--cols:${cols}">${(b.clips || []).map((c) => `<figure data-fade><div class="clip">${loopVideo(c.video, c.poster)}</div>${c.caption ? `<figcaption class="cap mono">${esc(c.caption)}</figcaption>` : ''}</figure>`).join('')}</div></section>`;
       }
       case 'steps':
-        return `<section class="blk blk-steps z2"><div class="blk-row" data-fade><h4 class="mono">${esc(b.label)}</h4><div>${b.title ? `<h3 class="blk-title">${inline(b.title)}</h3>` : ''}</div></div><div class="steps-list">${(b.items || []).map((s, i) => `<div class="step" data-fade><div><span class="n mono">${pad2(i + 1)}</span><h5 style="display:inline">${esc(s.title)}</h5></div><div><p>${esc(s.body)}</p>${s.tools ? `<p class="tl2 mono">${esc(s.tools)}</p>` : ''}</div></div>`).join('')}</div></section>`;
+        return `<section class="blk blk-steps z2"><div class="blk-row" data-fade><h4 class="mono">${esc(b.label)}</h4><div>${b.title ? `<h3 class="blk-title">${inline(b.title)}</h3>` : ''}</div></div><div class="steps-list">${(b.items || []).map((s, i) => `<div class="step" data-fade><div><span class="n mono">${pad2(i + 1)}</span><h5 style="display:inline">${esc(s.title)}</h5></div><div><p>${esc(s.body)}</p>${s.tools ? `<div class="tl2 tms">${toolMarks(s.tools, 'sm')}</div>` : ''}</div></div>`).join('')}</div></section>`;
       case 'tools':
-        return `<section class="blk blk-text z2" data-fade><div class="blk-row"><h4 class="mono">${esc(b.label || 'Stack')}</h4><div class="chips">${(b.items || []).map((t) => `<span class="chip">${esc(typeof t === 'string' ? t : t.tool || t.name)}</span>`).join('')}</div></div></section>`;
+        return `<section class="blk blk-text z2" data-fade><div class="blk-row"><h4 class="mono">${esc(b.label || 'Stack')}</h4><div class="tms">${toolMarks((b.items || []).map((t) => (typeof t === 'string' ? t : t.tool || t.name)))}</div></div></section>`;
       case 'metrics':
         return `<section class="blk blk-metrics z2"><div class="blk-row" data-fade><h4 class="mono">${esc(b.label)}</h4><div class="metrics">${(b.items || []).map((m) => `<div class="metric"><b data-count="${esc(m.value)}">${esc(m.value)}</b><span>${esc(m.label)}</span></div>`).join('')}</div></div></section>`;
       case 'quote':
@@ -429,11 +498,16 @@
     }
   }
 
+  /* each project's "next" block floods with its own bold colour on hover */
+  const NEXT_TINTS = [['var(--blue)', '#fff'], ['var(--cyan)', 'var(--ink)'], ['var(--violet)', '#fff'], ['var(--mint)', 'var(--ink)']];
+  const nextTint = (p) => { let h = 0; String(p.slug).split('').forEach((c) => { h = (h * 31 + c.charCodeAt(0)) >>> 0; }); const [bg, fg] = NEXT_TINTS[h % NEXT_TINTS.length]; return `--hv:${bg};--hf:${fg}`; };
+
   function casePage() {
     const params = new URLSearchParams(location.search);
-    const isExp = params.has('e');
+    const bd = document.body.dataset;
+    const isExp = bd.kind ? bd.kind === 'lab' : params.has('e');
     const list = isExp ? EXPERIMENTS : PROJECTS;
-    const slug = params.get(isExp ? 'e' : 'c');
+    const slug = bd.slug || params.get(isExp ? 'e' : 'c');
     const p = list.find((x) => x.slug === slug) || (!slug ? list[0] : null);
     const back = isExp ? ['lab.html', 'the Lab'] : ['work.html', 'all work'];
 
@@ -442,8 +516,10 @@
       finish(); arrive(() => {}); return;
     }
 
-    document.title = p.title + ' — Vibhor Mathur';
-    const dsc = $('meta[name="description"]'); if (dsc && p.summary) dsc.setAttribute('content', p.summary);
+    /* legacy case.html?c=slug links go to the one canonical, indexable URL */
+    if (!bd.slug) { location.replace(projHref(p, isExp ? 'e' : 'c')); return; }
+    document.title = p.seo_title || (p.title + ' — Vibhor Mathur');
+    const dsc = $('meta[name="description"]'); if (dsc && (p.seo_description || p.summary)) dsc.setAttribute('content', p.seo_description || p.summary);
 
     const siblings = list.filter((x) => (x.sections || []).length);
     const idx = siblings.indexOf(p);
@@ -454,7 +530,7 @@
       : (cover.image ? `<img src="${esc(cover.image)}" alt="${esc(p.title)}">` : '');
     const lines = String(p.title_lines || p.title).split(/\n/);
     const meta = isExp
-      ? [['Medium', (p.medium || []).join(', ')], ['Tools', p.tools], ['Year', p.year], ['Type', 'Experiment']]
+      ? [['Medium', (p.medium || []).join(', ')], ['Tools', p.tools || '—'], ['Year', p.year], ['Type', 'Experiment']]
       : [['Client', p.client], ['Role', p.role], ['Year', p.year], ['Type', p.category]];
     const metrics = (p.metrics || []).length ? `<div class="metrics z2">${p.metrics.map((m) => `<div class="metric" data-fade><b data-count="${esc(m.value)}">${esc(m.value)}</b><span>${esc(m.label)}</span></div>`).join('')}</div>` : '';
     const team = (p.team || []).length ? `<div data-fade><h4 class="mono">Team</h4><ul>${p.team.map((t) => `<li><span>${esc(t.name)}</span><span>${esc(t.role)}</span></li>`).join('')}</ul></div>` : '';
@@ -465,7 +541,7 @@
     root.innerHTML = `
       <section class="case-hero z2">
         <h1 aria-label="${esc(p.title)}">${lines.map((t) => `<span class="l"><span>${esc(t)}</span></span>`).join('')}</h1>
-        <div class="case-meta mono">${meta.filter((m) => m[1]).map((m) => `<div><span>${m[0]}</span>${esc(m[1])}</div>`).join('')}</div>
+        <div class="case-meta mono">${meta.filter((m) => m[1]).map((m) => `<div><span>${m[0]}</span>${m[0] === 'Tools' && m[1] !== '—' ? `<div class="tms">${toolMarks(m[1])}</div>` : esc(m[1])}</div>`).join('')}</div>
       </section>
       ${coverMedia ? `<div class="case-cover ${isExp ? 'sq' : ''} z2">${coverMedia}</div>` : ''}
       ${p.tagline ? `<p class="case-hook z2" data-split>${inline(p.tagline)}</p>` : ''}
@@ -473,8 +549,8 @@
       ${(p.sections || []).map(blockHTML).join('')}
       ${hasEnd ? `<section class="case-end z2">${team}${awards}${links}</section>` : ''}
       ${next
-        ? `<a class="next" href="case.html?${isExp ? 'e' : 'c'}=${encodeURIComponent(next.slug)}" data-cursor="Next"><span class="mono">Next ${isExp ? 'experiment' : 'project'}</span><div class="t">${esc(next.title)}</div></a>`
-        : `<a class="next" href="${back[0]}"><span class="mono">Back</span><div class="t">${isExp ? 'The Lab' : 'All work'}</div></a>`}
+        ? `<a class="next" href="${projHref(next, isExp ? 'e' : 'c')}" data-cursor="Next" data-cur="white" style="${nextTint(next)}"><span class="mono">Next ${isExp ? 'experiment' : 'project'}</span><div class="t">${esc(next.title)}</div></a>`
+        : `<a class="next" href="${back[0]}" data-cur="white" style="${nextTint({ slug: 'back' })}"><span class="mono">Back</span><div class="t">${isExp ? 'The Lab' : 'All work'}</div></a>`}
       ${contactHTML()}`;
 
     $$('.vbox[data-embed]', root).forEach((box) => {
@@ -487,6 +563,7 @@
 
     initReveals(document);
     initLoops();
+    initCompare();
     finish();
     arrive(() => introLines($('.case-hero h1')));
   }
@@ -494,11 +571,11 @@
   /* ---- boot ---- */
   const S = SITE;
   if (page === 'work') {
-    document.title = 'Work — Vibhor Mathur';
-    listPage({ items: PROJECTS, key: 'categories', label: 'Work', title: 'Work', intro: 'Brand films, campaigns, launches and identities from Razorpay and Grofers. Filter by category.', preferred: CAT_ORDER, card: projectCard, gridClass: 'wgrid', sortable: true });
+    document.title = (((S.seo || {}).pages || {}).work || {}).title || 'Work — Vibhor Mathur';
+    listPage({ items: PROJECTS, key: 'categories', label: 'Work', title: 'Work', intro: 'Brand films, campaigns, launches and identities from Razorpay and Grofers. Filter by category.', preferred: CAT_ORDER, card: projectCard, gridClass: 'wgrid', sortable: true, wall: true });
   } else if (page === 'lab') {
-    document.title = 'Lab — Vibhor Mathur';
-    listPage({ items: EXPERIMENTS, key: 'medium', label: 'Lab', title: 'Lab', intro: (S.lab && S.lab.sub) ? 'Art experiments made after hours: AI art, stop-motion animation and found-object art.' : '', preferred: ['AI art', 'Stop motion', 'Found objects', 'Conceptual art', 'Type & text'], card: (p) => labCard(p), gridClass: 'lgrid', sortable: false });
+    document.title = (((S.seo || {}).pages || {}).lab || {}).title || 'Lab — Vibhor Mathur';
+    listPage({ items: EXPERIMENTS, key: 'medium', label: 'Lab', title: 'Lab', intro: (S.lab && S.lab.sub) ? 'Art made after hours: found objects, digital collage, illustration and AI experiments.' : '', preferred: ['AI film', 'AI art', 'Found objects', 'Type & text', 'Digital collage', 'Illustration', 'Stop motion', 'Conceptual art'], card: (p) => labCard(p), gridClass: 'lgrid', sortable: false, extra: '<a class="btn shuffle" href="lab.html" data-shuffle>Surprise me</a>' });
   } else if (page === 'about') {
     aboutPage();
   } else if (page === 'mentorship') {

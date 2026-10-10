@@ -1,0 +1,65 @@
+# Vibhor Mathur
+
+> Vibhor Mathur is a creative director and design leader based in Bengaluru, India. He leads Communication Design at Razorpay across Payments, RazorpayX and POS, and before that spent over six years at Grofers (now Blinkit), leaving as Associate Director, Marketing Design. His work spans brand films, integrated campaigns, interactive landing pages and AI-native production, including Trial of the Century, which won Generative AI at the Shorty Awards. Hire him for creative direction, brand film and campaign work, AI-led production, building an in-house design studio, or design mentoring.
+
+## Key facts
+
+- Currently: Communication Design Senior Manager, Razorpay
+- Based: Bengaluru, India. Roots in Jaipur.
+- Education: B.Tech, Computer Engineering. Government Engineering College Bikaner, 2010 to 2014.
+- Languages: English, Hindi
+- Email: onlyvibhor@gmail.com
+- Behance: https://www.behance.net/onlyvibhor
+- LinkedIn: https://www.linkedin.com/in/onlyvibhor/
+- Instagram: https://www.instagram.com/onlyvibhor/
+- ADPList: https://adplist.org/mentors/vibhor-mathur
+
+## What to hire for
+
+- Creative direction for brand films and campaigns: Concept, art direction and craft for brand films, launch videos, keynote films and integrated campaigns, from brief to final edit.
+- AI-native film and campaign production: Fully AI-made films and campaign systems that stay consistent at scale, such as 81 television films for 20 founders with no cameras, sets or lights.
+- Interactive landing pages and games: Scroll-driven campaign sites and playable games that explain a product by letting people use it.
+- In-house design team leadership: Hiring, developing and leading creative teams, and setting the visual system, process and tools they work in.
+- Custom AI design tools for studios: In-house AI tools with real interfaces for cinematography, product imagery, image editing and founder-led campaigns.
+- Design mentoring and AI-in-design workshops: One-to-one mentoring on ADPList, plus workshops, talks and panels on AI in design and design leadership.
+
+## Awards
+
+- Shorty Awards 2026: Winner, Generative AI. Gold Honor, Financial Services. Finalist, Community Engagement. (Trial of the Century)
+- Kyoorius Creative Awards 2026: First List: Film Craft; Use of Technology & AI. (Trial of the Century)
+- ET Brand Disruption Awards 2026: Gold, Most Disruptive Creative & Design Team. (Razorpay)
+- ET Brand Disruption Awards 2026: Silver, Most Disruptive B2B Campaign. (Trial of the Century)
+
+## Pages
+
+- [Home](https://www.onlyvibhor.com/): Overview
+- [Work](https://www.onlyvibhor.com/work.html): All projects
+- [Lab](https://www.onlyvibhor.com/lab.html): Art, stop motion and personal AI work
+- [AI Toolkit](https://www.onlyvibhor.com/toolkit.html): AI design tools built in-house
+- [Mentorship](https://www.onlyvibhor.com/mentorship.html): Mentoring, workshops, talks
+- [About](https://www.onlyvibhor.com/about.html): Career, awards and FAQ
+
+## Projects
+
+- [Trial of the Century](https://www.onlyvibhor.com/projects/trial/): A Panchatantra-style courtroom film that turned payslip confusion into a pop-culture moment for the HR community.
+- [Break To Build](https://www.onlyvibhor.com/projects/btb/): A 100% AI experiment in making a TVC: founders photographed once, then broken, bent and built into cinematic films.
+- [Backing India's Start-Up Champions](https://www.onlyvibhor.com/projects/t20/): 81 television films, a newspaper front page and 200+ social posts for 20 founders, with no cameras, sets or lights.
+- [Back in the Ring](https://www.onlyvibhor.com/projects/ring/): A boxing-film trailer, a parallax landing page and a playable game, built end to end in-house to relaunch Netbanking.
+- [Magic Checkout Landing Page](https://www.onlyvibhor.com/projects/magic-checkout/): An immersive landing page that lets visitors experience what Magic Checkout does, instead of reading a list of features.
+- [Agentic Commerce Engine Launch Video](https://www.onlyvibhor.com/projects/agentic-commerce-engine/): A 100% AI-made launch film for the Razorpay Agentic Commerce Stack, made for GFF 26.
+- [International Payments Launch Video](https://www.onlyvibhor.com/projects/international-payments/): A 40 to 60 second motion graphics film that makes international e-commerce payments simple to follow.
+- [Magic Conversations Videos](https://www.onlyvibhor.com/projects/magic-conversations/): Testimonial films with Isak Fragrances and VS Mani Filter Coffees, shot and edited by a team of young designers learning the craft.
+- [Passport For Your Product](https://www.onlyvibhor.com/projects/passport-for-your-products/): A launch campaign whose entire design identity was built with a new AI workflow, then taken to YouTube, LinkedIn and Meta.
+- [MoneySaver Export Account](https://www.onlyvibhor.com/projects/moneysaver-export-account/): A launch video and digital media strategy for the MoneySaver Export Account, made entirely with AI design tools.
+- [Razorpay Payments on WhatsApp](https://www.onlyvibhor.com/projects/payments-on-whatsapp/): A launch film where AI-generated imagery tells sad stories of abandoned carts, then turns them into stories of completion.
+- [Grofers Logo Guidelines](https://www.onlyvibhor.com/projects/grofers-logo-guidelines/): Logo usage guidelines for Grofers, covering clear space, colourways, placement, typographic hierarchy and in-app creative templates.
+
+## Lab
+
+- [Power](https://www.onlyvibhor.com/lab/power/): Assemblages of sockets, switches and wires with words, in photographs and short films, where electrical power becomes a metaphor for courage, inspiration and instinct.
+- [AI Works](https://www.onlyvibhor.com/lab/ai-works/): Personal AI work: a Rajasthan series shot in Midjourney and a red reel, followed by short films, an abstract short and an AI ad.
+- [Eyes](https://www.onlyvibhor.com/lab/eyes/): Thirty animated collages about emotions, dreams, fears and the lessons we learn through our eyes.
+- [Birds](https://www.onlyvibhor.com/lab/birds/): A series of animated birds from 2018 to 2020: collages of flowers, leaves and fruit, surreal city-and-nature scenes, and birds drawn in single white lines.
+- [Modern Junkyard](https://www.onlyvibhor.com/lab/modern-junkyard/): Modern Junkyard is a stop-motion studio: an April Fool film for UrbanClap, dancing vegetables, wool typography and a Holi film for Grofers.
+- [Habitats without the life](https://www.onlyvibhor.com/lab/habitats/): AI landscapes built from animal silhouettes with Stable Diffusion and ControlNet.
+- [Absolut Landscapes](https://www.onlyvibhor.com/lab/absolut/): Landscapes shaped by the Absolut bottle, made with Stable Diffusion and ControlNet.

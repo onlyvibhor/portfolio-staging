@@ -77,6 +77,28 @@
       "body": "The film was built under an incredibly tight timeline. The entire film was created using AI, from every environment and human character to the footage itself, and every frame was treated with the same level of creative direction as a full-scale film production."
     },
     {
+      "type": "text",
+      "label": "More films",
+      "title": "Launch films from the same channel.",
+      "body": "Two more Razorpay films: the Agent Studio social film and the RazorpayX corporate credit card film with RBL Bank."
+    },
+    {
+      "type": "video_grid",
+      "columns": 2,
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=JXOzdo9S4F8",
+          "poster": "assets/img/p/yt-JXOzdo9S4F8.jpg",
+          "caption": "Agent Studio - Social"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=_o2QX5M_fhk",
+          "poster": "assets/img/p/yt-_o2QX5M_fhk.jpg",
+          "caption": "RBL Bank RazorpayX Corporate Credit Card"
+        }
+      ]
+    },
+    {
       "type": "tools",
       "label": "Stack",
       "items": [

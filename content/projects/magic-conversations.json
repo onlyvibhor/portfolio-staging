@@ -41,6 +41,38 @@
     {
       "type": "statement",
       "text": "Designers learning to direct, one shot at a time."
+    },
+    {
+      "type": "text",
+      "label": "Merchant reviews",
+      "title": "Merchants on camera.",
+      "body": "A newer set of Razorpay merchant reviews: Luzo, BookMyForex, ixigo and Mokobara."
+    },
+    {
+      "type": "video_grid",
+      "columns": 2,
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=4mWUNEP8Tu0",
+          "poster": "assets/img/p/yt-4mWUNEP8Tu0.jpg",
+          "caption": "Luzo's Honest Razorpay review: 90%+ UPI Success"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=p9PKg1lHQn0",
+          "poster": "assets/img/p/yt-p9PKg1lHQn0.jpg",
+          "caption": "Razorpay Review By BookMyForex: A Fintech CTO's Perspective"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=RmE6f5Pnkfs",
+          "poster": "assets/img/p/yt-RmE6f5Pnkfs.jpg",
+          "caption": "ixigo's Honest Razorpay Review: Powering Travel Bookings for Millions"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=2Mzg8ddzmGk",
+          "poster": "assets/img/p/yt-2Mzg8ddzmGk.jpg",
+          "caption": "Razorpay Review for High-Volume D2C: Mokobara's Experience"
+        }
+      ]
     }
   ],
   "team": [

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "AI Toolkit — Vibhor Mathur",
-    "description": "How the Razorpay design team uses AI to build its own tools: automating set tasks, scaling production, teaching beginners and shipping interactive web campaigns without waiting for a developer."
+    "title": "AI Design Toolkit for Creative Teams | Vibhor Mathur",
+    "description": "How a creative director's studio builds its own AI tools: automating set tasks, scaling production and shipping interactive web campaigns without a developer."
   },
   "label": "AI Toolkit",
   "headline": "Tools that make the *work*, built by the people who make the work.",
@@ -42,7 +42,7 @@
         {
           "label": "Backing India's Start-Up Champions",
           "detail": "81 films, 1 newspaper ad, 200+ social posts.",
-          "href": "case.html?c=t20"
+          "href": "projects/t20/"
         },
         {
           "label": "Razorbae, AI avatar",
@@ -71,12 +71,12 @@
         {
           "label": "Magic Checkout landing page",
           "detail": "An immersive scroll-through world with micro-animations.",
-          "href": "case.html?c=magic-checkout"
+          "href": "projects/magic-checkout/"
         },
         {
           "label": "Back in the Ring",
           "detail": "A parallax landing page and a playable game.",
-          "href": "case.html?c=ring"
+          "href": "projects/ring/"
         }
       ]
     }
@@ -188,14 +188,14 @@
         "tag": "Landing page",
         "body": "An immersive landing page where you experience what checkout does, from the magic you see to the science behind it.",
         "image": "assets/img/p/magic-cover.jpg",
-        "href": "case.html?c=magic-checkout"
+        "href": "projects/magic-checkout/"
       },
       {
         "title": "Back in the Ring",
         "tag": "Landing page and game",
         "body": "A parallax landing page that pulls you into the ring, plus a game where each opponent defeated unlocks a new feature.",
         "image": "assets/img/p/ring-cover.jpg",
-        "href": "case.html?c=ring"
+        "href": "projects/ring/"
       },
       {
         "title": "The Wall of Laughter",

@@ -70,6 +70,16 @@
       "body": "A custom avatar tool, built on the Nano Banana API and Gemini AI Studio, took a single reference image and returned a full campaign visual library: sportsman poses, campaign costume, expressions tuned to each founder's personality. 4K output, one click.\n\nEvery founder walked into the campaign looking like they had always belonged on that stage."
     },
     {
+      "type": "compare",
+      "before": "assets/img/p/t20-founder-source.jpg",
+      "after": "assets/img/p/t20-founder-pose.jpg",
+      "before_label": "Reference photo",
+      "after_label": "Generated pose",
+      "ratio": "129/172",
+      "size": "narrow",
+      "caption": "One reference photo in, a new campaign pose out. Drag to compare."
+    },
+    {
       "type": "image",
       "image": "assets/img/p/t20-4.jpg",
       "caption": "The custom avatar generation tool",

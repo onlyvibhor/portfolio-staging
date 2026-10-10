@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "About — Vibhor Mathur",
-    "description": "Self-taught designer from Jaipur, engineer by degree. Communication Design Senior Manager at Razorpay, formerly Associate Director at Grofers. Also an artist working with AI, stop motion and found objects."
+    "title": "About Vibhor Mathur: Creative Director & Design Leader, Bengaluru",
+    "description": "Creative director and design leader in Bengaluru. Leads Communication Design at Razorpay; formerly Associate Director at Grofers (Blinkit). Career, awards and FAQ."
   },
   "label": "About",
   "headline": "Designing narratives by day. Crafting emotions through *art* by night.",
-  "portrait": "assets/img/profile.png",
+  "portrait": "assets/img/about/portrait.jpg",
   "portrait_caption": "Jaipur → Bengaluru",
   "facts": [
     {
@@ -116,6 +116,14 @@
         "detail": "Mentor."
       },
       {
+        "name": "Samanvaya, Rotaract District 3191",
+        "detail": "First live workshop: design in brand building, for college students at BMS College of Engineering, August 2023."
+      },
+      {
+        "name": "IIIT-Delhi E-Summit",
+        "detail": "Fireside chat on design leadership with Sushant Ajnikar, Mini Gautam and Anshul Patria, March 2024."
+      },
+      {
         "name": "AI in art and design workshop",
         "detail": "Image generation, AI video and AI-assisted UI design, March 2024."
       },
@@ -221,6 +229,82 @@
       {
         "label": "ADPList",
         "url": "https://adplist.org/mentors/vibhor-mathur"
+      }
+    ]
+  },
+  "gallery": {
+    "label": "In pictures",
+    "items": [
+      {
+        "image": "assets/img/about/on-set.jpg",
+        "video": "assets/vid/about/on-set.mp4",
+        "caption": "On set"
+      },
+      {
+        "image": "assets/img/about/brand-disruption-awards-2026.jpg",
+        "caption": "ET Brand Disruption Awards 2026"
+      },
+      {
+        "image": "assets/img/about/reimagine-awards-stage.jpg",
+        "caption": "On stage at the Reimagine Awards"
+      },
+      {
+        "image": "assets/img/mentor/photo.jpg",
+        "caption": "Presenting at a workshop"
+      },
+      {
+        "image": "assets/img/mentor/iiitd-gift.jpg",
+        "caption": "IIIT-Delhi E-Summit"
+      },
+      {
+        "image": "assets/img/mentor/samanvaya-talk.jpg",
+        "caption": "Samanvaya workshop, Bengaluru, August 2023"
+      },
+      {
+        "image": "assets/img/mentor/extended.jpg",
+        "caption": "xtended Pack Collective workshop"
+      },
+      {
+        "image": "assets/img/mentor/iiitd-panel.jpg",
+        "caption": "IIIT-Delhi E-Summit, design panel, March 2024"
+      }
+    ]
+  },
+  "faq": {
+    "label": "Questions",
+    "title": "Questions people ask.",
+    "items": [
+      {
+        "q": "Who is Vibhor Mathur?",
+        "a": "Vibhor Mathur is a creative director and design leader based in Bengaluru, India. He is Communication Design Senior Manager at Razorpay, where he leads Communication Design across Payments, RazorpayX and POS. From 2015 to 2021 he was at Grofers (now Blinkit), leaving as Associate Director, Marketing Design. He is a self-taught designer from Jaipur with a B.Tech in computer engineering."
+      },
+      {
+        "q": "What can I hire Vibhor for?",
+        "a": "Creative and art direction for brand films, launch videos and campaigns; AI-native film and campaign production; interactive landing pages and games; building and leading in-house design teams and visual systems; custom AI design tools for studios; and design mentoring or workshops on AI in design."
+      },
+      {
+        "q": "What has he made with AI?",
+        "a": "Trial of the Century, an AI film for RazorpayX Payroll, won Generative AI at the Shorty Awards. Break To Build turned one photograph of each of thirty founders into thirty ad films. Backing India's Start-Up Champions produced 81 television films, a newspaper front page and more than 200 social posts for 20 founders with no cameras, sets or lights. Back in the Ring is a fully in-house, fully AI-made cinematic trailer for Razorpay Netbanking."
+      },
+      {
+        "q": "What awards has his work won?",
+        "a": "Shorty Awards 2026: Winner, Generative AI; Gold Honor, Financial Services; Finalist, Community Engagement, for Trial of the Century. Kyoorius Creative Awards 2026: First List for Film Craft and for Use of Technology and AI. ET Brand Disruption Awards 2026: Gold, Most Disruptive Creative and Design Team, and Silver, Most Disruptive B2B Campaign."
+      },
+      {
+        "q": "What results has his work delivered?",
+        "a": "Backing India's Start-Up Champions reached 8.1 million unique viewers and lifted purchase intent by 133 percent. Trial of the Century earned more than 2.1 million impressions. The MoneySaver Export Account launch reached 29.1 million in media."
+      },
+      {
+        "q": "What AI tools has his design team built?",
+        "a": "The Razorpay design team built and uses a Cinematography Tool, a Product Image Generator, an Advanced Image Editor and a Founder Image Generator on live campaigns, all with proper interfaces rather than blank prompt boxes. The AI Toolkit page explains how each one works."
+      },
+      {
+        "q": "Does Vibhor mentor designers or run workshops?",
+        "a": "Yes. He is a design mentor on ADPList, where he has completed 33 one-to-one sessions of 60 minutes each. He also teaches workshops and joins talks and panels on AI in design and design leadership, including GrowthSchool, Designland and the IIIT-Delhi E-Summit."
+      },
+      {
+        "q": "Where is he based, and how do I get in touch?",
+        "a": "Vibhor is based in Bengaluru, India, with roots in Jaipur, and works in English and Hindi. The quickest way to reach him is email at onlyvibhor@gmail.com, or LinkedIn at linkedin.com/in/onlyvibhor."
       }
     ]
   }

@@ -1,0 +1,182 @@
+{
+  "title": "AI Works",
+  "slug": "ai-works",
+  "published": true,
+  "order": 2,
+  "year": "Ongoing",
+  "medium": [
+    "AI film",
+    "AI art"
+  ],
+  "tools": "Midjourney and other AI tools",
+  "title_lines": "AI\nWorks",
+  "tagline": "Rajasthan in Midjourney, a red reel, and a few short films.",
+  "summary": "Personal AI work: a Rajasthan series shot in Midjourney and a red reel, followed by short films, an abstract short and an AI ad.",
+  "cover": {
+    "image": "assets/img/ai/ai-works-cover.jpg",
+    "video": ""
+  },
+  "sections": [
+    {
+      "type": "text",
+      "label": "The work",
+      "title": "Stories, looks and experiments, made for myself.",
+      "body": "Outside my day job I use generative AI to make images, reels and films for myself. The Rajasthan series and the red reel lead, followed by the short films: a Diwali zombie story set in Jaipur, an abstract short and an AI ad."
+    },
+    {
+      "type": "text",
+      "label": "Rajasthan",
+      "title": "Seven frames of Rajasthan, shot in Midjourney.",
+      "body": "Pink stone facades, shafts of light and lone figures: a seven-image series set in Rajasthan, made entirely in Midjourney. It first ran as an Instagram carousel."
+    },
+    {
+      "type": "image",
+      "image": "assets/img/ai/midjourney-1.jpg",
+      "caption": "",
+      "size": "wide"
+    },
+    {
+      "type": "image_grid",
+      "columns": 3,
+      "images": [
+        {
+          "image": "assets/img/ai/midjourney-2.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/ai/midjourney-3.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/ai/midjourney-4.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/ai/midjourney-5.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/ai/midjourney-6.jpg",
+          "caption": ""
+        },
+        {
+          "image": "assets/img/ai/midjourney-7.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "label": "The red reel",
+      "title": "A reel in rust and red.",
+      "body": "A hand pressed against a weathered red wall, set to Dr. Dog's Where'd All the Time Go?"
+    },
+    {
+      "type": "video",
+      "url": "assets/vid/ai/where-did-all-the-time-go.mp4",
+      "poster": "assets/img/ai/where-did-all-the-time-go.jpg",
+      "caption": "A reel set to Dr. Dog's Where'd All the Time Go?",
+      "size": "wide",
+      "loop": false,
+      "ratio": "1276/718"
+    },
+    {
+      "type": "text",
+      "label": "Films",
+      "title": "Short films and an ad.",
+      "body": "Longer pieces on YouTube."
+    },
+    {
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=sFg0CfD6G34",
+      "poster": "assets/img/ai/yt-sFg0CfD6G34.jpg",
+      "caption": "Khwaab: AI video",
+      "size": "wide",
+      "loop": false
+    },
+    {
+      "type": "text",
+      "label": "Houseparty",
+      "title": "An abstract AI short, with Socketman.",
+      "body": "A character with a retro monitor for a head runs through a room of pigeons and old electronics. Socketman echoes the electrical-accessory world of the Power series."
+    },
+    {
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=xMpj-Kd6zQ0",
+      "poster": "assets/img/ai/yt-xMpj-Kd6zQ0.jpg",
+      "caption": "Houseparty: abstract AI short, Socketman",
+      "size": "wide",
+      "loop": false
+    },
+    {
+      "type": "text",
+      "label": "Undying Light",
+      "title": "A Diwali clash between light and darkness.",
+      "body": "A short film where zombies haunt the vibrant streets of Jaipur, fully generated using AI tools. Making it taught me how much sound design matters in cinematic video: atmosphere, emotion, character voices, foley, music and sync all carry the film as much as the picture."
+    },
+    {
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=J-qqFTV3qxc",
+      "poster": "assets/img/ai/yt-J-qqFTV3qxc.jpg",
+      "caption": "Undying Light: AI-generated short film",
+      "size": "wide",
+      "loop": false
+    },
+    {
+      "type": "text",
+      "label": "Serum ad",
+      "title": "An AI ad for a personal-care serum.",
+      "body": "A product film made entirely with AI: close, glossy, and shot like a beauty campaign."
+    },
+    {
+      "type": "video",
+      "url": "https://www.youtube.com/watch?v=xucmtMB87Ls",
+      "poster": "assets/img/ai/yt-xucmtMB87Ls.jpg",
+      "caption": "Personal Care serum AI ad",
+      "size": "wide",
+      "loop": false
+    },
+    {
+      "type": "text",
+      "label": "Ultra-wide",
+      "title": "A reel in 5120×1080.",
+      "body": "Shorter pieces live on Instagram. This one is made in an ultra-wide frame."
+    },
+    {
+      "type": "video",
+      "url": "assets/vid/ai/dance-of-the-creator.mp4",
+      "poster": "assets/img/ai/dance-of-the-creator.jpg",
+      "caption": "Dance of the creator: an ultra-wide (5120×1080) AI reel",
+      "size": "wide",
+      "loop": false,
+      "ratio": "1280/270"
+    },
+    {
+      "type": "tools",
+      "label": "Tools",
+      "items": [
+        "Midjourney",
+        "Generative AI video",
+        "Sound design"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "Undying Light, on my site",
+      "url": "https://www.onlyvibhor.com/unspoken-light-oblyvibhor"
+    },
+    {
+      "label": "Dance of the creator, Instagram",
+      "url": "https://www.instagram.com/onlyvibhor/reel/DPx-jpwk372/"
+    },
+    {
+      "label": "Reel, Instagram",
+      "url": "https://www.instagram.com/onlyvibhor/reel/DT3fjnFk0UC/"
+    },
+    {
+      "label": "Shot by Midjourney, Instagram",
+      "url": "https://www.instagram.com/onlyvibhor/p/DT3dCKNEzWc/"
+    }
+  ]
+}

@@ -23,7 +23,7 @@
     return '<p>' + esc(s).replace(/\n\n+/g, '</p><p>') + '</p>';
   };
   const rand = (a, b) => a + Math.random() * (b - a);
-  const projHref = (p, kind) => `case.html?${kind === 'e' ? 'e' : 'c'}=${encodeURIComponent(p.slug)}`;
+  const projHref = (p, kind) => `${kind === 'e' ? 'lab' : 'projects'}/${encodeURIComponent(p.slug)}/`;
   const pad2 = (n) => String(n).padStart(2, '0');
   const clock = () => new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Kolkata' }).format(new Date());
 
@@ -49,7 +49,7 @@
             if (!t) return;
             if (/^\s+$/.test(t)) { parent.appendChild(document.createTextNode(' ')); return; }
             if (mask) {
-              const w = document.createElement('span'); w.className = 'w';
+              const w = document.createElement('span'); w.className = 'wm';
               const i = document.createElement('span'); i.className = 'wi'; i.textContent = t;
               w.appendChild(i); parent.appendChild(w);
             } else {
@@ -79,10 +79,11 @@
   function initReveals(root) {
     $$('[data-split]', root).forEach((el) => {
       const wi = split(el, true);
-      if (reduce) return;
-      gsap.fromTo(wi, { yPercent: 112, y: 0 }, {
+      const unmask = () => wi.forEach((n) => n.parentNode.classList.add('d'));
+      if (reduce) { unmask(); return; }
+      gsap.fromTo(wi, { yPercent: 140, y: 0 }, {
         yPercent: 0, duration: 1.1, ease: 'power4.out', stagger: 0.045,
-        scrollTrigger: { trigger: el, start: 'top 90%' }
+        scrollTrigger: { trigger: el, start: 'top 90%' }, onComplete: unmask
       });
     });
     $$('[data-scrub]', root).forEach(scrubWords);
@@ -116,7 +117,7 @@
   }
   function introLines(h1, delay) {
     const lines = lineSpans(h1);
-    return gsap.fromTo(lines, { yPercent: 105, y: 0 }, {
+    return gsap.fromTo(lines, { yPercent: 130, y: 0 }, {
       yPercent: 0, duration: reduce ? 0.01 : 1.3, ease: 'power4.out', stagger: 0.12, delay: delay || 0,
       onComplete: () => h1.classList.add('done')
     });
@@ -131,25 +132,89 @@
     ['About', 'about.html', 'about'],
     ['Contact', '#contact', 'contact']
   ];
-  const isExp = new URLSearchParams(location.search).has('e');
+  const isExp = document.body.dataset.kind ? document.body.dataset.kind === 'lab' : new URLSearchParams(location.search).has('e');
   const navCurrent = { work: 'work', case: isExp ? 'lab' : 'work', lab: 'lab', about: 'about', toolkit: 'toolkit', mentorship: 'mentorship' }[page];
   const navHTML = (cls) => NAV.map(([label, href, key]) => `<a href="${href}"${key === navCurrent ? ' class="on" aria-current="page"' : ''}>${label}</a>`).join('');
 
   document.body.insertAdjacentHTML('afterbegin', `
     <header class="hdr">
-      <a href="index.html" class="logo">Vibhor Mathur</a>
+     <div class="hdr-row">
+      <a href="index.html" class="logo"><img class="hdr-av" src="assets/img/avatar/avatar-sm.webp" alt="" width="138" height="200" data-tilt="14"><span>Vibhor Mathur</span></a>
       <nav aria-label="Primary">${navHTML()}</nav>
       <span class="clock mono"></span>
       <button class="menu-btn" type="button" aria-controls="mnav" aria-expanded="false">Menu</button>
+     </div>
     </header>
     <div class="mnav" id="mnav">${navHTML()}</div>`);
 
+  /* ---- tool logos: tags for AI / design tools render as logos (mono masks), unknown names stay text ---- */
+  const LOGO_RULES = [
+    [/midjourney/i, 'midjourney.svg'], [/nano\s*banana/i, 'nanobanana.svg'], [/gemini/i, 'gemini.svg'],
+    [/chatgpt|openai/i, 'openai.svg'], [/claude/i, 'claude.svg'], [/runway/i, 'runway.svg'], [/kling/i, 'kling.svg'],
+    [/higgsfield/i, 'higgsfield.png'], [/eleven\s*labs/i, 'elevenlabs.svg'], [/suno/i, 'suno.svg'], [/topaz/i, 'topazlabs.svg'],
+    [/replit/i, 'replit.svg'], [/firefly/i, 'adobefirefly.svg'], [/photoshop/i, 'adobephotoshop.svg'], [/premiere/i, 'adobepremierepro.svg'],
+    [/after\s*effects/i, 'adobeaftereffects.svg'], [/illustrator/i, 'adobeillustrator.svg'], [/^adobe/i, 'adobe.svg'],
+    [/stable\s*diffusion/i, 'stability.svg'], [/kaiber/i, 'kaiber.png'], [/d-?id/i, 'did.png']
+  ];
+  function logoFor(name) { const n = String(name || '').trim(); const r = LOGO_RULES.find((x) => x[0].test(n)); return r ? 'assets/img/logos/' + r[1] : null; }
+  /* one tool: a logo mark (tooltip + accessible name) or, if we have no logo, its name as text */
+  function toolMark(name, cls) {
+    const n = String(name || '').trim(); if (!n) return '';
+    const src = logoFor(n);
+    return src
+      ? `<span class="tm ${cls || ''}" role="img" aria-label="${esc(n)}" title="${esc(n)}"><i style="-webkit-mask-image:url(${src});mask-image:url(${src})"></i></span>`
+      : `<span class="tm txt ${cls || ''}">${esc(n)}</span>`;
+  }
+  /* a list of tools, from an array or a free-text string ("Gemini, Nano Banana API and Replit"); logos are de-duplicated */
+  function toolMarks(list, cls) {
+    const arr = Array.isArray(list) ? list : String(list || '').split(/\s*(?:,|·|\+|&|and)\s*/i);
+    const seen = new Set(); const out = [];
+    arr.forEach((t) => { const n = String(t || '').trim(); if (!n) return; const src = logoFor(n); const key = src || n.toLowerCase(); if (seen.has(key)) return; seen.add(key); out.push(toolMark(n, cls)); });
+    return out.join('');
+  }
+  /* "Gemini Studio for the interface, Nano Banana API": keep only the tools we have logos for */
+  function toolMarksFromText(text, cls) {
+    const found = []; String(text || '').split(/\s*(?:,|·|and)\s*/i).forEach((part) => { const src = logoFor(part); if (src) found.push(part); });
+    return toolMarks(found, cls);
+  }
+
+  /* ---- Lab shuffle: any [data-shuffle] link jumps to a random experiment (never the one you are on) ---- */
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest && e.target.closest('[data-shuffle]'); if (!a) return;
+    const list = (window.EXPERIMENTS || []).filter((x) => (x.sections || []).length);
+    const cur = document.body.dataset.slug || new URLSearchParams(location.search).get('e');
+    const pool = list.filter((x) => x.slug !== cur); const pick = (pool.length ? pool : list)[Math.floor(Math.random() * (pool.length || list.length))];
+    if (pick) a.setAttribute('href', projHref(pick, 'e'));
+  }, true);
+
+  /* ---- awards: one data source (ABOUT.recognition) feeds the header ticker and the tiles ---- */
+  function awardItems() { return ((window.ABOUT || {}).recognition || {}).items || []; }
+  function awardsTicker(cls) {
+    const parts = [];
+    awardItems().forEach((r) => String(r.detail || '').split(/\.\s+/).map((d) => d.replace(/\.$/, '').trim()).filter(Boolean)
+      .forEach((d) => parts.push(`<span><i aria-hidden="true"></i><b>${esc(r.name)} ${esc(r.year || '')}</b> ${esc(d)}</span>`)));
+    if (!parts.length) return '';
+    const run = parts.join('');
+    return `<a class="tick${cls ? ' ' + cls : ''}" href="about.html#recognition" aria-label="Awards and recognition, see all"><span class="tick-lab">Awards</span><div class="tick-win"><div class="tick-track"><div>${run}</div><div aria-hidden="true">${run}</div></div></div></a>`;
+  }
+  function awardTiles(items) {
+    return `<div class="award-tiles">${(items || awardItems()).map((r, i) => `
+      <article class="award" data-fade>
+        <span class="mono">${esc(r.year || '')}</span>
+        <h3>${esc(r.name)}</h3>
+        <p>${esc(r.detail)}</p>
+        ${r.work ? `<p class="aw-work mono">${esc(r.work)}</p>` : ''}
+      </article>`).join('')}</div>`;
+  }
+
   function contactHTML() {
     const ct = SITE.contact || {};
-    const links = (ct.links || []).map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join('');
+    const prof = ct.profile ? `<a href="${esc(ct.profile.url)}" download>${esc(ct.profile.label)}</a>` : '';
+    const links = prof + (ct.links || []).map((l) => `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join('');
     const mail = Array.from(ct.email || '').map((c, i) => `<span class="mc" style="--i:${i}">${esc(c)}</span>`).join('');
     return `
       <section class="contact" id="contact">
+        <img class="cav" src="assets/img/avatar/avatar.webp" alt="" aria-hidden="true" width="691" height="1000" loading="lazy" data-tilt="18">
         <p class="big" data-split>${inline(ct.headline)}</p>
         <a class="mail" href="mailto:${esc(ct.email)}" aria-label="Email ${esc(ct.email)}">${mail}</a>
         <div class="foot mono"><nav aria-label="Social">${links}</nav><span>Bengaluru <span data-clock></span></span><span>&copy; ${new Date().getFullYear()}</span></div>
@@ -165,21 +230,37 @@
   const cur = $('.cur');
   if (cur && fine) {
     const label = cur.querySelector('span');
-    let x = innerWidth / 2, y = innerHeight / 2, cx = x, cy = y;
-    window.addEventListener('mousemove', (e) => { x = e.clientX; y = e.clientY; });
+    let x = 0, y = 0, cx = 0, cy = 0, seen = false, scrolled = false, last = performance.now();
+    cur.classList.add('off');                       // hidden until the real pointer has been seen: no more flying in from the screen centre
+    const place = () => { cur.style.transform = `translate3d(${cx}px,${cy}px,0)`; };
+    window.addEventListener('mousemove', (e) => {
+      x = e.clientX; y = e.clientY;
+      if (!seen) { seen = true; cx = x; cy = y; place(); cur.classList.remove('off'); }
+    }, { passive: true });
+    document.documentElement.addEventListener('mouseleave', () => cur.classList.add('off'));
+    document.documentElement.addEventListener('mouseenter', () => { if (seen) cur.classList.remove('off'); });
     gsap.ticker.add(() => {
-      cx += (x - cx) * 0.2; cy += (y - cy) * 0.2;
-      cur.style.transform = `translate3d(${cx}px,${cy}px,0)`;
+      if (!seen) return;
+      const now = performance.now(), dt = Math.min(64, now - last); last = now;
+      const k = 1 - Math.pow(1 - 0.3, dt / 16.67);   // same feel at 60, 120 or 144 Hz
+      cx += (x - cx) * k; cy += (y - cy) * k;
+      place();
     });
-    document.addEventListener('mouseover', (e) => {
-      const sc = e.target.closest && e.target.closest('[data-cur]');
+    /* the cursor state follows the element under it, including when the page scrolls or animates under a still mouse */
+    function state(t) {
+      if (!t || !t.closest) return;
+      cur.classList.toggle('off', !!t.closest('iframe,input,textarea,video[controls]') || !seen);
+      const sc = t.closest('[data-cur]');
       cur.classList.toggle('solid-ink', !!sc && sc.dataset.cur === 'ink');
       cur.classList.toggle('solid-white', !!sc && sc.dataset.cur === 'white');
-      const v = e.target.closest && e.target.closest('[data-cursor]');
-      if (v) { label.textContent = v.dataset.cursor; cur.classList.add('view'); cur.classList.remove('link'); return; }
+      const v = t.closest('[data-cursor]');
+      if (v) { if (label.textContent !== v.dataset.cursor) label.textContent = v.dataset.cursor; cur.classList.add('view'); cur.classList.remove('link'); return; }
       cur.classList.remove('view');
-      cur.classList.toggle('link', !!(e.target.closest && e.target.closest('a,button,select,label')));
-    });
+      cur.classList.toggle('link', !!t.closest('a,button,select,label'));
+    }
+    document.addEventListener('mouseover', (e) => state(e.target), { passive: true });
+    window.addEventListener('scroll', () => { scrolled = true; }, { passive: true });
+    setInterval(() => { if (scrolled && seen) { scrolled = false; state(document.elementFromPoint(x, y)); } }, 120);
   }
 
   /* -------------------------------------------- header, menu, transitions */
@@ -244,12 +325,37 @@
     if (html.classList.contains('nav-in')) curtainOut(intro, 0.1); else intro();
   }
 
+  /* 3D avatar: turns its head toward the cursor (fine pointers only) */
+  function initTilt() {
+    const els = $$('[data-tilt]');
+    if (!els.length || reduce || !fine) return;
+    let mx = innerWidth / 2, my = innerHeight / 2;
+    window.addEventListener('mousemove', (e) => { mx = e.clientX; my = e.clientY; }, { passive: true });
+    const st = els.map((el) => ({ el, max: parseFloat(el.dataset.tilt) || 14, rx: 0, ry: 0, on: true }));
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((es) => es.forEach((e) => { const s = st.find((x) => x.el === e.target); if (s) s.on = e.isIntersecting; }), { rootMargin: '100px' });
+      st.forEach((s) => io.observe(s.el));
+    }
+    gsap.ticker.add(() => {
+      st.forEach((s) => {
+        if (!s.on) return;
+        const r = s.el.getBoundingClientRect();
+        const dx = Math.max(-1, Math.min(1, (mx - (r.left + r.width / 2)) / (innerWidth * 0.5)));
+        const dy = Math.max(-1, Math.min(1, (my - (r.top + r.height / 2)) / (innerHeight * 0.5)));
+        s.ry += (dx * s.max - s.ry) * 0.08; s.rx += (-dy * s.max * 0.7 - s.rx) * 0.08;
+        s.el.style.setProperty('--ry', s.ry.toFixed(2) + 'deg'); s.el.style.setProperty('--rx', s.rx.toFixed(2) + 'deg');
+      });
+    });
+  }
+
   function finish() {
     startClocks();
+
+    initTilt();
     const refresh = () => ScrollTrigger.refresh();
     window.addEventListener('load', refresh);
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
   }
 
-  window.VM = { SITE, $, $$, esc, inline, nl, md, rand, pad2, projHref, reduce, fine, html, gsap, lenis, split, scrubWords, initReveals, lineSpans, introLines, contactHTML, curtainOut, arrive, finish };
+  window.VM = { awardsTicker, toolMark, toolMarks, toolMarksFromText, logoFor, awardTiles, awardItems, SITE, $, $$, esc, inline, nl, md, rand, pad2, projHref, reduce, fine, html, gsap, lenis, split, scrubWords, initReveals, lineSpans, introLines, contactHTML, curtainOut, arrive, finish };
 })();
